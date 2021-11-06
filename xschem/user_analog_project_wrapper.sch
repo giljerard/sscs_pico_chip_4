@@ -4,26 +4,30 @@ K {}
 V {}
 S {}
 E {}
-N 3830 -460 3830 -390 { lab=vdda1}
-N 3730 -460 3830 -460 { lab=vdda1}
-N 3860 -230 3860 -180 { lab=vssa1}
-N 3770 -180 3860 -180 { lab=vssa1}
-N 3890 -460 3890 -390 { lab=vccd1}
-N 3890 -460 3960 -460 { lab=vccd1}
-N 3890 -130 3890 -60 { lab=vccd1}
-N 3890 -130 3950 -130 { lab=vccd1}
-N 3830 -130 3830 -60 { lab=io_analog[4]}
-N 3790 -130 3830 -130 { lab=io_analog[4]}
-N 3860 100 3860 150 { lab=vssa1}
-N 3800 150 3860 150 { lab=vssa1}
-N 4010 -10 4110 -10 { lab=gpio_analog[7]}
-N 4010 20 4110 20 { lab=io_out[15]}
-N 4010 50 4110 50 { lab=io_out[16]}
-N 4010 -340 4130 -340 { lab=gpio_analog[3]}
-N 4010 -310 4130 -310 { lab=io_out[11]}
-N 4010 -280 4130 -280 { lab=io_out[12]}
-C {example_por.sym} 3860 -310 0 0 {name=x1}
-C {example_por.sym} 3860 20 0 0 {name=x2}
+N 3790 -70 3830 -70 { lab=io_analog[3]}
+N 3690 30 3720 30 { lab=io_analog[6]}
+N 3690 90 3720 90 { lab=io_analog[5]}
+N 3860 150 3860 170 { lab=io_analog[9]}
+N 3840 170 3860 170 { lab=io_analog[9]}
+N 3840 170 3840 180 { lab=io_analog[9]}
+N 3880 150 3880 170 { lab=io_analog[10]}
+N 3880 170 3900 170 { lab=io_analog[10]}
+N 3900 170 3900 180 { lab=io_analog[10]}
+N 4020 90 4050 90 { lab=io_analog[8]}
+N 4020 30 4050 30 { lab=io_analog[7]}
+N 3790 -100 3830 -100 { lab=io_analog[0]}
+N 3790 -130 3830 -130 { lab=io_analog[1]}
+N 3790 -160 3830 -160 { lab=io_analog[4]}
+N 3790 -190 3830 -190 { lab=io_analog[3]}
+N 3830 -70 3830 -30 {}
+N 3830 -100 3850 -100 {}
+N 3850 -100 3850 -30 {}
+N 3830 -130 3870 -130 {}
+N 3870 -130 3870 -30 {}
+N 3830 -160 3890 -160 {}
+N 3890 -160 3890 -30 {}
+N 3830 -190 3910 -190 {}
+N 3910 -190 3910 -30 {}
 C {devices/iopin.sym} 3240 -470 0 0 {name=p1 lab=vdda1}
 C {devices/iopin.sym} 3240 -440 0 0 {name=p2 lab=vdda2}
 C {devices/iopin.sym} 3240 -410 0 0 {name=p3 lab=vssa1}
@@ -56,15 +60,15 @@ C {devices/iopin.sym} 3250 500 0 0 {name=p30 lab=io_clamp_high[2:0]}
 C {devices/iopin.sym} 3250 530 0 0 {name=p31 lab=io_clamp_low[2:0]}
 C {devices/opin.sym} 3270 600 0 0 {name=p32 lab=user_irq[2:0]}
 C {devices/ipin.sym} 3290 210 0 0 {name=p28 lab=la_oenb[127:0]}
-C {devices/lab_pin.sym} 3730 -460 0 0 {name=l1 sig_type=std_logic lab=vdda1}
-C {devices/lab_pin.sym} 3770 -180 0 0 {name=l2 sig_type=std_logic lab=vssa1}
-C {devices/lab_pin.sym} 3960 -460 0 1 {name=l3 sig_type=std_logic lab=vccd1}
-C {devices/lab_pin.sym} 3950 -130 0 1 {name=l4 sig_type=std_logic lab=vccd1}
-C {devices/lab_pin.sym} 3790 -130 0 0 {name=l5 sig_type=std_logic lab=io_analog[4]}
-C {devices/lab_pin.sym} 3800 150 0 0 {name=l6 sig_type=std_logic lab=vssa1}
-C {devices/lab_pin.sym} 4130 -340 0 1 {name=l7 sig_type=std_logic lab=gpio_analog[3]}
-C {devices/lab_pin.sym} 4130 -310 0 1 {name=l8 sig_type=std_logic lab=io_out[11]}
-C {devices/lab_pin.sym} 4130 -280 0 1 {name=l9 sig_type=std_logic lab=io_out[12]}
-C {devices/lab_pin.sym} 4110 -10 0 1 {name=l10 sig_type=std_logic lab=gpio_analog[7]}
-C {devices/lab_pin.sym} 4110 20 0 1 {name=l11 sig_type=std_logic lab=io_out[15]}
-C {devices/lab_pin.sym} 4110 50 0 1 {name=l12 sig_type=std_logic lab=io_out[16]}
+C {devices/lab_pin.sym} 3790 -70 0 0 {name=l5 sig_type=std_logic lab=io_analog[3]}
+C {sscs_pico_chip_4/xschem/top.sym} 3870 60 0 0 {name=x1}
+C {devices/lab_pin.sym} 3690 30 0 0 {name=l1 sig_type=std_logic lab=io_analog[6]}
+C {devices/lab_pin.sym} 3690 90 0 0 {name=l2 sig_type=std_logic lab=io_analog[5]}
+C {devices/lab_pin.sym} 3840 180 3 0 {name=l3 sig_type=std_logic lab=io_analog[9]}
+C {devices/lab_pin.sym} 3900 180 3 0 {name=l4 sig_type=std_logic lab=io_analog[10]}
+C {devices/lab_pin.sym} 4050 30 0 1 {name=l6 sig_type=std_logic lab=io_analog[7]}
+C {devices/lab_pin.sym} 4050 90 0 1 {name=l7 sig_type=std_logic lab=io_analog[8]}
+C {devices/lab_pin.sym} 3790 -100 0 0 {name=l8 sig_type=std_logic lab=io_analog[0]}
+C {devices/lab_pin.sym} 3790 -130 0 0 {name=l9 sig_type=std_logic lab=io_analog[1]}
+C {devices/lab_pin.sym} 3790 -160 0 0 {name=l10 sig_type=std_logic lab=io_analog[4]}
+C {devices/lab_pin.sym} 3790 -190 0 0 {name=l11 sig_type=std_logic lab=io_analog[2]}
