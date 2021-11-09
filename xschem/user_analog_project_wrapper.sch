@@ -18,16 +18,20 @@ N 4020 30 4050 30 { lab=io_analog[7]}
 N 3790 -100 3830 -100 { lab=io_analog[0]}
 N 3790 -130 3830 -130 { lab=io_analog[1]}
 N 3790 -160 3830 -160 { lab=io_analog[4]}
-N 3790 -190 3830 -190 { lab=io_analog[3]}
-N 3830 -70 3830 -30 {}
-N 3830 -100 3850 -100 {}
-N 3850 -100 3850 -30 {}
-N 3830 -130 3870 -130 {}
-N 3870 -130 3870 -30 {}
-N 3830 -160 3890 -160 {}
-N 3890 -160 3890 -30 {}
-N 3830 -190 3910 -190 {}
-N 3910 -190 3910 -30 {}
+N 3790 -190 3830 -190 { lab=io_analog[2]}
+N 3830 -70 3830 -30 { lab=io_analog[3]}
+N 3830 -100 3850 -100 { lab=io_analog[0]}
+N 3850 -100 3850 -30 { lab=io_analog[0]}
+N 3830 -130 3870 -130 { lab=io_analog[1]}
+N 3870 -130 3870 -30 { lab=io_analog[1]}
+N 3830 -160 3890 -160 { lab=io_analog[4]}
+N 3890 -160 3890 -30 { lab=io_analog[4]}
+N 3830 -190 3910 -190 { lab=io_analog[2]}
+N 3910 -190 3910 -30 { lab=io_analog[2]}
+N 4380 30 4380 40 { lab=io_analog[10]}
+N 4380 -50 4380 -30 { lab=io_analog[9]}
+N 4370 -50 4380 -50 { lab=io_analog[9]}
+N 4380 40 4380 50 {}
 C {devices/iopin.sym} 3240 -470 0 0 {name=p1 lab=vdda1}
 C {devices/iopin.sym} 3240 -440 0 0 {name=p2 lab=vdda2}
 C {devices/iopin.sym} 3240 -410 0 0 {name=p3 lab=vssa1}
@@ -72,3 +76,6 @@ C {devices/lab_pin.sym} 3790 -100 0 0 {name=l8 sig_type=std_logic lab=io_analog[
 C {devices/lab_pin.sym} 3790 -130 0 0 {name=l9 sig_type=std_logic lab=io_analog[1]}
 C {devices/lab_pin.sym} 3790 -160 0 0 {name=l10 sig_type=std_logic lab=io_analog[4]}
 C {devices/lab_pin.sym} 3790 -190 0 0 {name=l11 sig_type=std_logic lab=io_analog[2]}
+C {sscs_pico_chip_4/xschem/big_cap.sym} 4380 10 0 0 {name=x2}
+C {devices/lab_pin.sym} 4380 50 0 0 {name=l12 sig_type=std_logic lab=io_analog[10]}
+C {devices/lab_pin.sym} 4370 -50 0 0 {name=l13 sig_type=std_logic lab=io_analog[9]}

@@ -1,12 +1,11 @@
-timestamp 1636438547
+timestamp 1636447474
 version 8.3
 tech sky130A
 style ngspice()
 scale 1000 1 500000
 resistclasses 4400000 2200000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use big_cap big_cap_0 1 0 49220 0 1 680440
 use top top_0 1 0 191644 0 1 671360
-parameters sky130_fd_pr__cap_mim_m3_1 w=w l=l
-parameters sky130_fd_pr__cap_mim_m3_2 w=w l=l
 port "io_analog[4]" 41 329294 702300 334294 704800 m5
 port "io_analog[4]" 47 318994 702300 323994 704800 m5
 port "io_analog[5]" 42 227594 702300 232594 704800 m5
@@ -697,22 +696,20 @@ port "wbs_cyc_i" 607 4070 -800 4182 480 m2
 port "wbs_ack_o" 574 2888 -800 3000 480 m2
 port "wb_rst_i" 573 1706 -800 1818 480 m2
 port "wb_clk_i" 572 524 -800 636 480 m2
-node "m5_169440_674152#" 0 21626.3 169440 674152 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 86278635 44536 0 0
+node "m5_155960_660505#" 0 43411.2 155960 660505 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 226078533 100766 0 0
 node "io_analog[4]" 0 2925 329294 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0
 node "io_analog[4]" 0 2831.4 318994 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0
 node "io_analog[5]" 0 2925 227594 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0
 node "io_analog[5]" 0 21618 217294 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 90320000 51000 0 0
 node "io_analog[6]" 0 21618 175894 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 90320000 51000 0 0
 node "io_analog[6]" 0 2925 165594 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0
+node "m4_155960_652631#" 0 89132.2 155960 652631 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 214012172 95666 146218635 68536 0 0
 node "io_analog[4]" 0 2775 329294 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0
 node "io_analog[4]" 0 63527.5 318994 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 74813440 276026 0 0 0 0
 node "io_analog[5]" 0 2775 227594 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0
 node "io_analog[5]" 0 2775 217294 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0
 node "io_analog[6]" 0 2775 175894 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0
 node "io_analog[6]" 0 2775 165594 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0
-node "c1_122790_649360#" 0 24798.2 122790 649360 mim 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 489409600 178160 0 0 0 0
-node "c1_122790_660920#" 0 35883.7 122790 660920 mim 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 993283200 266560 0 0 0 0
-node "c1_122790_683860#" 0 24798.2 122790 683860 mim 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 489409600 178160 0 0 0 0
 node "io_in_3v3[0]" 1 613.728 583520 1544 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
 node "io_oeb[26]" 1 613.728 -800 1544 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
 node "io_in[0]" 1 613.728 583520 2726 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
@@ -876,8 +873,7 @@ node "vccd2" 0 6519 0 633842 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 node "vccd1" 0 6519 582340 639784 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
 node "vccd2" 0 6519 0 643842 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
 node "io_analog[0]" 0 176756 582300 677984 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 125886249 784980 0 0 0 0
-node "m3_122760_672270#" 0 399639 122760 672270 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1001016000 269440 13579200 91120 1001016000 269440 0 0
-node "io_analog[10]" 0 599433 0 680242 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1013516000 284440 26079200 106120 1883618078 593042 0 0
+node "io_analog[10]" 0 149229 0 680242 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 12500000 15000 651845015 270994 0 0
 node "io_analog[1]" 0 178295 566594 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 126574720 791732 0 0 0 0
 node "vssa1" 0 6519 520594 702340 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
 node "vssa1" 0 6519 510594 702340 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
@@ -897,7 +893,7 @@ node "io_clamp_low[2]" 0 3577 170894 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "io_analog[6]" 0 6825 165594 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0 0 0
 node "io_analog[7]" 0 110632 120194 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12631200 16460 184743420 364282 0 0 0 0
 node "io_analog[8]" 0 118733 68194 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12631200 16460 199144800 392520 0 0 0 0
-node "io_analog[9]" 0 156194 16194 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 34780000 23912 645318850 268372 0 0
+node "io_analog[9]" 0 199119 16194 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 258422249 123420 585928300 244592 0 0
 node "user_irq[2]" 1 631.648 583250 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
 node "user_irq[1]" 1 631.648 582068 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
 node "user_irq[0]" 1 631.648 580886 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
@@ -1393,90 +1389,130 @@ node "wbs_ack_o" 1 631.648 2888 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 node "wb_rst_i" 1 631.648 1706 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
 node "wb_clk_i" 1 631.648 524 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
 substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "io_analog[4]" "io_analog[4]" 26250
-cap "io_analog[10]" "c1_122790_649360#" 1.91551e+06
-cap "io_clamp_high[0]" "io_analog[4]" 525
-cap "io_analog[9]" "io_analog[8]" 11855.6
-cap "io_analog[6]" "io_analog[6]" 21250
-cap "io_clamp_low[0]" "io_clamp_high[0]" 525
 cap "io_analog[6]" "io_analog[6]" 26250
-cap "io_clamp_high[2]" "io_analog[6]" 525
-cap "io_analog[4]" "io_analog[4]" 26353.2
 cap "io_analog[4]" "io_clamp_low[0]" 525
-cap "io_analog[4]" "io_analog[4]" 21250
-cap "io_clamp_low[2]" "io_clamp_high[2]" 525
-cap "io_analog[9]" "io_analog[7]" 11855.6
-cap "io_analog[5]" "io_analog[5]" 26250
+cap "io_analog[4]" "io_analog[4]" 26250
 cap "io_analog[4]" "io_analog[4]" 21449.2
-cap "io_analog[8]" "io_analog[10]" 11855.6
-cap "m3_122760_672270#" "io_analog[10]" 26267.5
-cap "io_analog[5]" "io_analog[5]" 700
-cap "io_analog[6]" "io_clamp_low[2]" 525
-cap "m3_122760_672270#" "c1_122790_660920#" 1.94339e+06
-cap "io_analog[10]" "c1_122790_660920#" 1.95205e+06
+cap "io_clamp_low[2]" "io_clamp_high[2]" 525
 cap "io_analog[5]" "io_analog[5]" 21250
-cap "io_clamp_high[1]" "io_analog[5]" 525
-cap "io_analog[6]" "io_analog[6]" 700
-cap "m3_122760_672270#" "c1_122790_683860#" 1.91551e+06
-cap "io_analog[5]" "io_analog[5]" 26250
-cap "io_clamp_low[1]" "io_clamp_high[1]" 525
-cap "io_analog[5]" "io_analog[5]" 22425
-cap "io_analog[7]" "io_analog[10]" 11855.6
+cap "io_analog[6]" "io_clamp_low[2]" 525
+cap "io_analog[8]" "io_analog[10]" 11855.6
 cap "io_analog[6]" "io_analog[6]" 26250
-cap "io_analog[5]" "io_clamp_low[1]" 525
+cap "io_analog[9]" "io_analog[10]" 48927.2
+cap "io_clamp_high[1]" "io_analog[5]" 525
+cap "io_analog[4]" "io_analog[4]" 26353.2
+cap "io_analog[5]" "io_analog[5]" 22425
+cap "io_analog[8]" "io_analog[9]" 11855.6
+cap "io_clamp_low[1]" "io_clamp_high[1]" 525
+cap "io_analog[5]" "io_analog[5]" 26250
 cap "io_analog[6]" "io_analog[6]" 22425
-device csubckt sky130_fd_pr__cap_mim_m3_2 156930 649360 156931 649361 w=11000 l=11000 "None" "io_analog[10]" 1045440 0 "c1_122790_649360#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 145550 649360 145551 649361 w=11000 l=11000 "None" "io_analog[10]" 1045440 0 "c1_122790_649360#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 134170 649360 134171 649361 w=11000 l=11000 "None" "io_analog[10]" 1045440 0 "c1_122790_649360#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 122790 649360 122791 649361 w=11000 l=11000 "None" "io_analog[10]" 1045440 0 "c1_122790_649360#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 156930 660920 156931 660921 w=11000 l=11000 "None" "io_analog[10]" 1045440 0 "c1_122790_660920#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 145550 660920 145551 660921 w=11000 l=11000 "None" "io_analog[10]" 1045440 0 "c1_122790_660920#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 134170 660920 134171 660921 w=11000 l=11000 "None" "io_analog[10]" 1045440 0 "c1_122790_660920#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 122790 660920 122791 660921 w=11000 l=11000 "None" "io_analog[10]" 1045440 0 "c1_122790_660920#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 156930 672300 156931 672301 w=11000 l=11000 "None" "m3_122760_672270#" 1045440 0 "c1_122790_660920#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 145550 672300 145551 672301 w=11000 l=11000 "None" "m3_122760_672270#" 1045440 0 "c1_122790_660920#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 134170 672300 134171 672301 w=11000 l=11000 "None" "m3_122760_672270#" 1045440 0 "c1_122790_660920#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 122790 672300 122791 672301 w=11000 l=11000 "None" "m3_122760_672270#" 1045440 0 "c1_122790_660920#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 156930 683860 156931 683861 w=11000 l=11000 "None" "m3_122760_672270#" 1045440 0 "c1_122790_683860#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 145550 683860 145551 683861 w=11000 l=11000 "None" "m3_122760_672270#" 1045440 0 "c1_122790_683860#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 134170 683860 134171 683861 w=11000 l=11000 "None" "m3_122760_672270#" 1045440 0 "c1_122790_683860#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_2 122790 683860 122791 683861 w=11000 l=11000 "None" "m3_122760_672270#" 1045440 0 "c1_122790_683860#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_1 156930 649360 156931 649361 w=11000 l=11000 "None" "c1_122790_649360#" 1045440 0 "io_analog[10]" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_1 145550 649360 145551 649361 w=11000 l=11000 "None" "c1_122790_649360#" 1045440 0 "io_analog[10]" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_1 134170 649360 134171 649361 w=11000 l=11000 "None" "c1_122790_649360#" 1045440 0 "io_analog[10]" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_1 122790 649360 122791 649361 w=11000 l=11000 "None" "c1_122790_649360#" 1045440 0 "io_analog[10]" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_1 156930 660920 156931 660921 w=11000 l=11000 "None" "c1_122790_660920#" 1045440 0 "io_analog[10]" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_1 145550 660920 145551 660921 w=11000 l=11000 "None" "c1_122790_660920#" 1045440 0 "io_analog[10]" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_1 134170 660920 134171 660921 w=11000 l=11000 "None" "c1_122790_660920#" 1045440 0 "io_analog[10]" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_1 122790 660920 122791 660921 w=11000 l=11000 "None" "c1_122790_660920#" 1045440 0 "io_analog[10]" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_1 156930 672300 156931 672301 w=11000 l=11000 "None" "c1_122790_660920#" 1045440 0 "m3_122760_672270#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_1 145550 672300 145551 672301 w=11000 l=11000 "None" "c1_122790_660920#" 1045440 0 "m3_122760_672270#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_1 134170 672300 134171 672301 w=11000 l=11000 "None" "c1_122790_660920#" 1045440 0 "m3_122760_672270#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_1 122790 672300 122791 672301 w=11000 l=11000 "None" "c1_122790_660920#" 1045440 0 "m3_122760_672270#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_1 156930 683860 156931 683861 w=11000 l=11000 "None" "c1_122790_683860#" 1045440 0 "m3_122760_672270#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_1 145550 683860 145551 683861 w=11000 l=11000 "None" "c1_122790_683860#" 1045440 0 "m3_122760_672270#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_1 134170 683860 134171 683861 w=11000 l=11000 "None" "c1_122790_683860#" 1045440 0 "m3_122760_672270#" 282 0
-device csubckt sky130_fd_pr__cap_mim_m3_1 122790 683860 122791 683861 w=11000 l=11000 "None" "c1_122790_683860#" 1045440 0 "m3_122760_672270#" 282 0
+cap "io_analog[5]" "io_clamp_low[1]" 525
+cap "io_clamp_high[0]" "io_analog[4]" 525
+cap "io_analog[6]" "io_analog[6]" 21250
+cap "io_analog[7]" "io_analog[10]" 11855.6
+cap "m4_155960_652631#" "m5_155960_660505#" 93178
+cap "io_analog[5]" "io_analog[5]" 700
+cap "io_analog[5]" "io_analog[5]" 26250
+cap "io_analog[7]" "io_analog[9]" 11855.6
+cap "io_clamp_low[0]" "io_clamp_high[0]" 525
+cap "io_analog[4]" "io_analog[4]" 21250
+cap "io_analog[6]" "io_analog[6]" 700
+cap "io_clamp_high[2]" "io_analog[6]" 525
+cap "big_cap_0/VDD" "big_cap_0/GND" 153.135
+cap "big_cap_0/VDD" "big_cap_0/GND" 79.335
+cap "big_cap_0/VDD" "big_cap_0/GND" 153.135
+cap "big_cap_0/GND" "big_cap_0/VDD" 79.335
+cap "big_cap_0/GND" "big_cap_0/VDD" 221.45
+cap "big_cap_0/VDD" "big_cap_0/GND" 427.45
+cap "big_cap_0/VDD" "big_cap_0/GND" 581
+cap "big_cap_0/GND" "big_cap_0/VDD" 301
+cap "big_cap_0/VDD" "big_cap_0/GND" 485.55
+cap "big_cap_0/GND" "big_cap_0/VDD" 251.55
+cap "big_cap_0/VDD" "big_cap_0/GND" 581
+cap "big_cap_0/GND" "big_cap_0/VDD" 301
+cap "big_cap_0/VDD" "big_cap_0/GND" 581
+cap "big_cap_0/GND" "big_cap_0/VDD" 301
+cap "big_cap_0/GND" "big_cap_0/VDD" 301
+cap "big_cap_0/GND" "big_cap_0/VDD" 581
+cap "big_cap_0/VDD" "big_cap_0/GND" 177.205
+cap "big_cap_0/GND" "big_cap_0/VDD" 91.805
+cap "big_cap_0/GND" "big_cap_0/VDD" 91.805
+cap "big_cap_0/GND" "big_cap_0/VDD" 177.205
+cap "big_cap_0/GND" "big_cap_0/VDD" 119.85
+cap "big_cap_0/GND" "big_cap_0/VDD" 119.85
+cap "big_cap_0/VDD" "big_cap_0/GND" 329
+cap "big_cap_0/GND" "big_cap_0/GND" 196
+cap "big_cap_0/VDD" "big_cap_0/GND" 329
+cap "big_cap_0/GND" "big_cap_0/GND" 196
+cap "big_cap_0/VDD" "big_cap_0/GND" 329
+cap "big_cap_0/GND" "big_cap_0/GND" 196
+cap "big_cap_0/GND" "big_cap_0/GND" 196
+cap "big_cap_0/VDD" "big_cap_0/GND" 329
+cap "big_cap_0/VDD" "big_cap_0/GND" 124.55
+cap "big_cap_0/GND" "big_cap_0/GND" 74.2
+cap "big_cap_0/GND" "big_cap_0/GND" 182
+cap "big_cap_0/GND" "big_cap_0/VDD" 305.5
+cap "big_cap_0/VDD" "big_cap_0/GND" 517.92
+cap "big_cap_0/GND" "big_cap_0/VDD" 268.32
+cap "big_cap_0/GND" "big_cap_0/VDD" 268.32
+cap "big_cap_0/VDD" "big_cap_0/GND" 517.92
+cap "big_cap_0/VDD" "big_cap_0/GND" 373.5
+cap "big_cap_0/GND" "big_cap_0/VDD" 193.5
+cap "big_cap_0/GND" "big_cap_0/VDD" 301
+cap "big_cap_0/VDD" "big_cap_0/GND" 581
+cap "big_cap_0/VDD" "big_cap_0/GND" 581
+cap "big_cap_0/GND" "big_cap_0/VDD" 301
+cap "big_cap_0/VDD" "big_cap_0/GND" 581
+cap "big_cap_0/GND" "big_cap_0/VDD" 301
+cap "big_cap_0/GND" "big_cap_0/VDD" 203.605
+cap "big_cap_0/VDD" "big_cap_0/GND" 393.005
+cap "big_cap_0/GND" "big_cap_0/VDD" 203.605
+cap "big_cap_0/VDD" "big_cap_0/GND" 393.005
+cap "big_cap_0/VDD" "big_cap_0/GND" 235.72
+cap "big_cap_0/GND" "big_cap_0/VDD" 122.12
+cap "big_cap_0/VDD" "big_cap_0/GND" 235.72
+cap "big_cap_0/GND" "big_cap_0/VDD" 122.12
+cap "big_cap_0/GND" "big_cap_0/VDD" 301
+cap "big_cap_0/VDD" "big_cap_0/GND" 581
+cap "big_cap_0/VDD" "big_cap_0/GND" 581
+cap "big_cap_0/GND" "big_cap_0/VDD" 301
+cap "big_cap_0/VDD" "big_cap_0/GND" 406.7
+cap "big_cap_0/GND" "big_cap_0/VDD" 210.7
+cap "big_cap_0/GND" "big_cap_0/VDD" 301
+cap "big_cap_0/VDD" "big_cap_0/GND" 581
+cap "big_cap_0/VDD" "big_cap_0/GND" 460.65
+cap "big_cap_0/GND" "big_cap_0/VDD" 238.65
+cap "big_cap_0/VDD" "big_cap_0/GND" 581
+cap "big_cap_0/GND" "big_cap_0/VDD" 301
 cap "top_0/Iin_p" "top_0/Iin_p" 98
 cap "top_0/Vinp" "top_0/Iin_p" 164.5
 cap "top_0/Vinp" "top_0/Iin_p" -581.275
 cap "top_0/Iin_p" "top_0/Iin_p" -375.91
 cap "top_0/Vinn" "top_0/Iin_n" 164.5
 cap "top_0/Iin_n" "top_0/Iin_n" 98
-cap "top_0/Vinp" "top_0/Iin_p" 329
+cap "big_cap_0/GND" "big_cap_0/VDD" 49.02
+cap "big_cap_0/VDD" "big_cap_0/GND" 94.62
+cap "big_cap_0/VDD" "big_cap_0/GND" 94.62
+cap "big_cap_0/GND" "big_cap_0/VDD" 49.02
 cap "top_0/Iin_p" "top_0/Iin_p" 196
+cap "top_0/Iin_p" "top_0/Vinp" 329
 cap "top_0/Iin_p" "top_0/Vinp" -933.75
 cap "top_0/Iin_p" "top_0/Iin_p" -607.5
 cap "top_0/Vinn" "top_0/Iin_n" 329
 cap "top_0/Iin_n" "top_0/Iin_n" 196
-cap "top_0/Vinp" "top_0/Iin_p" 37.6
-cap "top_0/Vinp" "top_0/Iin_p" -93.375
+cap "top_0/Iin_p" "top_0/Vinp" 37.6
+cap "top_0/Iin_p" "top_0/Vinp" -93.375
 cap "top_0/Vinn" "top_0/Iin_n" 37.6
 merge "top_0/Vb5" "io_analog[3]" -6475.8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -10112000 -15000 -433180 -4188 0 0 0 0
 merge "top_0/Vout_p" "io_analog[7]" -7127 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -11609294 -16180 -454754 -4170 0 0 0 0
-merge "top_0/VSUBS" "VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-merge "top_0/VDD" "m5_169440_674152#" -7790.3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -17962445 -26133 0 0
-merge "top_0/GND" "io_analog[10]" -10689 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1840000 -13400 -1840000 -13400 -2764799 -22238 0 0
+merge "big_cap_0/VSUBS" "top_0/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "top_0/VSUBS" "VSUBS"
+merge "top_0/VDD" "big_cap_0/VDD" -34100.6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6346400 -15000 -19285501 -86085 -20308845 -39533 0 0
+merge "big_cap_0/VDD" "m4_155960_652631#"
+merge "m4_155960_652631#" "io_analog[9]"
+merge "big_cap_0/GND" "io_analog[10]" -15730.9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1840000 -13400 -1840000 -13400 -9906604 -42600 0 0
+merge "io_analog[10]" "top_0/GND"
+merge "top_0/GND" "m5_155960_660505#"
 merge "top_0/Vb4_" "io_analog[0]" -7060.02 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -10207700 -15000 38070 -4992 0 0 0 0
 merge "top_0/Vb3_" "io_analog[1]" -7583.46 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12500000 -15000 88890 -5900 0 0 0 0
 merge "top_0/Vb1_" "io_analog[2]" -7008.72 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -10694000 -15000 -35200 -6620 0 0 0 0
