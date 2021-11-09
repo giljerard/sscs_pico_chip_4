@@ -1,0 +1,37 @@
+* NGSPICE file created from big_cap.ext - technology: sky130A
+
+.subckt big_cap VDD GND
+X0 GND VDD sky130_fd_pr__cap_mim_m3_2 l=5.5e+07u w=5.5e+07u
+X1 GND VDD sky130_fd_pr__cap_mim_m3_2 l=5.5e+07u w=5.5e+07u
+X2 VDD GND sky130_fd_pr__cap_mim_m3_1 l=5.5e+07u w=5.5e+07u
+X3 GND VDD sky130_fd_pr__cap_mim_m3_2 l=5.5e+07u w=5.5e+07u
+X4 VDD GND sky130_fd_pr__cap_mim_m3_1 l=5.5e+07u w=5.5e+07u
+X5 VDD GND sky130_fd_pr__cap_mim_m3_1 l=5.5e+07u w=5.5e+07u
+X6 VDD GND sky130_fd_pr__cap_mim_m3_1 l=5.5e+07u w=5.5e+07u
+X7 GND VDD sky130_fd_pr__cap_mim_m3_2 l=5.5e+07u w=5.5e+07u
+X8 VDD GND sky130_fd_pr__cap_mim_m3_1 l=5.5e+07u w=5.5e+07u
+X9 VDD GND sky130_fd_pr__cap_mim_m3_1 l=5.5e+07u w=5.5e+07u
+X10 VDD GND sky130_fd_pr__cap_mim_m3_1 l=5.5e+07u w=5.5e+07u
+X11 GND VDD sky130_fd_pr__cap_mim_m3_2 l=5.5e+07u w=5.5e+07u
+X12 GND VDD sky130_fd_pr__cap_mim_m3_2 l=5.5e+07u w=5.5e+07u
+X13 VDD GND sky130_fd_pr__cap_mim_m3_1 l=5.5e+07u w=5.5e+07u
+X14 GND VDD sky130_fd_pr__cap_mim_m3_2 l=5.5e+07u w=5.5e+07u
+X15 VDD GND sky130_fd_pr__cap_mim_m3_1 l=5.5e+07u w=5.5e+07u
+X16 GND VDD sky130_fd_pr__cap_mim_m3_2 l=5.5e+07u w=5.5e+07u
+X17 GND VDD sky130_fd_pr__cap_mim_m3_2 l=5.5e+07u w=5.5e+07u
+X18 VDD GND sky130_fd_pr__cap_mim_m3_1 l=5.5e+07u w=5.5e+07u
+X19 GND VDD sky130_fd_pr__cap_mim_m3_2 l=5.5e+07u w=5.5e+07u
+X20 GND VDD sky130_fd_pr__cap_mim_m3_2 l=5.5e+07u w=5.5e+07u
+X21 VDD GND sky130_fd_pr__cap_mim_m3_1 l=5.5e+07u w=5.5e+07u
+X22 VDD GND sky130_fd_pr__cap_mim_m3_1 l=5.5e+07u w=5.5e+07u
+X23 VDD GND sky130_fd_pr__cap_mim_m3_1 l=5.5e+07u w=5.5e+07u
+X24 GND VDD sky130_fd_pr__cap_mim_m3_2 l=5.5e+07u w=5.5e+07u
+X25 GND VDD sky130_fd_pr__cap_mim_m3_2 l=5.5e+07u w=5.5e+07u
+X26 GND VDD sky130_fd_pr__cap_mim_m3_2 l=5.5e+07u w=5.5e+07u
+X27 VDD GND sky130_fd_pr__cap_mim_m3_1 l=5.5e+07u w=5.5e+07u
+X28 GND VDD sky130_fd_pr__cap_mim_m3_2 l=5.5e+07u w=5.5e+07u
+X29 GND VDD sky130_fd_pr__cap_mim_m3_2 l=5.5e+07u w=5.5e+07u
+X30 VDD GND sky130_fd_pr__cap_mim_m3_1 l=5.5e+07u w=5.5e+07u
+X31 VDD GND sky130_fd_pr__cap_mim_m3_1 l=5.5e+07u w=5.5e+07u
+.ends
+
