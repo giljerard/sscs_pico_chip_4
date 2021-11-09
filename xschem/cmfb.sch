@@ -1,4 +1,4 @@
-v {xschem version=2.9.9 file_version=1.2 }
+v {xschem version=3.0.0 file_version=1.2 }
 G {}
 K {}
 V {}
@@ -20,8 +20,8 @@ N 580 -280 680 -280 { lab=#net3}
 N 650 -260 680 -260 { lab=#net3}
 N 650 -280 650 -260 { lab=#net3}
 N 580 -260 600 -260 { lab=Vcmfb}
-C {tia_post_approval/schem/cmfb_half.sym} 430 -310 0 0 {name=x1}
-C {tia_post_approval/schem/cmfb_half.sym} 830 -310 0 1 {name=x2}
+C {sscs_pico_chip_4/xschem/cmfb_half.sym} 430 -310 0 0 {name=x1}
+C {sscs_pico_chip_4/xschem/cmfb_half.sym} 830 -310 0 1 {name=x2}
 C {sky130_fd_pr/res_xhigh_po.sym} 630 -390 1 1 {name=R20
 W=1.41
 L=1.41
