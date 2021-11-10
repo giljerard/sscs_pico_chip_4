@@ -131,6 +131,12 @@
 x1 io_analog[8] io_analog[7] io_analog[2] io_analog[4] io_analog[1] io_analog[0] io_analog[3]
 + io_analog[5] io_analog[6] io_analog[10] io_analog[9] top
 x2 io_analog[5] io_analog[6] big_cap
+XM3 io_analog[0] io_analog[6] io_analog[6] io_analog[6] sky130_fd_pr__nfet_01v8_lvt L=1 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=20 m=20 
+XM4 io_analog[0] io_analog[5] io_analog[5] io_analog[5] sky130_fd_pr__pfet_01v8_lvt L=1 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=20 m=20 
 .ends
 
 * expanding   symbol:  sscs_pico_chip_4/xschem/top.sym # of pins=11

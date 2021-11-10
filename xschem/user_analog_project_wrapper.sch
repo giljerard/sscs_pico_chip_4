@@ -5,7 +5,7 @@ V {}
 S {}
 E {}
 N 4160 -70 4200 -70 { lab=io_analog[3]}
-N 4060 30 4090 30 { lab=io_analog[6]}
+N 4060 30 4090 30 { lab=io_analog[8]}
 N 4060 90 4090 90 { lab=io_analog[7]}
 N 4230 150 4230 170 { lab=io_analog[5]}
 N 4210 170 4230 170 { lab=io_analog[5]}
@@ -32,6 +32,15 @@ N 4750 30 4750 40 { lab=io_analog[6]}
 N 4750 -50 4750 -30 { lab=io_analog[5]}
 N 4740 -50 4750 -50 { lab=io_analog[5]}
 N 4750 40 4750 50 { lab=io_analog[6]}
+N 3820 -510 3820 -480 { lab=io_analog[6]}
+N 3780 -480 3820 -480 { lab=io_analog[6]}
+N 3780 -510 3780 -480 { lab=io_analog[6]}
+N 3780 -680 3780 -650 { lab=io_analog[5]}
+N 3780 -680 3820 -680 { lab=io_analog[5]}
+N 3820 -680 3820 -650 { lab=io_analog[5]}
+N 3780 -480 3780 -440 { lab=io_analog[6]}
+N 3780 -720 3780 -680 { lab=io_analog[5]}
+N 3780 -620 3780 -540 { lab=io_analog[0]}
 C {devices/iopin.sym} 3240 -470 0 0 {name=p1 lab=vdda1}
 C {devices/iopin.sym} 3240 -440 0 0 {name=p2 lab=vdda2}
 C {devices/iopin.sym} 3240 -410 0 0 {name=p3 lab=vssa1}
@@ -79,3 +88,34 @@ C {devices/lab_pin.sym} 4160 -190 0 0 {name=l11 sig_type=std_logic lab=io_analog
 C {sscs_pico_chip_4/xschem/big_cap.sym} 4750 10 0 0 {name=x2}
 C {devices/lab_pin.sym} 4750 50 0 0 {name=l12 sig_type=std_logic lab=io_analog[6]}
 C {devices/lab_pin.sym} 4740 -50 0 0 {name=l13 sig_type=std_logic lab=io_analog[5]}
+C {sky130_fd_pr/nfet_01v8_lvt.sym} 3800 -510 0 1 {name=M3
+L=1
+W=5
+nf=1
+mult=20
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8_lvt
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} 3800 -650 0 1 {name=M4
+L=1
+W=5
+nf=1
+mult=20
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 3780 -580 0 0 {name=l16 sig_type=std_logic lab=io_analog[0]}
+C {devices/lab_pin.sym} 3780 -720 0 1 {name=l14 sig_type=std_logic lab=io_analog[5]}
+C {devices/lab_pin.sym} 3780 -440 0 1 {name=l15 sig_type=std_logic lab=io_analog[6]}

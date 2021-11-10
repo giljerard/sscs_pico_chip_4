@@ -1,4 +1,4 @@
-timestamp 1636529817
+timestamp 1636532148
 version 8.3
 tech sky130A
 style ngspice()
@@ -6,14 +6,13 @@ scale 1000 1 500000
 resistclasses 4400000 2200000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
 use big_cap big_cap_1 1 0 119364 0 1 670158
 use top top_0 1 0 89244 0 1 674450
+parameters sky130_fd_pr__pfet_01v8_lvt l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__nfet_01v8_lvt l=l w=w a1=as p1=ps a2=ad p2=pd
 port "io_analog[4]" 41 329294 702300 334294 704800 m5
 port "io_analog[4]" 47 318994 702300 323994 704800 m5
 port "io_analog[5]" 48 217294 702300 222294 704800 m5
 port "io_analog[6]" 43 175894 702300 180894 704800 m5
-port "io_analog[6]" 49 165594 702300 170594 704800 m5
 port "io_analog[4]" 41 329294 702300 334294 704800 m4
-port "io_analog[5]" 42 227594 702300 232594 704800 m5
-port "io_analog[5]" 42 227594 702300 232594 704800 m4
 port "io_analog[5]" 48 217294 702300 222294 704800 m4
 port "io_analog[6]" 43 175894 702300 180894 704800 m4
 port "io_analog[6]" 49 165594 702300 170594 704800 m4
@@ -180,7 +179,6 @@ port "vccd2" 555 0 633842 1660 638642 m3
 port "vccd1" 552 582340 639784 584800 644584 m3
 port "vccd2" 554 0 643842 1660 648642 m3
 port "io_analog[10]" 37 0 680242 1700 685242 m3
-port "io_analog[0]" 36 582300 677984 584800 682984 m3
 port "io_analog[4]" 47 318994 702300 323994 704800 m4
 port "io_analog[1]" 38 566594 702300 571594 704800 m3
 port "vssa1" 562 520594 702340 525394 704800 m3
@@ -696,16 +694,18 @@ port "wbs_cyc_i" 607 4070 -800 4182 480 m2
 port "wbs_ack_o" 574 2888 -800 3000 480 m2
 port "wb_rst_i" 573 1706 -800 1818 480 m2
 port "wb_clk_i" 572 524 -800 636 480 m2
+port "io_analog[0]" 36 582300 677984 584800 682984 m3
+port "io_analog[5]" 42 227594 702300 232594 704800 m4
+port "io_analog[5]" 42 227594 702300 232594 704800 m5
+port "io_analog[6]" 49 165594 702300 170594 704800 m5
 node "io_analog[4]" 0 2925 329294 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0
 node "io_analog[4]" 0 2831.4 318994 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0
 node "io_analog[5]" 0 4140.24 217294 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17830000 17132 0 0
 node "io_analog[6]" 0 4140.24 175894 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17830000 17132 0 0
-node "io_analog[6]" 0 266966 165594 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1264400000 515760 0 0
 node "io_analog[4]" 0 2775 329294 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0
-node "io_analog[5]" 0 576638 227594 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1613261534 625798 708121472 300712 0 0
 node "io_analog[5]" 0 2775 217294 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0
 node "io_analog[6]" 0 2775 175894 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0
-node "io_analog[6]" 0 2775 165594 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0
+node "io_analog[6]" 0 25200 165594 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0
 node "io_in_3v3[0]" 1 613.728 583520 1544 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
 node "io_oeb[26]" 1 613.728 -800 1544 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
 node "io_in[0]" 1 613.728 583520 2726 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
@@ -869,14 +869,13 @@ node "m3_582340_635784#" 0 1347.54 582340 635784 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 node "vccd2" 0 6711.26 0 633842 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10729600 17036 0 0 0 0 0 0
 node "vccd1" 0 6134.96 582340 639784 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10527864 14520 0 0 0 0 0 0
 node "vccd2" 0 6519 0 643842 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
-node "io_analog[10]" 0 119556 0 680242 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12631200 16460 294012000 298012 0 0 0 0
-node "io_analog[0]" 1 246761 582300 677984 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17476640 36696 239171304 1010408 0 0 0 0
-node "io_analog[4]" 1 111270 318994 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4976640 21696 117966400 456790 0 0 0 0
-node "io_analog[1]" 1 239007 566594 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17476640 36696 235472590 972490 0 0 0 0
+node "io_analog[10]" 0 138333 0 680242 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12631200 16460 294012000 298012 0 0 0 0
+node "io_analog[4]" 1 118099 318994 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4976640 21696 117966400 456790 0 0 0 0
+node "io_analog[1]" 1 245938 566594 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17476640 36696 235472590 972490 0 0 0 0
 node "vssa1" 0 6519 520594 702340 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
 node "vssa1" 0 6519 510594 702340 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
-node "io_analog[2]" 1 187640 465394 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17476640 36696 178748320 756156 0 0 0 0
-node "io_analog[3]" 1 151351 413394 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17476640 36696 142490037 599194 0 0 0 0
+node "io_analog[2]" 1 194469 465394 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17476640 36696 178748320 756156 0 0 0 0
+node "io_analog[3]" 1 158151 413394 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17476640 36696 142490037 599194 0 0 0 0
 node "io_analog[4]" 0 6825 329294 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0 0 0
 node "io_clamp_high[0]" 0 3577 326794 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5500000 9400 0 0 0 0 0 0
 node "io_clamp_low[0]" 0 3577 324294 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5500000 9400 0 0 0 0 0 0
@@ -888,10 +887,10 @@ node "io_analog[5]" 0 6825 217294 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 node "io_analog[6]" 0 6825 175894 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0 0 0
 node "io_clamp_high[2]" 0 3577 173394 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5500000 9400 0 0 0 0 0 0
 node "io_clamp_low[2]" 0 3577 170894 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5500000 9400 0 0 0 0 0 0
-node "io_analog[6]" 0 6825 165594 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0 0 0
+node "io_analog[6]" 0 7525 165594 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0 0 0
 node "io_analog[7]" 0 30328.7 120194 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 14700000 15880 86240000 53820 0 0
 node "io_analog[8]" 0 30328.7 68194 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 14700000 15880 86240000 53820 0 0
-node "io_analog[9]" 0 113110 16194 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12631200 16460 277120000 281120 0 0 0 0
+node "io_analog[9]" 0 155367 16194 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12631200 16460 277120000 281120 0 0 0 0
 node "user_irq[2]" 1 631.648 583250 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
 node "user_irq[1]" 1 631.648 582068 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
 node "user_irq[0]" 1 631.648 580886 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
@@ -1386,295 +1385,327 @@ node "wbs_cyc_i" 1 631.648 4070 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 node "wbs_ack_o" 1 631.648 2888 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
 node "wb_rst_i" 1 631.648 1706 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
 node "wb_clk_i" 1 631.648 524 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
-substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "io_clamp_low[1]" "io_clamp_high[1]" 525
-cap "io_analog[6]" "io_clamp_high[2]" 525
-cap "io_analog[6]" "io_clamp_low[2]" 525
-cap "io_analog[4]" "io_analog[6]" 6828.4
-cap "io_analog[5]" "io_analog[5]" 700
-cap "io_analog[5]" "io_analog[5]" 22425
-cap "io_analog[4]" "io_analog[5]" 7530.8
-cap "io_analog[5]" "io_analog[6]" 97944
-cap "io_clamp_low[2]" "io_clamp_high[2]" 525
-cap "io_analog[6]" "io_analog[6]" 22425
+node "io_analog[0]" 75146 289530 582300 677984 m3 0 0 0 0 0 0 0 0 638000 23276 638000 23276 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 753984 45848 4169814 72994 3021700 23076 18987490 48234 239171304 1010408 0 0 0 0
+node "io_analog[5]" 91242 709819 227594 702300 m5 0 0 0 0 7515792 13724 0 0 452200 26600 580000 21160 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4492000 52920 0 0 986136 58076 2330326 43514 1418274 11390 1418274 11390 1613261534 625798 708121472 300712 0 0
+substrate "io_analog[6]" 0 0 165594 702300 m5 7460712 13708 0 0 0 0 0 0 580000 21160 451520 26560 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4456000 52560 0 0 982498 57862 2306170 42902 1233518 11322 1233518 11322 1538388 11438 1264400000 515760 0 0
 cap "io_analog[4]" "io_analog[4]" 26353.2
-cap "io_clamp_high[0]" "io_analog[4]" 525
-cap "io_analog[5]" "io_analog[5]" 26250
-cap "io_analog[6]" "io_analog[6]" 26250
-cap "io_analog[0]" "io_analog[6]" 6828.4
-cap "io_analog[5]" "io_clamp_high[1]" 525
-cap "io_analog[0]" "io_analog[5]" 7497.73
-cap "io_clamp_low[0]" "io_clamp_high[0]" 525
-cap "io_analog[1]" "io_analog[6]" 6931.03
-cap "io_analog[9]" "io_analog[6]" 42256.7
-cap "io_analog[4]" "io_analog[4]" 21250
-cap "io_analog[6]" "io_analog[6]" 700
-cap "io_analog[6]" "io_analog[6]" 700
-cap "io_analog[1]" "io_analog[5]" 7530.8
-cap "io_analog[9]" "io_analog[5]" 21010
-cap "io_analog[2]" "io_analog[6]" 6828.4
-cap "io_analog[6]" "io_analog[6]" 22425
-cap "io_analog[4]" "io_analog[4]" 26250
-cap "io_analog[2]" "io_analog[5]" 7530.8
-cap "io_analog[6]" "io_analog[6]" 26250
-cap "io_analog[6]" "io_analog[3]" 6800.41
-cap "io_analog[4]" "io_clamp_low[0]" 525
-cap "io_analog[6]" "io_analog[10]" 18776.8
-cap "io_analog[4]" "io_analog[4]" 21449.2
-cap "io_analog[5]" "io_analog[3]" 7530.8
-cap "io_analog[5]" "io_analog[5]" 28025
-cap "io_clamp_low[1]" "io_analog[5]" 525
 cap "io_analog[5]" "io_analog[10]" 75532.5
-cap "big_cap_1/VDD" "big_cap_1/GND" 354.32
+cap "io_analog[5]" "io_analog[5]" 28025
+cap "io_clamp_high[0]" "io_analog[4]" 525
+cap "io_clamp_high[1]" "io_clamp_low[1]" 525
+cap "io_analog[6]" "io_clamp_low[2]" 525
+cap "io_analog[5]" "io_analog[1]" 7530.8
+cap "io_clamp_low[1]" "io_analog[5]" 525
+cap "io_analog[5]" "io_analog[2]" 7530.8
+cap "io_analog[5]" "io_analog[3]" 7530.8
+cap "io_clamp_high[2]" "io_clamp_low[2]" 525
+cap "io_analog[5]" "io_analog[9]" 21010
+cap "io_analog[4]" "io_analog[4]" 21449.2
+cap "io_clamp_high[1]" "io_analog[5]" 525
+cap "io_analog[6]" "io_analog[6]" 700
+cap "io_analog[4]" "io_analog[4]" 26250
+cap "io_analog[6]" "io_analog[6]" 22425
+cap "io_analog[6]" "io_analog[6]" 26250
+cap "io_clamp_high[0]" "io_clamp_low[0]" 525
+cap "io_analog[5]" "io_analog[5]" 22425
+cap "io_analog[5]" "io_analog[5]" 26250
+cap "io_analog[5]" "io_analog[4]" 7530.8
+cap "io_analog[6]" "io_analog[6]" 26250
+cap "io_analog[5]" "io_analog[5]" 700
+cap "io_analog[4]" "io_clamp_low[0]" 525
+cap "io_analog[4]" "io_analog[4]" 21250
+cap "io_analog[6]" "io_clamp_high[2]" 525
+cap "io_analog[5]" "io_analog[0]" 34681.1
+device msubckt sky130_fd_pr__pfet_01v8_lvt 232454 690226 232455 690227 l=200 w=1000 "io_analog[5]" "io_analog[5]" 400 0 "io_analog[5]" 1000 0 "io_analog[0]" 1000 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 232196 690226 232197 690227 l=200 w=1000 "io_analog[5]" "io_analog[5]" 400 0 "io_analog[0]" 1000 0 "io_analog[5]" 1000 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 231938 690226 231939 690227 l=200 w=1000 "io_analog[5]" "io_analog[5]" 400 0 "io_analog[5]" 1000 0 "io_analog[0]" 1000 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 231680 690226 231681 690227 l=200 w=1000 "io_analog[5]" "io_analog[5]" 400 0 "io_analog[0]" 1000 0 "io_analog[5]" 1000 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 231422 690226 231423 690227 l=200 w=1000 "io_analog[5]" "io_analog[5]" 400 0 "io_analog[5]" 1000 0 "io_analog[0]" 1000 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 231164 690226 231165 690227 l=200 w=1000 "io_analog[5]" "io_analog[5]" 400 0 "io_analog[0]" 1000 0 "io_analog[5]" 1000 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 230906 690226 230907 690227 l=200 w=1000 "io_analog[5]" "io_analog[5]" 400 0 "io_analog[5]" 1000 0 "io_analog[0]" 1000 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 230648 690226 230649 690227 l=200 w=1000 "io_analog[5]" "io_analog[5]" 400 0 "io_analog[0]" 1000 0 "io_analog[5]" 1000 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 230390 690226 230391 690227 l=200 w=1000 "io_analog[5]" "io_analog[5]" 400 0 "io_analog[5]" 1000 0 "io_analog[0]" 1000 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 230132 690226 230133 690227 l=200 w=1000 "io_analog[5]" "io_analog[5]" 400 0 "io_analog[0]" 1000 0 "io_analog[5]" 1000 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 229874 690226 229875 690227 l=200 w=1000 "io_analog[5]" "io_analog[5]" 400 0 "io_analog[5]" 1000 0 "io_analog[0]" 1000 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 229616 690226 229617 690227 l=200 w=1000 "io_analog[5]" "io_analog[5]" 400 0 "io_analog[0]" 1000 0 "io_analog[5]" 1000 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 229358 690226 229359 690227 l=200 w=1000 "io_analog[5]" "io_analog[5]" 400 0 "io_analog[5]" 1000 0 "io_analog[0]" 1000 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 229100 690226 229101 690227 l=200 w=1000 "io_analog[5]" "io_analog[5]" 400 0 "io_analog[0]" 1000 0 "io_analog[5]" 1000 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 228842 690226 228843 690227 l=200 w=1000 "io_analog[5]" "io_analog[5]" 400 0 "io_analog[5]" 1000 0 "io_analog[0]" 1000 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 228584 690226 228585 690227 l=200 w=1000 "io_analog[5]" "io_analog[5]" 400 0 "io_analog[0]" 1000 0 "io_analog[5]" 1000 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 228326 690226 228327 690227 l=200 w=1000 "io_analog[5]" "io_analog[5]" 400 0 "io_analog[5]" 1000 0 "io_analog[0]" 1000 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 228068 690226 228069 690227 l=200 w=1000 "io_analog[5]" "io_analog[5]" 400 0 "io_analog[0]" 1000 0 "io_analog[5]" 1000 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 227810 690226 227811 690227 l=200 w=1000 "io_analog[5]" "io_analog[5]" 400 0 "io_analog[5]" 1000 0 "io_analog[0]" 1000 0
+device msubckt sky130_fd_pr__pfet_01v8_lvt 227552 690226 227553 690227 l=200 w=1000 "io_analog[5]" "io_analog[5]" 400 0 "io_analog[0]" 1000 0 "io_analog[5]" 1000 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 170432 690216 170433 690217 l=200 w=1000 "io_analog[6]" "io_analog[6]" 400 0 "io_analog[6]" 1000 0 "io_analog[0]" 1000 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 170174 690216 170175 690217 l=200 w=1000 "io_analog[6]" "io_analog[6]" 400 0 "io_analog[0]" 1000 0 "io_analog[6]" 1000 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 169916 690216 169917 690217 l=200 w=1000 "io_analog[6]" "io_analog[6]" 400 0 "io_analog[6]" 1000 0 "io_analog[0]" 1000 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 169658 690216 169659 690217 l=200 w=1000 "io_analog[6]" "io_analog[6]" 400 0 "io_analog[0]" 1000 0 "io_analog[6]" 1000 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 169400 690216 169401 690217 l=200 w=1000 "io_analog[6]" "io_analog[6]" 400 0 "io_analog[6]" 1000 0 "io_analog[0]" 1000 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 169142 690216 169143 690217 l=200 w=1000 "io_analog[6]" "io_analog[6]" 400 0 "io_analog[0]" 1000 0 "io_analog[6]" 1000 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 168884 690216 168885 690217 l=200 w=1000 "io_analog[6]" "io_analog[6]" 400 0 "io_analog[6]" 1000 0 "io_analog[0]" 1000 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 168626 690216 168627 690217 l=200 w=1000 "io_analog[6]" "io_analog[6]" 400 0 "io_analog[0]" 1000 0 "io_analog[6]" 1000 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 168368 690216 168369 690217 l=200 w=1000 "io_analog[6]" "io_analog[6]" 400 0 "io_analog[6]" 1000 0 "io_analog[0]" 1000 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 168110 690216 168111 690217 l=200 w=1000 "io_analog[6]" "io_analog[6]" 400 0 "io_analog[0]" 1000 0 "io_analog[6]" 1000 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 167852 690216 167853 690217 l=200 w=1000 "io_analog[6]" "io_analog[6]" 400 0 "io_analog[6]" 1000 0 "io_analog[0]" 1000 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 167594 690216 167595 690217 l=200 w=1000 "io_analog[6]" "io_analog[6]" 400 0 "io_analog[0]" 1000 0 "io_analog[6]" 1000 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 167336 690216 167337 690217 l=200 w=1000 "io_analog[6]" "io_analog[6]" 400 0 "io_analog[6]" 1000 0 "io_analog[0]" 1000 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 167078 690216 167079 690217 l=200 w=1000 "io_analog[6]" "io_analog[6]" 400 0 "io_analog[0]" 1000 0 "io_analog[6]" 1000 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 166820 690216 166821 690217 l=200 w=1000 "io_analog[6]" "io_analog[6]" 400 0 "io_analog[6]" 1000 0 "io_analog[0]" 1000 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 166562 690216 166563 690217 l=200 w=1000 "io_analog[6]" "io_analog[6]" 400 0 "io_analog[0]" 1000 0 "io_analog[6]" 1000 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 166304 690216 166305 690217 l=200 w=1000 "io_analog[6]" "io_analog[6]" 400 0 "io_analog[6]" 1000 0 "io_analog[0]" 1000 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 166046 690216 166047 690217 l=200 w=1000 "io_analog[6]" "io_analog[6]" 400 0 "io_analog[0]" 1000 0 "io_analog[6]" 1000 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 165788 690216 165789 690217 l=200 w=1000 "io_analog[6]" "io_analog[6]" 400 0 "io_analog[6]" 1000 0 "io_analog[0]" 1000 0
+device msubckt sky130_fd_pr__nfet_01v8_lvt 165530 690216 165531 690217 l=200 w=1000 "io_analog[6]" "io_analog[6]" 400 0 "io_analog[0]" 1000 0 "io_analog[6]" 1000 0
+cap "big_cap_1/GND" "big_cap_1/VDD" 354.32
 cap "big_cap_1/VDD" "big_cap_1/GND" 683.92
-cap "big_cap_1/GND" "big_cap_1/VDD" 114.625
 cap "big_cap_1/VDD" "big_cap_1/GND" 457.625
+cap "big_cap_1/GND" "big_cap_1/VDD" 114.625
+cap "big_cap_1/VDD" "big_cap_1/GND" 301
 cap "big_cap_1/VDD" "big_cap_1/GND" 581
+cap "big_cap_1/VDD" "big_cap_1/GND" 581
+cap "big_cap_1/VDD" "big_cap_1/GND" 301
+cap "big_cap_1/GND" "big_cap_1/VDD" 301
+cap "big_cap_1/GND" "big_cap_1/VDD" 581
+cap "big_cap_1/GND" "big_cap_1/VDD" 301
+cap "big_cap_1/GND" "big_cap_1/VDD" 581
+cap "big_cap_1/GND" "big_cap_1/VDD" 581
+cap "big_cap_1/GND" "big_cap_1/VDD" 301
+cap "big_cap_1/VDD" "big_cap_1/GND" 581
+cap "big_cap_1/GND" "big_cap_1/VDD" 301
+cap "big_cap_1/GND" "big_cap_1/VDD" 581
+cap "big_cap_1/GND" "big_cap_1/VDD" 301
+cap "big_cap_1/VDD" "big_cap_1/GND" 581
+cap "big_cap_1/VDD" "big_cap_1/GND" 301
+cap "big_cap_1/VDD" "big_cap_1/GND" 581
+cap "big_cap_1/VDD" "big_cap_1/GND" 301
 cap "big_cap_1/VDD" "big_cap_1/GND" 301
 cap "big_cap_1/VDD" "big_cap_1/GND" 581
 cap "big_cap_1/GND" "big_cap_1/VDD" 301
 cap "big_cap_1/GND" "big_cap_1/VDD" 581
 cap "big_cap_1/VDD" "big_cap_1/GND" 301
-cap "big_cap_1/VDD" "big_cap_1/GND" 581
-cap "big_cap_1/GND" "big_cap_1/VDD" 301
-cap "big_cap_1/GND" "big_cap_1/VDD" 581
-cap "big_cap_1/VDD" "big_cap_1/GND" 301
-cap "big_cap_1/GND" "big_cap_1/VDD" 581
-cap "big_cap_1/GND" "big_cap_1/VDD" 301
-cap "big_cap_1/VDD" "big_cap_1/GND" 581
-cap "big_cap_1/GND" "big_cap_1/VDD" 301
-cap "big_cap_1/VDD" "big_cap_1/GND" 301
-cap "big_cap_1/VDD" "big_cap_1/GND" 581
-cap "big_cap_1/VDD" "big_cap_1/GND" 301
-cap "big_cap_1/VDD" "big_cap_1/GND" 581
-cap "big_cap_1/GND" "big_cap_1/VDD" 581
-cap "big_cap_1/VDD" "big_cap_1/GND" 301
-cap "big_cap_1/VDD" "big_cap_1/GND" 301
-cap "big_cap_1/VDD" "big_cap_1/GND" 581
-cap "big_cap_1/GND" "big_cap_1/VDD" 301
-cap "big_cap_1/VDD" "big_cap_1/GND" 581
-cap "big_cap_1/VDD" "big_cap_1/GND" 301
-cap "big_cap_1/VDD" "big_cap_1/GND" 581
-cap "big_cap_1/VDD" "big_cap_1/GND" 301
-cap "big_cap_1/GND" "big_cap_1/VDD" 581
-cap "big_cap_1/GND" "big_cap_1/VDD" 301
-cap "big_cap_1/VDD" "big_cap_1/GND" 581
-cap "big_cap_1/VDD" "big_cap_1/GND" 581
-cap "big_cap_1/GND" "big_cap_1/VDD" 301
-cap "big_cap_1/VDD" "big_cap_1/GND" 581
-cap "big_cap_1/GND" "big_cap_1/VDD" 301
-cap "big_cap_1/VDD" "big_cap_1/GND" 581
-cap "big_cap_1/GND" "big_cap_1/VDD" 301
-cap "big_cap_1/GND" "big_cap_1/VDD" 301
-cap "big_cap_1/GND" "big_cap_1/VDD" 581
-cap "big_cap_1/GND" "big_cap_1/VDD" 301
 cap "big_cap_1/GND" "big_cap_1/VDD" 581
 cap "big_cap_1/VDD" "big_cap_1/GND" 301
 cap "big_cap_1/VDD" "big_cap_1/GND" 581
 cap "big_cap_1/VDD" "big_cap_1/GND" 581
 cap "big_cap_1/GND" "big_cap_1/VDD" 301
+cap "big_cap_1/VDD" "big_cap_1/GND" 301
+cap "big_cap_1/VDD" "big_cap_1/GND" 581
+cap "big_cap_1/GND" "big_cap_1/VDD" 581
+cap "big_cap_1/GND" "big_cap_1/VDD" 301
+cap "big_cap_1/VDD" "big_cap_1/GND" 581
+cap "big_cap_1/VDD" "big_cap_1/GND" 301
+cap "big_cap_1/GND" "big_cap_1/VDD" 581
+cap "big_cap_1/GND" "big_cap_1/VDD" 301
+cap "big_cap_1/VDD" "big_cap_1/GND" 301
+cap "big_cap_1/VDD" "big_cap_1/GND" 581
+cap "big_cap_1/VDD" "big_cap_1/GND" 301
+cap "big_cap_1/GND" "big_cap_1/VDD" 581
+cap "big_cap_1/VDD" "big_cap_1/GND" 581
+cap "big_cap_1/VDD" "big_cap_1/GND" 301
 cap "big_cap_1/VDD" "big_cap_1/GND" 581
 cap "big_cap_1/VDD" "big_cap_1/GND" 301
 cap "big_cap_1/GND" "big_cap_1/VDD" 581
 cap "big_cap_1/GND" "big_cap_1/VDD" 301
 cap "big_cap_1/VDD" "big_cap_1/GND" 581
-cap "big_cap_1/VDD" "big_cap_1/GND" 301
-cap "big_cap_1/GND" "big_cap_1/VDD" 301
-cap "big_cap_1/GND" "big_cap_1/VDD" 581
-cap "big_cap_1/VDD" "big_cap_1/GND" 581
-cap "big_cap_1/GND" "big_cap_1/VDD" 301
-cap "big_cap_1/VDD" "big_cap_1/GND" 301
-cap "big_cap_1/GND" "big_cap_1/VDD" 581
 cap "big_cap_1/GND" "big_cap_1/VDD" 301
 cap "big_cap_1/VDD" "big_cap_1/GND" 581
+cap "big_cap_1/VDD" "big_cap_1/GND" 301
+cap "big_cap_1/VDD" "big_cap_1/GND" 581
+cap "big_cap_1/GND" "big_cap_1/VDD" 301
+cap "big_cap_1/VDD" "big_cap_1/GND" 581
+cap "big_cap_1/VDD" "big_cap_1/GND" 301
+cap "big_cap_1/GND" "big_cap_1/VDD" 581
+cap "big_cap_1/VDD" "big_cap_1/GND" 301
 cap "big_cap_1/GND" "big_cap_1/VDD" 581
 cap "big_cap_1/GND" "big_cap_1/VDD" 301
+cap "big_cap_1/GND" "big_cap_1/VDD" 581
+cap "big_cap_1/VDD" "big_cap_1/GND" 301
 cap "big_cap_1/GND" "big_cap_1/VDD" 99.76
-cap "big_cap_1/GND" "big_cap_1/VDD" 365.2
-cap "big_cap_1/GND" "big_cap_1/VDD" 313.04
+cap "big_cap_1/VDD" "big_cap_1/GND" 365.2
+cap "big_cap_1/VDD" "big_cap_1/GND" 313.04
 cap "big_cap_1/GND" "big_cap_1/VDD" 604.24
 cap "big_cap_1/VDD" "big_cap_1/GND" 204.25
 cap "big_cap_1/VDD" "big_cap_1/GND" 394.25
+cap "big_cap_1/GND" "big_cap_1/VDD" -111.825
 cap "big_cap_1/VDD" "big_cap_1/GND" -74.025
-cap "big_cap_1/VDD" "big_cap_1/GND" -111.825
-cap "big_cap_1/VDD" "big_cap_1/GND" -215.8
-cap "big_cap_1/VDD" "big_cap_1/GND" -223.6
+cap "big_cap_1/GND" "big_cap_1/VDD" -215.8
+cap "big_cap_1/GND" "big_cap_1/VDD" -223.6
 cap "big_cap_1/VDD" "big_cap_1/GND" 301
-cap "big_cap_1/VDD" "big_cap_1/GND" 581
+cap "big_cap_1/GND" "big_cap_1/VDD" 581
+cap "big_cap_1/GND" "big_cap_1/VDD" 208.33
 cap "big_cap_1/GND" "big_cap_1/VDD" 107.93
-cap "big_cap_1/VDD" "big_cap_1/GND" 208.33
-cap "big_cap_1/GND" "big_cap_1/VDD" -241.75
 cap "big_cap_1/GND" "big_cap_1/VDD" -243.27
+cap "big_cap_1/GND" "big_cap_1/VDD" -241.75
 cap "big_cap_1/GND" "big_cap_1/VDD" -318.01
-cap "big_cap_1/GND" "big_cap_1/VDD" -346.97
-cap "big_cap_1/VDD" "big_cap_1/GND" -88.39
+cap "big_cap_1/VDD" "big_cap_1/GND" -346.97
 cap "big_cap_1/GND" "big_cap_1/VDD" 9.93
-cap "big_cap_1/GND" "big_cap_1/VDD" 320.07
+cap "big_cap_1/VDD" "big_cap_1/GND" -88.39
 cap "big_cap_1/GND" "big_cap_1/GND" 190.68
-cap "big_cap_1/GND" "big_cap_1/VDD" -217.875
+cap "big_cap_1/GND" "big_cap_1/VDD" 320.07
+cap "big_cap_1/VDD" "big_cap_1/GND" -217.875
 cap "big_cap_1/GND" "big_cap_1/GND" -141.75
 cap "big_cap_1/VDD" "big_cap_1/GND" 251.45
 cap "big_cap_1/GND" "big_cap_1/GND" 149.8
-cap "big_cap_1/GND" "big_cap_1/GND" 36.31
 cap "big_cap_1/GND" "big_cap_1/VDD" 61.675
-cap "big_cap_1/VDD" "big_cap_1/GND" 203.98
+cap "big_cap_1/GND" "big_cap_1/GND" 36.31
+cap "big_cap_1/GND" "big_cap_1/VDD" 203.98
 cap "big_cap_1/GND" "big_cap_1/VDD" -130.725
-cap "top_0/GND" "top_0/Vout_p" -22.72
-cap "top_0/Vout_p" "top_0/GND" 70.99
+cap "top_0/Vout_p" "top_0/GND" -22.72
+cap "top_0/GND" "top_0/Vout_p" 70.99
 cap "top_0/Vout_n" "top_0/GND" -104.8
 cap "big_cap_1/VDD" "big_cap_1/GND" 101.05
-cap "big_cap_1/VDD" "big_cap_1/GND" -87.15
-cap "big_cap_1/VDD" "big_cap_1/GND" 215.8
+cap "big_cap_1/GND" "big_cap_1/VDD" -87.15
 cap "big_cap_1/VDD" "big_cap_1/GND" 111.8
-cap "big_cap_1/GND" "big_cap_1/VDD" -241.75
+cap "big_cap_1/VDD" "big_cap_1/GND" 215.8
 cap "big_cap_1/GND" "big_cap_1/VDD" -243.27
-cap "big_cap_1/GND" "big_cap_1/VDD" -318.01
+cap "big_cap_1/GND" "big_cap_1/VDD" -241.75
 cap "big_cap_1/GND" "big_cap_1/VDD" -346.97
+cap "big_cap_1/VDD" "big_cap_1/GND" -318.01
 cap "big_cap_1/VDD" "big_cap_1/GND" -116.77
 cap "big_cap_1/VDD" "big_cap_1/GND" -44.85
-cap "big_cap_1/GND" "big_cap_1/VDD" 581
-cap "big_cap_1/VDD" "big_cap_1/GND" 301
-cap "big_cap_1/GND" "big_cap_1/VDD" -149.1
-cap "big_cap_1/VDD" "big_cap_1/GND" -98.7
-cap "big_cap_1/VDD" "big_cap_1/GND" -201.24
-cap "big_cap_1/VDD" "big_cap_1/GND" -172.64
-cap "big_cap_1/VDD" "big_cap_1/GND" 301
 cap "big_cap_1/VDD" "big_cap_1/GND" 581
-cap "big_cap_1/GND" "big_cap_1/VDD" 581
 cap "big_cap_1/GND" "big_cap_1/VDD" 301
-cap "big_cap_1/VDD" "big_cap_1/GND" -123.375
-cap "big_cap_1/VDD" "big_cap_1/GND" -186.375
-cap "big_cap_1/GND" "big_cap_1/VDD" -223.6
-cap "big_cap_1/GND" "big_cap_1/VDD" -215.8
-cap "big_cap_1/VDD" "big_cap_1/GND" 301
-cap "big_cap_1/GND" "big_cap_1/VDD" 581
+cap "big_cap_1/GND" "big_cap_1/VDD" -98.7
+cap "big_cap_1/GND" "big_cap_1/VDD" -149.1
+cap "big_cap_1/VDD" "big_cap_1/GND" -201.24
+cap "big_cap_1/GND" "big_cap_1/VDD" -172.64
 cap "big_cap_1/VDD" "big_cap_1/GND" 581
+cap "big_cap_1/GND" "big_cap_1/VDD" 301
 cap "big_cap_1/VDD" "big_cap_1/GND" 301
+cap "big_cap_1/VDD" "big_cap_1/GND" 581
 cap "big_cap_1/VDD" "big_cap_1/GND" -123.375
 cap "big_cap_1/VDD" "big_cap_1/GND" -186.375
 cap "big_cap_1/VDD" "big_cap_1/GND" -215.8
-cap "big_cap_1/VDD" "big_cap_1/GND" -201.24
-cap "big_cap_1/GND" "big_cap_1/VDD" 581
-cap "big_cap_1/GND" "big_cap_1/VDD" 301
-cap "big_cap_1/GND" "big_cap_1/VDD" 59.555
-cap "big_cap_1/GND" "big_cap_1/VDD" 114.955
-cap "big_cap_1/VDD" "big_cap_1/GND" -37.275
-cap "big_cap_1/VDD" "big_cap_1/GND" -24.675
-cap "big_cap_1/VDD" "big_cap_1/GND" -43.16
-cap "big_cap_1/VDD" "big_cap_1/GND" -44.72
-cap "big_cap_1/VDD" "big_cap_1/GND" 59.555
-cap "big_cap_1/GND" "big_cap_1/VDD" 114.955
-cap "big_cap_1/VDD" "big_cap_1/GND" 136.95
-cap "big_cap_1/VDD" "big_cap_1/GND" 70.95
-cap "big_cap_1/GND" "big_cap_1/VDD" -24.675
-cap "big_cap_1/GND" "big_cap_1/VDD" -37.275
-cap "big_cap_1/VDD" "big_cap_1/GND" -67.08
-cap "big_cap_1/VDD" "big_cap_1/GND" -43.16
-cap "big_cap_1/GND" "big_cap_1/VDD" 70.95
-cap "big_cap_1/VDD" "big_cap_1/GND" 136.95
-cap "big_cap_1/GND" "big_cap_1/VDD" 581
-cap "big_cap_1/VDD" "big_cap_1/GND" 301
-cap "big_cap_1/VDD" "big_cap_1/GND" -98.7
-cap "big_cap_1/VDD" "big_cap_1/GND" -149.1
-cap "big_cap_1/GND" "big_cap_1/VDD" -201.24
-cap "big_cap_1/VDD" "big_cap_1/GND" -172.64
-cap "big_cap_1/GND" "big_cap_1/VDD" 301
-cap "big_cap_1/GND" "big_cap_1/VDD" 581
-cap "big_cap_1/VDD" "big_cap_1/GND" 193.5
-cap "big_cap_1/VDD" "big_cap_1/GND" 373.5
-cap "big_cap_1/VDD" "big_cap_1/GND" 118.375
-cap "big_cap_1/GND" "big_cap_1/VDD" 56.895
-cap "big_cap_1/GND" "big_cap_1/VDD" -215.8
 cap "big_cap_1/GND" "big_cap_1/VDD" -223.6
 cap "big_cap_1/GND" "big_cap_1/VDD" 581
 cap "big_cap_1/GND" "big_cap_1/VDD" 301
+cap "big_cap_1/VDD" "big_cap_1/GND" 581
+cap "big_cap_1/VDD" "big_cap_1/GND" 301
+cap "big_cap_1/GND" "big_cap_1/VDD" -186.375
+cap "big_cap_1/GND" "big_cap_1/VDD" -123.375
+cap "big_cap_1/VDD" "big_cap_1/GND" -215.8
+cap "big_cap_1/VDD" "big_cap_1/GND" -201.24
 cap "big_cap_1/VDD" "big_cap_1/GND" 301
 cap "big_cap_1/VDD" "big_cap_1/GND" 581
-cap "big_cap_1/VDD" "big_cap_1/GND" -186.375
-cap "big_cap_1/VDD" "big_cap_1/GND" -123.375
+cap "big_cap_1/VDD" "big_cap_1/GND" 114.955
+cap "big_cap_1/GND" "big_cap_1/VDD" 59.555
+cap "big_cap_1/GND" "big_cap_1/VDD" -37.275
+cap "big_cap_1/GND" "big_cap_1/VDD" -24.675
+cap "big_cap_1/VDD" "big_cap_1/GND" -43.16
+cap "big_cap_1/VDD" "big_cap_1/GND" -44.72
+cap "big_cap_1/GND" "big_cap_1/VDD" 59.555
+cap "big_cap_1/GND" "big_cap_1/VDD" 114.955
+cap "big_cap_1/GND" "big_cap_1/VDD" 70.95
+cap "big_cap_1/GND" "big_cap_1/VDD" 136.95
+cap "big_cap_1/VDD" "big_cap_1/GND" -24.675
+cap "big_cap_1/VDD" "big_cap_1/GND" -37.275
+cap "big_cap_1/GND" "big_cap_1/VDD" -43.16
+cap "big_cap_1/VDD" "big_cap_1/GND" -67.08
+cap "big_cap_1/GND" "big_cap_1/VDD" 70.95
+cap "big_cap_1/GND" "big_cap_1/VDD" 136.95
+cap "big_cap_1/VDD" "big_cap_1/GND" 581
+cap "big_cap_1/GND" "big_cap_1/VDD" 301
+cap "big_cap_1/GND" "big_cap_1/VDD" -149.1
+cap "big_cap_1/VDD" "big_cap_1/GND" -98.7
+cap "big_cap_1/GND" "big_cap_1/VDD" -201.24
+cap "big_cap_1/VDD" "big_cap_1/GND" -172.64
+cap "big_cap_1/GND" "big_cap_1/VDD" 581
+cap "big_cap_1/GND" "big_cap_1/VDD" 301
+cap "big_cap_1/GND" "big_cap_1/VDD" 193.5
+cap "big_cap_1/GND" "big_cap_1/VDD" 373.5
+cap "big_cap_1/GND" "big_cap_1/VDD" 118.375
+cap "big_cap_1/VDD" "big_cap_1/GND" 56.895
+cap "big_cap_1/GND" "big_cap_1/VDD" -223.6
+cap "big_cap_1/GND" "big_cap_1/VDD" -215.8
+cap "big_cap_1/GND" "big_cap_1/VDD" 581
+cap "big_cap_1/GND" "big_cap_1/VDD" 301
+cap "big_cap_1/GND" "big_cap_1/VDD" 301
+cap "big_cap_1/VDD" "big_cap_1/GND" 581
+cap "big_cap_1/GND" "big_cap_1/VDD" -123.375
+cap "big_cap_1/GND" "big_cap_1/VDD" -186.375
 cap "big_cap_1/GND" "big_cap_1/VDD" -201.24
 cap "big_cap_1/GND" "big_cap_1/VDD" -215.8
 cap "big_cap_1/GND" "big_cap_1/VDD" 581
 cap "big_cap_1/VDD" "big_cap_1/GND" 301
 cap "big_cap_1/GND" "big_cap_1/VDD" 99.975
-cap "big_cap_1/VDD" "big_cap_1/GND" 192.975
-cap "big_cap_1/GND" "big_cap_1/VDD" -74.55
+cap "big_cap_1/GND" "big_cap_1/VDD" 192.975
 cap "big_cap_1/GND" "big_cap_1/VDD" -49.35
-cap "big_cap_1/VDD" "big_cap_1/GND" -89.44
+cap "big_cap_1/GND" "big_cap_1/VDD" -74.55
+cap "big_cap_1/GND" "big_cap_1/VDD" -89.44
 cap "big_cap_1/VDD" "big_cap_1/GND" -86.32
-cap "big_cap_1/VDD" "big_cap_1/GND" 193.39
+cap "big_cap_1/GND" "big_cap_1/VDD" 193.39
 cap "big_cap_1/GND" "big_cap_1/VDD" 100.19
-cap "big_cap_1/GND" "big_cap_1/VDD" 122.2
 cap "big_cap_1/GND" "big_cap_1/GND" 72.8
+cap "big_cap_1/GND" "big_cap_1/VDD" 122.2
 cap "big_cap_1/GND" "big_cap_1/GND" -178.06
 cap "big_cap_1/GND" "big_cap_1/VDD" -279.55
-cap "big_cap_1/VDD" "big_cap_1/GND" 329
 cap "big_cap_1/GND" "big_cap_1/GND" 196
-cap "big_cap_1/VDD" "big_cap_1/GND" -174.3
+cap "big_cap_1/VDD" "big_cap_1/GND" 329
+cap "big_cap_1/GND" "big_cap_1/VDD" -174.3
 cap "big_cap_1/GND" "big_cap_1/GND" -113.4
 cap "big_cap_1/GND" "big_cap_1/VDD" 106.22
 cap "big_cap_1/GND" "big_cap_1/VDD" 105.28
+cap "big_cap_1/VDD" "big_cap_1/GND" -87.15
 cap "big_cap_1/GND" "big_cap_1/VDD" -87.15
-cap "big_cap_1/GND" "big_cap_1/VDD" -87.15
-cap "big_cap_1/GND" "big_cap_1/VDD" 329
+cap "big_cap_1/VDD" "big_cap_1/GND" 329
 cap "big_cap_1/GND" "big_cap_1/GND" 196
 cap "big_cap_1/GND" "big_cap_1/GND" -113.4
 cap "big_cap_1/GND" "big_cap_1/VDD" -174.3
-cap "big_cap_1/GND" "big_cap_1/GND" 39.2
-cap "big_cap_1/VDD" "big_cap_1/GND" 501.55
-cap "big_cap_1/VDD" "big_cap_1/GND" 225.75
-cap "big_cap_1/GND" "big_cap_1/GND" -28.35
-cap "big_cap_1/VDD" "big_cap_1/GND" -111.825
-cap "big_cap_1/VDD" "big_cap_1/GND" -117.6
-cap "big_cap_1/VDD" "big_cap_1/GND" -156.52
-cap "big_cap_1/GND" "big_cap_1/VDD" -129.48
 cap "big_cap_1/GND" "big_cap_1/VDD" 225.75
+cap "big_cap_1/VDD" "big_cap_1/GND" 501.55
+cap "big_cap_1/GND" "big_cap_1/GND" 39.2
+cap "big_cap_1/GND" "big_cap_1/VDD" -111.825
+cap "big_cap_1/GND" "big_cap_1/VDD" -117.6
+cap "big_cap_1/GND" "big_cap_1/GND" -28.35
+cap "big_cap_1/GND" "big_cap_1/VDD" -156.52
+cap "big_cap_1/GND" "big_cap_1/VDD" -129.48
 cap "big_cap_1/GND" "big_cap_1/VDD" 435.75
+cap "big_cap_1/VDD" "big_cap_1/GND" 225.75
 cap "big_cap_1/VDD" "big_cap_1/GND" 301
 cap "big_cap_1/VDD" "big_cap_1/GND" 581
-cap "big_cap_1/GND" "big_cap_1/VDD" -186.375
 cap "big_cap_1/VDD" "big_cap_1/GND" -123.375
-cap "big_cap_1/GND" "big_cap_1/VDD" -215.8
-cap "big_cap_1/GND" "big_cap_1/VDD" -223.6
-cap "big_cap_1/VDD" "big_cap_1/GND" 301
+cap "big_cap_1/VDD" "big_cap_1/GND" -186.375
+cap "big_cap_1/VDD" "big_cap_1/GND" -223.6
+cap "big_cap_1/VDD" "big_cap_1/GND" -215.8
 cap "big_cap_1/VDD" "big_cap_1/GND" 581
-cap "big_cap_1/VDD" "big_cap_1/GND" 148.35
+cap "big_cap_1/VDD" "big_cap_1/GND" 301
 cap "big_cap_1/VDD" "big_cap_1/GND" 286.35
+cap "big_cap_1/GND" "big_cap_1/VDD" 148.35
 cap "big_cap_1/VDD" "big_cap_1/GND" -74.025
 cap "big_cap_1/VDD" "big_cap_1/GND" -111.825
-cap "big_cap_1/GND" "big_cap_1/VDD" -215.8
+cap "big_cap_1/VDD" "big_cap_1/GND" -215.8
 cap "big_cap_1/GND" "big_cap_1/VDD" -201.24
+cap "big_cap_1/GND" "big_cap_1/VDD" 581
 cap "big_cap_1/VDD" "big_cap_1/GND" 301
-cap "big_cap_1/VDD" "big_cap_1/GND" 581
-cap "big_cap_1/VDD" "big_cap_1/GND" 475.59
 cap "big_cap_1/VDD" "big_cap_1/GND" 246.39
-cap "big_cap_1/GND" "big_cap_1/VDD" -149.1
-cap "big_cap_1/GND" "big_cap_1/VDD" -98.7
-cap "big_cap_1/VDD" "big_cap_1/GND" -178.88
+cap "big_cap_1/VDD" "big_cap_1/GND" 475.59
+cap "big_cap_1/VDD" "big_cap_1/GND" -98.7
+cap "big_cap_1/VDD" "big_cap_1/GND" -149.1
+cap "big_cap_1/GND" "big_cap_1/VDD" -178.88
 cap "big_cap_1/GND" "big_cap_1/VDD" -172.64
-cap "big_cap_1/GND" "big_cap_1/VDD" 246.39
+cap "big_cap_1/VDD" "big_cap_1/GND" 246.39
 cap "big_cap_1/VDD" "big_cap_1/GND" 475.59
 cap "top_0/Iin_p" "top_0/Iin_p" 57.4
 cap "top_0/Iin_p" "top_0/Vinp" 96.35
-cap "top_0/Iin_p" "top_0/Vinp" -10.375
 cap "top_0/Iin_p" "top_0/Iin_p" -6.75
-cap "top_0/Iin_n" "top_0/Vinn" 96.35
+cap "top_0/Vinp" "top_0/Iin_p" -10.375
 cap "top_0/Iin_n" "top_0/Iin_n" 57.4
+cap "top_0/Vinn" "top_0/Iin_n" 96.35
 cap "top_0/Iin_p" "top_0/Iin_p" 196
 cap "top_0/Iin_p" "top_0/Vinp" 329
-cap "top_0/Vinp" "top_0/Iin_p" -51.875
+cap "top_0/Iin_p" "top_0/Vinp" -51.875
 cap "top_0/Iin_p" "top_0/Iin_p" -33.75
-cap "top_0/Vinn" "top_0/Iin_n" 329
+cap "top_0/Iin_n" "top_0/Vinn" 329
 cap "top_0/Iin_n" "top_0/Iin_n" 196
 cap "top_0/Iin_p" "top_0/Vinp" 105.75
 cap "top_0/Iin_p" "top_0/Vinp" -20.75
-cap "top_0/Vinn" "top_0/Iin_n" 105.75
+cap "top_0/Iin_n" "top_0/Vinn" 105.75
 merge "top_0/Vb5" "io_analog[3]" -6421.13 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -10112000 -15000 -159840 -4188 0 0 0 0
 merge "top_0/Vout_p" "io_analog[9]" -5635.05 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3017800 -16180 2480783 -9066 0 0 0 0
-merge "top_0/VSUBS" "big_cap_1/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-merge "big_cap_1/VSUBS" "VSUBS"
-merge "top_0/GND" "big_cap_1/GND" -155018 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -25000000 -30000 -25000000 -30000 -493674591 -324110 0 0
-merge "big_cap_1/GND" "io_analog[6]"
+merge "top_0/GND" "top_0/VSUBS" -155018 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -25000000 -30000 -25000000 -30000 -493674591 -324110 0 0
+merge "top_0/VSUBS" "big_cap_1/GND"
+merge "big_cap_1/GND" "big_cap_1/VSUBS"
+merge "big_cap_1/VSUBS" "io_analog[6]"
 merge "top_0/VDD" "big_cap_1/VDD" -281309 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -25000000 -30000 -873027640 -435735 -46819035 -60023 0 0
 merge "big_cap_1/VDD" "io_analog[5]"
 merge "top_0/Vb4_" "io_analog[0]" -6668.4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9817300 -15000 1386320 -4248 0 0 0 0

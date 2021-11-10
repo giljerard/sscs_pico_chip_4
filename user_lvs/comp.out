@@ -286,6 +286,7 @@ Iin_p                                      |Iin_p
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes top and top are equivalent.
+Equate elements:  no current cell.
 
 Cell user_analog_project_wrapper disconnected node: gpio_analog[0]
 Cell user_analog_project_wrapper disconnected node: gpio_analog[10]
@@ -1598,7 +1599,9 @@ Circuit 1: user_analog_project_wrapper     |Circuit 2: user_analog_project_wrapp
 -------------------------------------------|-------------------------------------------
 big_cap (1)                                |big_cap (1)                                
 top (1)                                    |top (1)                                    
-Number of devices: 2                       |Number of devices: 2                       
+sky130_fd_pr__nfet_01v8_lvt (1)            |sky130_fd_pr__nfet_01v8_lvt (1)            
+sky130_fd_pr__pfet_01v8_lvt (1)            |sky130_fd_pr__pfet_01v8_lvt (1)            
+Number of devices: 4                       |Number of devices: 4                       
 Number of nets: 11                         |Number of nets: 11                         
 ---------------------------------------------------------------------------------------
 Circuits match uniquely.
@@ -1607,12 +1610,12 @@ Netlists match uniquely.
 Subcircuit pins:
 Circuit 1: user_analog_project_wrapper     |Circuit 2: user_analog_project_wrapper     
 -------------------------------------------|-------------------------------------------
+io_analog[0]                               |io_analog[0]                               
 io_analog[8]                               |io_analog[8]                               
 io_analog[7]                               |io_analog[7]                               
 io_analog[2]                               |io_analog[2]                               
 io_analog[4]                               |io_analog[4]                               
 io_analog[1]                               |io_analog[1]                               
-io_analog[0]                               |io_analog[0]                               
 io_analog[3]                               |io_analog[3]                               
 io_analog[10]                              |io_analog[10]                              
 io_analog[9]                               |io_analog[9]                               
