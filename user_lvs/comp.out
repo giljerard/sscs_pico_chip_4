@@ -228,6 +228,28 @@ GND                                        |GND
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes mirror_1 and mirror_1 are equivalent.
+Class big_cap:  Merged 30 devices.
+Class big_cap:  Merged 30 devices.
+
+Subcircuit summary:
+Circuit 1: big_cap                         |Circuit 2: big_cap                         
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__cap_mim_m3_2 (1)             |sky130_fd_pr__cap_mim_m3_2 (1)             
+sky130_fd_pr__cap_mim_m3_1 (1)             |sky130_fd_pr__cap_mim_m3_1 (1)             
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 2                          |Number of nets: 2                          
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: big_cap                         |Circuit 2: big_cap                         
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+GND                                        |GND                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes big_cap and big_cap are equivalent.
 
 Subcircuit summary:
 Circuit 1: top                             |Circuit 2: top                             
@@ -264,28 +286,6 @@ Iin_p                                      |Iin_p
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes top and top are equivalent.
-Class big_cap:  Merged 30 devices.
-Class big_cap:  Merged 30 devices.
-
-Subcircuit summary:
-Circuit 1: big_cap                         |Circuit 2: big_cap                         
--------------------------------------------|-------------------------------------------
-sky130_fd_pr__cap_mim_m3_2 (1)             |sky130_fd_pr__cap_mim_m3_2 (1)             
-sky130_fd_pr__cap_mim_m3_1 (1)             |sky130_fd_pr__cap_mim_m3_1 (1)             
-Number of devices: 2                       |Number of devices: 2                       
-Number of nets: 2                          |Number of nets: 2                          
----------------------------------------------------------------------------------------
-Circuits match uniquely.
-Netlists match uniquely.
-
-Subcircuit pins:
-Circuit 1: big_cap                         |Circuit 2: big_cap                         
--------------------------------------------|-------------------------------------------
-VDD                                        |VDD                                        
-GND                                        |GND                                        
----------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
-Device classes big_cap and big_cap are equivalent.
 
 Cell user_analog_project_wrapper disconnected node: gpio_analog[0]
 Cell user_analog_project_wrapper disconnected node: gpio_analog[10]
@@ -1596,8 +1596,8 @@ Cell user_analog_project_wrapper disconnected node: la_oenb[0]
 Subcircuit summary:
 Circuit 1: user_analog_project_wrapper     |Circuit 2: user_analog_project_wrapper     
 -------------------------------------------|-------------------------------------------
-top (1)                                    |top (1)                                    
 big_cap (1)                                |big_cap (1)                                
+top (1)                                    |top (1)                                    
 Number of devices: 2                       |Number of devices: 2                       
 Number of nets: 11                         |Number of nets: 11                         
 ---------------------------------------------------------------------------------------
@@ -1607,17 +1607,17 @@ Netlists match uniquely.
 Subcircuit pins:
 Circuit 1: user_analog_project_wrapper     |Circuit 2: user_analog_project_wrapper     
 -------------------------------------------|-------------------------------------------
-io_analog[6]                               |io_analog[6]                               
-io_analog[5]                               |io_analog[5]                               
+io_analog[8]                               |io_analog[8]                               
+io_analog[7]                               |io_analog[7]                               
 io_analog[2]                               |io_analog[2]                               
 io_analog[4]                               |io_analog[4]                               
 io_analog[1]                               |io_analog[1]                               
 io_analog[0]                               |io_analog[0]                               
 io_analog[3]                               |io_analog[3]                               
-io_analog[8]                               |io_analog[8]                               
-io_analog[7]                               |io_analog[7]                               
-io_analog[9]                               |io_analog[9]                               
 io_analog[10]                              |io_analog[10]                              
+io_analog[9]                               |io_analog[9]                               
+io_analog[5]                               |io_analog[5]                               
+io_analog[6]                               |io_analog[6]                               
 gpio_analog[0]                             |gpio_analog[0]                             
 gpio_analog[10]                            |gpio_analog[10]                            
 gpio_analog[11]                            |gpio_analog[11]                            

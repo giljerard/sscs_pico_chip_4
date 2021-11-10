@@ -29,7 +29,7 @@ cap "Vin_p" "Vin_n" 19.2857
 cap "sf_half_1/g_u" "sf_half_0/g_u" 182.893
 cap "sf_half_0/g_u" "sf_half_1/g_u" 182.893
 cap "sf_half_0/g_u" "sf_half_1/g_u" 166.857
-cap "sf_half_0/g_u" "sf_half_1/g_u" 166.857
+cap "sf_half_1/g_u" "sf_half_0/g_u" 166.857
 cap "sf_half_1/g_u" "sf_half_0/g_u" 183.696
 cap "sf_half_1/g_u" "sf_half_0/g_u" 183.696
 merge "sf_half_0/GND" "sf_half_1/GND" -1602 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -320000 -6800 0 0 0 0 0 0 0 0 0 0
