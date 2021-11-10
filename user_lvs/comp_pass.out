@@ -27,6 +27,8 @@ VDD                                        |VDD
 Cell pin lists are equivalent.
 Device classes cmfb_half and cmfb_half are equivalent.
 Equate elements:  no current cell.
+Equate elements:  no current cell.
+Equate elements:  no current cell.
 
 Subcircuit summary:
 Circuit 1: sf_half                         |Circuit 2: sf_half                         
@@ -50,8 +52,6 @@ g_d                                        |g_d
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sf_half and sf_half are equivalent.
-Equate elements:  no current cell.
-Equate elements:  no current cell.
 
 Subcircuit summary:
 Circuit 1: core_half                       |Circuit 2: core_half                       
@@ -105,6 +105,29 @@ Cell pin lists are equivalent.
 Device classes cmfb and cmfb are equivalent.
 
 Subcircuit summary:
+Circuit 1: mirror_4                        |Circuit 2: mirror_4                        
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__cap_mim_m3_1 (1)             |sky130_fd_pr__cap_mim_m3_1 (1)             
+sky130_fd_pr__cap_mim_m3_2 (1)             |sky130_fd_pr__cap_mim_m3_2 (1)             
+sky130_fd_pr__nfet_01v8 (3)                |sky130_fd_pr__nfet_01v8 (3)                
+sky130_fd_pr__res_xhigh_po (1)             |sky130_fd_pr__res_xhigh_po (1)             
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 3                          |Number of nets: 3                          
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: mirror_4                        |Circuit 2: mirror_4                        
+-------------------------------------------|-------------------------------------------
+Vb4_                                       |Vb4_                                       
+Vb4                                        |Vb4                                        
+GND                                        |GND                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes mirror_4 and mirror_4 are equivalent.
+
+Subcircuit summary:
 Circuit 1: sf                              |Circuit 2: sf                              
 -------------------------------------------|-------------------------------------------
 sf_half (2)                                |sf_half (2)                                
@@ -129,29 +152,6 @@ Vin_p                                      |Vin_p
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sf and sf are equivalent.
-
-Subcircuit summary:
-Circuit 1: mirror_4                        |Circuit 2: mirror_4                        
--------------------------------------------|-------------------------------------------
-sky130_fd_pr__cap_mim_m3_1 (1)             |sky130_fd_pr__cap_mim_m3_1 (1)             
-sky130_fd_pr__cap_mim_m3_2 (1)             |sky130_fd_pr__cap_mim_m3_2 (1)             
-sky130_fd_pr__nfet_01v8 (3)                |sky130_fd_pr__nfet_01v8 (3)                
-sky130_fd_pr__res_xhigh_po (1)             |sky130_fd_pr__res_xhigh_po (1)             
-Number of devices: 6                       |Number of devices: 6                       
-Number of nets: 3                          |Number of nets: 3                          
----------------------------------------------------------------------------------------
-Circuits match uniquely.
-Netlists match uniquely.
-
-Subcircuit pins:
-Circuit 1: mirror_4                        |Circuit 2: mirror_4                        
--------------------------------------------|-------------------------------------------
-Vb4_                                       |Vb4_                                       
-Vb4                                        |Vb4                                        
-GND                                        |GND                                        
----------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
-Device classes mirror_4 and mirror_4 are equivalent.
 Class mirror_3:  Merged 1 devices.
 
 Subcircuit summary:
@@ -233,8 +233,8 @@ Subcircuit summary:
 Circuit 1: top                             |Circuit 2: top                             
 -------------------------------------------|-------------------------------------------
 cmfb (2)                                   |cmfb (2)                                   
-sf (1)                                     |sf (1)                                     
 mirror_4 (1)                               |mirror_4 (1)                               
+sf (1)                                     |sf (1)                                     
 mirror_3 (1)                               |mirror_3 (1)                               
 core (2)                                   |core (2)                                   
 mirror_1 (1)                               |mirror_1 (1)                               
@@ -264,28 +264,6 @@ Iin_p                                      |Iin_p
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes top and top are equivalent.
-Class big_cap:  Merged 30 devices.
-Class big_cap:  Merged 30 devices.
-
-Subcircuit summary:
-Circuit 1: big_cap                         |Circuit 2: big_cap                         
--------------------------------------------|-------------------------------------------
-sky130_fd_pr__cap_mim_m3_2 (1)             |sky130_fd_pr__cap_mim_m3_2 (1)             
-sky130_fd_pr__cap_mim_m3_1 (1)             |sky130_fd_pr__cap_mim_m3_1 (1)             
-Number of devices: 2                       |Number of devices: 2                       
-Number of nets: 2                          |Number of nets: 2                          
----------------------------------------------------------------------------------------
-Circuits match uniquely.
-Netlists match uniquely.
-
-Subcircuit pins:
-Circuit 1: big_cap                         |Circuit 2: big_cap                         
--------------------------------------------|-------------------------------------------
-VDD                                        |VDD                                        
-GND                                        |GND                                        
----------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
-Device classes big_cap and big_cap are equivalent.
 
 Cell user_analog_project_wrapper disconnected node: gpio_analog[0]
 Cell user_analog_project_wrapper disconnected node: gpio_analog[10]
@@ -1597,8 +1575,7 @@ Subcircuit summary:
 Circuit 1: user_analog_project_wrapper     |Circuit 2: user_analog_project_wrapper     
 -------------------------------------------|-------------------------------------------
 top (1)                                    |top (1)                                    
-big_cap (1)                                |big_cap (1)                                
-Number of devices: 2                       |Number of devices: 2                       
+Number of devices: 1                       |Number of devices: 1                       
 Number of nets: 11                         |Number of nets: 11                         
 ---------------------------------------------------------------------------------------
 Circuits match uniquely.
@@ -1614,10 +1591,10 @@ io_analog[4]                               |io_analog[4]
 io_analog[1]                               |io_analog[1]                               
 io_analog[0]                               |io_analog[0]                               
 io_analog[3]                               |io_analog[3]                               
-io_analog[8]                               |io_analog[8]                               
-io_analog[7]                               |io_analog[7]                               
 io_analog[9]                               |io_analog[9]                               
 io_analog[10]                              |io_analog[10]                              
+io_analog[8]                               |io_analog[8]                               
+io_analog[7]                               |io_analog[7]                               
 gpio_analog[0]                             |gpio_analog[0]                             
 gpio_analog[10]                            |gpio_analog[10]                            
 gpio_analog[11]                            |gpio_analog[11]                            
