@@ -4,60 +4,30 @@ K {}
 V {}
 S {}
 E {}
-N 450 -830 450 -800 { lab=#net1}
-N 320 -840 320 -810 { lab=Vb2}
-N 590 -290 590 -270 { lab=Iin_n}
-N 590 -290 650 -290 { lab=Iin_n}
-N 390 -120 390 -80 { lab=GND}
-N 590 -120 590 -80 { lab=GND}
-N 550 -120 550 -100 { lab=GND}
-N 550 -100 590 -100 { lab=GND}
-N 550 -200 550 -180 { lab=Iin_n}
-N 550 -200 590 -200 { lab=Iin_n}
-N 430 -200 430 -180 { lab=Iin_p}
-N 390 -200 430 -200 { lab=Iin_p}
-N 430 -120 430 -100 { lab=GND}
-N 390 -100 430 -100 { lab=GND}
-N 390 -240 390 -180 { lab=Iin_p}
-N 590 -240 590 -180 { lab=Iin_n}
-N 390 -270 390 -240 { lab=Iin_p}
-N 590 -270 590 -240 { lab=Iin_n}
-N 200 -840 200 -810 { lab=Vb5}
-N 200 -610 220 -610 { lab=VDD}
-N 280 -610 310 -610 { lab=Vb1_}
-N 200 -530 220 -530 { lab=VDD}
-N 280 -530 310 -530 { lab=Vb3_}
-N 200 -450 220 -450 { lab=VDD}
-N 280 -450 310 -450 { lab=Vb4_}
-N 1040 -350 1210 -350 { lab=Vout_p}
-N 1040 -290 1210 -290 { lab=Vout_n}
-N 1120 -290 1120 -270 { lab=Vout_n}
-N 1120 -370 1120 -350 { lab=Vout_p}
-N 650 -290 740 -290 { lab=Iin_n}
-N 390 -350 390 -270 { lab=Iin_p}
-N 390 -350 740 -350 { lab=Iin_p}
-C {devices/vsource.sym} 450 -770 0 0 {name=VDD_source value=1.8}
-C {devices/gnd.sym} 450 -740 0 0 {name=l1 lab=GND}
-C {devices/gnd.sym} 390 -80 0 1 {name=l3 lab=GND}
-C {devices/lab_pin.sym} 450 -890 0 1 {name=l5 sig_type=std_logic lab=VDD}
-C {devices/code.sym} -190 -360 0 0 {name=TT_MODELS
+N 380 -350 610 -350 { lab=VDD}
+N 380 -330 450 -330 { lab=pad}
+N 510 -330 610 -330 { lab=to_core}
+N 380 -310 610 -310 { lab=GND}
+N 100 -170 100 -140 { lab=pad}
+N 100 -330 100 -300 { lab=VDD}
+C {devices/code.sym} -180 -670 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
 value="
-.include \\\\$::SKYWATER_MODELS\\\\/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__tt.corner.spice
-.include \\\\$::SKYWATER_MODELS\\\\/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__tt.corner.spice
+*.include \\\\$::SKYWATER_MODELS\\\\/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__tt.corner.spice
+*.include \\\\$::SKYWATER_MODELS\\\\/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__tt.corner.spice
 .include \\\\$::SKYWATER_MODELS\\\\/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__tt.corner.spice
 *.include \\\\$::SKYWATER_MODELS\\\\/cells/nfet_03v3_nvt/sky130_fd_pr__nfet_03v3_nvt__tt.corner.spice
 *.include \\\\$::SKYWATER_MODELS\\\\/cells/nfet_05v0_nvt/sky130_fd_pr__nfet_05v0_nvt__tt.corner.spice
 *.include \\\\$::SKYWATER_MODELS\\\\/cells/esd_nfet_01v8/sky130_fd_pr__esd_nfet_01v8__tt.corner.spice
 *.include \\\\$::SKYWATER_MODELS\\\\/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__tt.corner.spice
-*.include \\\\$::SKYWATER_MODELS\\\\/cells/pfet_01v8_hvt/sky130_fd_pr__pfet_01v8_hvt__tt.corner.spice
+.include \\\\$::SKYWATER_MODELS\\\\/cells/pfet_01v8_hvt/sky130_fd_pr__pfet_01v8_hvt__tt.corner.spice
 *.include \\\\$::SKYWATER_MODELS\\\\/models/corners/tt/nonfet.spice
 * Mismatch parameters
-.include \\\\$::SKYWATER_MODELS\\\\/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice
-.include \\\\$::SKYWATER_MODELS\\\\/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice
+*.include \\\\$::SKYWATER_MODELS\\\\/cells/nfet_01v8/sky130_fd_pr__nfet_01v8__mismatch.corner.spice
+*.include \\\\$::SKYWATER_MODELS\\\\/cells/pfet_01v8/sky130_fd_pr__pfet_01v8__mismatch.corner.spice
 .include \\\\$::SKYWATER_MODELS\\\\/cells/nfet_01v8_lvt/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice
-*.include \\\\$::SKYWATER_MODELS\\\\/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice
+.include \\\\$::SKYWATER_MODELS\\\\/cells/pfet_01v8_lvt/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice
 *.include \\\\$::SKYWATER_MODELS\\\\/cells/pfet_01v8_hvt/sky130_fd_pr__pfet_01v8_hvt__mismatch.corner.spice
 *.include \\\\$::SKYWATER_MODELS\\\\/cells/nfet_g5v0d10v5/sky130_fd_pr__nfet_g5v0d10v5__mismatch.corner.spice
 *.include \\\\$::SKYWATER_MODELS\\\\/cells/pfet_g5v0d10v5/sky130_fd_pr__pfet_g5v0d10v5__mismatch.corner.spice
@@ -72,14 +42,9 @@ value="
 .include \\\\$::SKYWATER_MODELS\\\\/models/all.spice
 * Corner
 *.include \\\\$::SKYWATER_MODELS\\\\/models/corners/tt/rf.spice
-.include /home/jared/Documents/GS_Design/tia_post_approval/pex/top_pex_fixed.spice
+*.include /home/jared/Documents/GS_Design/tia_post_approval/pex/top_pex_fixed.spice
 "}
-C {devices/launcher.sym} 810 -610 0 0 {name=h1
-descr='tate
-tclcommand="ngspice::annotate"}
-C {devices/ngspice_probe.sym} 450 -810 0 0 {name=r1}
-C {devices/ammeter.sym} 450 -860 2 0 {name=Vmeas current=3.7613e-05}
-C {devices/code.sym} -190 -200 0 0 {name=SAVE_PARAMS
+C {devices/code.sym} -180 -510 0 0 {name=SAVE_PARAMS
 only_toplevel=false
 
 value=".option savecurrents
@@ -117,116 +82,35 @@ save @m.xm24.msky130_fd_pr__pfet_01v8[vds] @m.xm24.msky130_fd_pr__pfet_01v8[gm] 
 save @m.xm25.msky130_fd_pr__pfet_01v8[vds] @m.xm25.msky130_fd_pr__pfet_01v8[gm] @m.xm25.msky130_fd_pr__pfet_01v8[vth] @m.xm25.msky130_fd_pr__pfet_01v8[vgs] @m.xm25.msky130_fd_pr__pfet_01v8[id] @m.xm25.msky130_fd_pr__pfet_01v8[gds] @m.xm25.msky130_fd_pr__pfet_01v8[cgg] @m.xm25.msky130_fd_pr__pfet_01v8[cgs] @m.xm25.msky130_fd_pr__pfet_01v8[cgd] @m.xm25.msky130_fd_pr__pfet_01v8[cgb] @m.xm25.msky130_fd_pr__pfet_01v8[cdg] @m.xm25.msky130_fd_pr__pfet_01v8[cds] @m.xm25.msky130_fd_pr__pfet_01v8[cdd] @m.xm25.msky130_fd_pr__pfet_01v8[cdb] @m.xm25.msky130_fd_pr__pfet_01v8[csg] @m.xm25.msky130_fd_pr__pfet_01v8[css] @m.xm25.msky130_fd_pr__pfet_01v8[csd] @m.xm25.msky130_fd_pr__pfet_01v8[csb] @m.xm25.msky130_fd_pr__pfet_01v8[cbg] @m.xm25.msky130_fd_pr__pfet_01v8[cbs] @m.xm25.msky130_fd_pr__pfet_01v8[cbd] @m.xm25.msky130_fd_pr__pfet_01v8[cbb] 
  
 op
-write top_tb.raw
+write esd_test.raw
 .endc"
 }
-C {devices/code_shown.sym} -240 20 0 0 {name=SPICE
+C {devices/code_shown.sym} -250 0 0 0 {name=SPICE
 only_toplevel=false
 
-value=".control
-*tran .01n 50n 1n
-
-*tran 10u 5m
-*plot Vout_n
-*plot Vcmfb 
-*plot Vcm1
+value=".lib /home/jaredgm2/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.control
 
 ac dec 50 1k 10G
-plot vdb(Vout_p)+6.02
-*plot vdb(Vcm1)
-*plot vp(Vcm1)*57.296
+plot vdb(to_core)
 
-*exit
 .endc
 "
 
-*value=".control
-set sqrnoise
-
-*noise v(Vout_n) IINN_source dec 10 1 10000T
-*noise v(Vout_n) IINN_source dec 50 1 100G
-noise v(Vout_p) IINN_source dec 10 20k 1g
-*setplot noise1
-*plot loglog onoise_spectrum
-
-setplot noise2
-print onoise_total 
-*exit
-.endc
-"}
-C {devices/vsource.sym} 320 -780 0 0 {name=Vb2_source value=".75"}
-C {devices/gnd.sym} 320 -750 0 0 {name=l11 lab=GND}
-C {devices/lab_pin.sym} 320 -840 0 0 {name=l13 sig_type=std_logic lab=Vb2}
-C {devices/gnd.sym} 590 -80 0 0 {name=l18 lab=GND}
-C {devices/capa.sym} 620 -240 3 1 {name=C3
-m=1
-value=6p
-footprint=1206
-device="ceramic capacitor"}
-C {devices/gnd.sym} 650 -240 3 1 {name=l50 lab=GND}
-C {devices/capa.sym} 360 -240 1 0 {name=C4
-m=1
-value=6p
-footprint=1206
-device="ceramic capacitor"}
-C {devices/gnd.sym} 330 -240 1 0 {name=l51 lab=GND}
-C {devices/isource.sym} 390 -150 0 1 {name=IINP_source
-value="sin(0,50n,1k) ac 1 0"
-*value="sin(0,50n,1k)"
-*value="pulse(0,450n,1n,0,0,1,10) ac 1 0"}
-C {devices/isource.sym} 590 -150 0 0 {name=IINN_source 
-value="sin(0,-50n,1k)"
-*value="pulse(0,-450n,1n,0,0,1,10)"}
-C {devices/lab_wire.sym} 1210 -350 0 1 {name=l73 sig_type=std_logic lab=Vout_p}
-C {devices/capa.sym} 1120 -240 2 0 {name=C5
-m=1
-value=20p
-footprint=1206
-device="ceramic capacitor"}
-C {devices/gnd.sym} 1120 -210 0 0 {name=l78 lab=GND}
-C {devices/capa.sym} 1120 -400 0 0 {name=C6
-m=1
-value=20p
-footprint=1206
-device="ceramic capacitor"}
-C {devices/gnd.sym} 1120 -430 2 0 {name=l80 lab=GND}
-C {devices/res_ac.sym} 430 -150 0 0 {name=R7
-value=100meg
-ac=100meg
+}
+C {design_lib//sscs_pico_chip_4/xschem/esd.sym} 230 -330 0 0 {name=x1}
+C {design_lib//sscs_pico_chip_4/xschem/esd.sym} 760 -330 0 1 {name=x2}
+C {devices/res_ac.sym} 480 -330 1 0 {name=R1
+value=100
+ac=100
 m=1}
-C {devices/res_ac.sym} 550 -150 0 1 {name=R8
-value=100meg
-ac=100meg
-m=1}
-C {devices/lab_wire.sym} 1210 -290 0 1 {name=l32 sig_type=std_logic lab=Vout_n}
-C {devices/vsource.sym} 200 -780 0 0 {name=Vb5 value="1.3"}
-C {devices/gnd.sym} 200 -750 0 0 {name=l46 lab=GND}
-C {devices/lab_pin.sym} 200 -840 0 0 {name=l2 sig_type=std_logic lab=Vb5}
-C {devices/res_ac.sym} 250 -610 3 0 {name=R2
-value=26k
-ac=26k
-m=1}
-C {devices/lab_wire.sym} 200 -610 3 1 {name=l20 sig_type=std_logic lab=VDD}
-C {devices/res_ac.sym} 250 -530 3 0 {name=R11
-value=26k
-ac=26k
-m=1}
-C {devices/lab_wire.sym} 200 -530 3 1 {name=l41 sig_type=std_logic lab=VDD}
-C {sscs_pico_chip_4/xschem/top.sym} 890 -320 0 0 {name=x1}
-C {devices/res_ac.sym} 250 -450 3 0 {name=R1
-value=26k
-ac=26k
-m=1}
-C {devices/lab_wire.sym} 200 -450 3 1 {name=l4 sig_type=std_logic lab=VDD}
-C {devices/lab_wire.sym} 850 -410 3 1 {name=l6 sig_type=std_logic lab=Vb5}
-C {devices/lab_wire.sym} 870 -410 3 1 {name=l7 sig_type=std_logic lab=Vb4_}
-C {devices/lab_wire.sym} 890 -410 3 1 {name=l8 sig_type=std_logic lab=Vb3_}
-C {devices/lab_wire.sym} 910 -410 3 1 {name=l9 sig_type=std_logic lab=Vb2}
-C {devices/lab_wire.sym} 930 -410 3 1 {name=l10 sig_type=std_logic lab=Vb1_}
-C {devices/lab_wire.sym} 310 -610 0 1 {name=l12 sig_type=std_logic lab=Vb1_}
-C {devices/lab_wire.sym} 310 -530 0 1 {name=l14 sig_type=std_logic lab=Vb3_}
-C {devices/lab_wire.sym} 310 -450 0 1 {name=l15 sig_type=std_logic lab=Vb4_}
-C {devices/gnd.sym} 900 -230 0 0 {name=l16 lab=GND}
-C {devices/lab_wire.sym} 880 -230 3 0 {name=l17 sig_type=std_logic lab=VDD}
-C {devices/lab_wire.sym} 650 -350 0 1 {name=l19 sig_type=std_logic lab=Iin_p}
-C {devices/lab_wire.sym} 650 -290 0 1 {name=l21 sig_type=std_logic lab=Iin_n}
+C {devices/gnd.sym} 560 -310 0 1 {name=l3 lab=GND}
+C {devices/lab_wire.sym} 550 -350 0 1 {name=l4 sig_type=std_logic lab=VDD}
+C {devices/lab_wire.sym} 390 -330 0 1 {name=l1 sig_type=std_logic lab=pad}
+C {devices/lab_wire.sym} 550 -330 0 1 {name=l2 sig_type=std_logic lab=to_core}
+C {devices/vsource.sym} 100 -110 0 0 {name=Vb5 value="ac 1 0"}
+C {devices/gnd.sym} 100 -80 0 0 {name=l46 lab=GND}
+C {devices/lab_wire.sym} 100 -150 0 1 {name=l6 sig_type=std_logic lab=pad}
+C {devices/vsource.sym} 100 -270 0 0 {name=VDD_source value=1.8}
+C {devices/gnd.sym} 100 -240 0 0 {name=l5 lab=GND}
+C {devices/lab_pin.sym} 100 -330 0 1 {name=l7 sig_type=std_logic lab=VDD}
