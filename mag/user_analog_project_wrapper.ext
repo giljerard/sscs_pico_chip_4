@@ -1,21 +1,26 @@
-timestamp 1637014062
+timestamp 1637690973
 version 8.3
 tech sky130A
 style ngspice()
 scale 1000 1 500000
 resistclasses 4400000 2200000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use esd_wide esd_wide_3 0 -1 24350 1 0 664950
+use esd_wide esd_wide_2 1 0 870 0 1 679650
+use big_cap big_cap_0 1 0 -27430 0 1 658600
+use esd_wide esd_wide_0 1 0 52890 0 1 679650
 use top top_0 1 0 89244 0 1 662150
-use big_cap big_cap_0 1 0 105480 0 1 586857
+use esd_wide esd_wide_1 -1 0 140498 0 1 679650
+use esd esd_0 1 0 304030 0 1 679650
+use esd esd_1 1 0 398430 0 1 679650
+use esd esd_2 1 0 450430 0 1 679650
+use esd esd_3 1 0 549540 0 1 679650
+use esd esd_4 0 1 559650 -1 0 696716
 port "io_analog[4]" 41 329294 702300 334294 704800 m5
 port "io_analog[4]" 47 318994 702300 323994 704800 m5
 port "io_analog[5]" 42 227594 702300 232594 704800 m5
 port "io_analog[5]" 48 217294 702300 222294 704800 m5
-port "io_analog[6]" 43 175894 702300 180894 704800 m5
-port "io_analog[6]" 49 165594 702300 170594 704800 m5
 port "io_analog[4]" 41 329294 702300 334294 704800 m4
 port "io_analog[4]" 47 318994 702300 323994 704800 m4
-port "io_analog[5]" 42 227594 702300 232594 704800 m4
-port "io_analog[5]" 48 217294 702300 222294 704800 m4
 port "io_analog[6]" 43 175894 702300 180894 704800 m4
 port "io_analog[6]" 49 165594 702300 170594 704800 m4
 port "io_in_3v3[0]" 83 583520 1544 584800 1656 m3
@@ -177,10 +182,10 @@ port "io_in[13]" 60 583520 587108 584800 587220 m3
 port "io_out[13]" 141 583520 588290 584800 588402 m3
 port "io_oeb[13]" 114 583520 589472 584800 589584 m3
 port "vccd1" 553 582340 629784 584800 634584 m3
-port "vccd2" 555 0 633842 1660 638642 m3
 port "vccd1" 552 582340 639784 584800 644584 m3
-port "vccd2" 554 0 643842 1660 648642 m3
 port "io_analog[0]" 36 582300 677984 584800 682984 m3
+port "vccd2" 555 0 633842 1660 638642 m3
+port "vccd2" 554 0 643842 1660 648642 m3
 port "io_analog[10]" 37 0 680242 1700 685242 m3
 port "io_analog[1]" 38 566594 702300 571594 704800 m3
 port "vssa1" 562 520594 702340 525394 704800 m3
@@ -192,11 +197,15 @@ port "io_clamp_high[0]" 50 326794 702300 328994 704800 m3
 port "io_clamp_low[0]" 53 324294 702300 326494 704800 m3
 port "io_analog[4]" 47 318994 702300 323994 704800 m3
 port "io_analog[5]" 42 227594 702300 232594 704800 m3
+port "io_analog[6]" 43 175894 702300 180894 704800 m5
+port "io_analog[6]" 49 165594 702300 170594 704800 m5
 port "io_clamp_high[1]" 51 225094 702300 227294 704800 m3
-port "io_clamp_low[1]" 54 222594 702300 224794 704800 m3
 port "io_analog[5]" 48 217294 702300 222294 704800 m3
-port "io_analog[6]" 43 175894 702300 180894 704800 m3
+port "io_clamp_low[1]" 54 222594 702300 224794 704800 m3
 port "io_clamp_high[2]" 52 173394 702300 175594 704800 m3
+port "io_analog[6]" 43 175894 702300 180894 704800 m3
+port "io_analog[5]" 42 227594 702300 232594 704800 m4
+port "io_analog[5]" 48 217294 702300 222294 704800 m4
 port "io_clamp_low[2]" 55 170894 702300 173094 704800 m3
 port "io_analog[6]" 49 165594 702300 170594 704800 m3
 port "io_analog[7]" 44 120194 702300 125194 704800 m3
@@ -696,25 +705,20 @@ port "wbs_cyc_i" 607 4070 -800 4182 480 m2
 port "wbs_ack_o" 574 2888 -800 3000 480 m2
 port "wb_rst_i" 573 1706 -800 1818 480 m2
 port "wb_clk_i" 572 524 -800 636 480 m2
-node "m5_154044_562737#" 0 148443 154044 562737 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 663330992 309420 0 0
-node "m5_11000_651000#" 0 726990 11000 651000 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3180000000 1282000 0 0
 node "io_analog[4]" 0 2925 329294 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0
-node "io_analog[4]" 0 2831.4 318994 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0
-node "io_analog[5]" 0 2925 227594 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0
-node "io_analog[5]" 0 2925 217294 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0
-node "io_analog[6]" 0 2925 175894 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0
-node "io_analog[6]" 0 762027 165594 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3359000000 1353600 0 0
-node "m4_154044_554151#" 0 399510 154044 554151 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1471296948 568920 0 0 0 0
-node "m4_119500_639600#" 0 30644.7 119500 639600 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 29106984 134180 0 0 0 0
-node "m4_119854_645460#" 0 28713.1 119854 645460 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 27773932 125180 0 0 0 0
-node "m4_120014_651320#" 0 26656.9 120014 651320 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25473760 116552 0 0 0 0
-node "m4_128410_670160#" 0 14898.9 128410 670160 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15100137 64210 0 0 0 0
-node "m4_110364_670830#" 0 23512.6 110364 670830 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 23771840 101396 0 0 0 0
+node "io_analog[4]" 0 2813.85 318994 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0
+node "io_analog[5]" 0 1950 227594 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0
+node "io_analog[5]" 0 1462.5 217294 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0
+node "m4_111924_639350#" 0 241958 111924 639350 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 284701759 1000094 0 0 0 0
+node "m4_112144_645210#" 0 242768 112144 645210 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 285656070 1003442 0 0 0 0
+node "m4_120014_651320#" 0 187324 120014 651320 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 217650520 777262 0 0 0 0
+node "m4_111044_670380#" 0 157981 111044 670380 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 185803470 653082 0 0 0 0
+node "m4_110364_670830#" 0 112317 110364 670830 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 131700170 464742 0 0 0 0
 node "io_analog[4]" 0 2775 329294 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0
-node "io_analog[4]" 0 3255.91 318994 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12995360 17064 0 0 0 0
-node "io_analog[5]" 0 2775 227594 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0
-node "io_analog[5]" 0 2775 217294 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0
-node "io_analog[6]" 0 2775 175894 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0
+node "io_analog[4]" 0 5192.58 318994 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15347150 24990 0 0 0 0
+node "m4_96854_683470#" 0 23131.5 96854 683470 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 52265600 68532 0 0 0 0
+node "m4_70068_683470#" 0 23131.7 70068 683470 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 52266200 68532 0 0 0 0
+node "io_analog[6]" 0 2460.5 175894 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0
 node "io_analog[6]" 0 2775 165594 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0
 node "io_in_3v3[0]" 1 613.728 583520 1544 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
 node "io_oeb[26]" 1 613.728 -800 1544 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
@@ -875,33 +879,35 @@ node "io_in[13]" 1 613.728 583520 587108 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 node "io_out[13]" 1 613.728 583520 588290 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
 node "io_oeb[13]" 1 613.728 583520 589472 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
 node "vccd1" 0 6519 582340 629784 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
-node "m3_98814_637980#" 0 2727.55 98814 637980 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 131200 1460 4472000 8472 0 0 0 0
-node "m3_94254_637980#" 0 2737.43 94254 637980 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 131200 1460 4500000 8500 0 0 0 0
-node "vccd2" 0 6519 0 633842 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
 node "vccd1" 0 6519 582340 639784 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
+node "io_analog[0]" 1 9348.03 582300 677984 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 3172050 12270 0 0 0 0
+node "vccd2" 0 6519 0 633842 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
 node "vccd2" 0 6519 0 643842 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
-node "io_analog[0]" 1 10989.4 582300 677984 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 4615680 20192 0 0 0 0
-node "io_analog[10]" 0 9206.24 0 680242 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 8080000 12080 0 0 0 0
-node "io_analog[1]" 0 7394.71 566594 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 912960 4764 0 0 0 0
+node "m3_17650_617440#" 0 151133 17650 617440 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 132711200 138040 216326000 227078 0 0 0 0
+node "io_analog[10]" 0 11537 0 680242 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 12800000 19200 0 0 0 0
+node "m3_18050_685390#" 0 143905 18050 685390 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 139607200 144936 188708000 199044 0 0 0 0
+node "io_analog[1]" 1 9348.03 566594 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 3172050 12270 0 0 0 0
 node "vssa1" 0 6519 520594 702340 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
 node "vssa1" 0 6519 510594 702340 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
-node "io_analog[2]" 0 7394.71 465394 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 912960 4764 0 0 0 0
-node "io_analog[3]" 0 7394.71 413394 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 912960 4764 0 0 0 0
+node "io_analog[2]" 1 9348.03 465394 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 3172050 12270 0 0 0 0
+node "io_analog[3]" 1 9348.03 413394 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 3172050 12270 0 0 0 0
 node "io_analog[4]" 0 6825 329294 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0 0 0
 node "io_clamp_high[0]" 0 3577 326794 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5500000 9400 0 0 0 0 0 0
 node "io_clamp_low[0]" 0 3577 324294 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5500000 9400 0 0 0 0 0 0
 node "io_analog[4]" 0 6825 318994 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0 0 0
 node "io_analog[5]" 0 6825 227594 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0 0 0
-node "io_clamp_high[1]" 0 3577 225094 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5500000 9400 0 0 0 0 0 0
-node "io_clamp_low[1]" 0 3577 222594 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5500000 9400 0 0 0 0 0 0
-node "io_analog[5]" 0 6825 217294 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0 0 0
-node "io_analog[6]" 0 6825 175894 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0 0 0
-node "io_clamp_high[2]" 0 3577 173394 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5500000 9400 0 0 0 0 0 0
-node "io_clamp_low[2]" 0 3577 170894 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5500000 9400 0 0 0 0 0 0
+node "io_analog[6]" 0 1.09354e+06 165594 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19360000 22000 1337853680 555370 3306222000 1352508 0 0
+equiv "io_analog[6]" "io_clamp_high[1]"
+node "io_analog[5]" 0 9725 217294 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18750000 20000 0 0 0 0 0 0
+equiv "io_analog[5]" "io_clamp_low[1]"
+node "io_clamp_high[2]" 0 9981 173394 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18510000 21600 0 0 0 0 0 0
+equiv "io_clamp_high[2]" "io_analog[6]"
+node "io_analog[5]" 0 919908 217294 702300 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 36960000 38000 179000000 101600 3953280000 1591312 0 0
+equiv "io_analog[5]" "io_clamp_low[2]"
 node "io_analog[6]" 0 6825 165594 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0 0 0
-node "io_analog[7]" 0 8379 120194 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 8500000 13400 0 0 0 0
-node "io_analog[8]" 0 8379 68194 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 8500000 13400 0 0 0 0
-node "io_analog[9]" 0 11080.4 16194 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 12796000 16796 0 0 0 0
+node "io_analog[7]" 0 10391.6 120194 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 10144000 15880 0 0 0 0
+node "io_analog[8]" 0 10391.6 68194 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 10144000 15880 0 0 0 0
+node "io_analog[9]" 0 11612.9 16194 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 12976000 19420 0 0 0 0
 node "user_irq[2]" 1 631.648 583250 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
 node "user_irq[1]" 1 631.648 582068 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
 node "user_irq[0]" 1 631.648 580886 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
@@ -1397,258 +1403,1680 @@ node "wbs_ack_o" 1 631.648 2888 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 node "wb_rst_i" 1 631.648 1706 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
 node "wb_clk_i" 1 631.648 524 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
 substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "io_analog[4]" "io_analog[4]" 26353.2
-cap "io_analog[10]" "io_analog[6]" 6377.44
+cap "io_analog[4]" "io_analog[4]" 21486.5
+cap "io_analog[5]" "m4_70068_683470#" 11471.3
+cap "io_analog[6]" "io_analog[4]" 5687.6
+cap "io_analog[6]" "m3_18050_685390#" 24570
+cap "io_analog[2]" "io_analog[6]" 5687.6
+cap "io_analog[5]" "io_clamp_high[2]" 525
+cap "io_analog[6]" "io_analog[10]" 17278
+cap "io_analog[6]" "m3_17650_617440#" 24570
+cap "io_analog[6]" "io_analog[5]" 525
+cap "io_analog[1]" "io_analog[6]" 5687.6
+cap "io_analog[5]" "m4_110364_670830#" 5817.11
+cap "io_analog[5]" "m4_112144_645210#" 5817.11
+cap "io_analog[6]" "io_analog[8]" 12013.6
+cap "io_analog[6]" "io_analog[7]" 12013.6
+cap "io_analog[5]" "io_analog[6]" 525
+cap "io_analog[5]" "io_analog[5]" 23325
 cap "io_analog[6]" "io_analog[6]" 26250
-cap "io_clamp_low[1]" "io_analog[5]" 525
-cap "io_analog[6]" "io_analog[6]" 21250
-cap "io_analog[0]" "io_analog[6]" 5917.24
-cap "io_analog[5]" "io_analog[5]" 26250
-cap "io_analog[6]" "io_analog[6]" 22425
-cap "io_analog[6]" "io_analog[6]" 26250
-cap "io_clamp_high[1]" "io_analog[5]" 525
-cap "io_analog[9]" "io_analog[6]" 15797
-cap "io_clamp_low[2]" "io_clamp_high[2]" 525
-cap "io_clamp_low[2]" "io_analog[6]" 525
-cap "io_analog[4]" "io_analog[4]" 21250
-cap "io_clamp_low[1]" "io_clamp_high[1]" 525
-cap "io_clamp_high[0]" "io_analog[4]" 525
-cap "io_analog[6]" "io_analog[6]" 700
-cap "io_analog[4]" "io_analog[4]" 26250
-cap "io_analog[4]" "io_analog[4]" 21449.2
-cap "io_clamp_low[0]" "io_clamp_high[0]" 525
-cap "io_analog[5]" "io_analog[5]" 21250
-cap "io_clamp_high[2]" "io_analog[6]" 525
+cap "io_analog[5]" "m4_111924_639350#" 5817.11
+cap "io_analog[6]" "io_clamp_high[2]" 26853.5
 cap "io_analog[4]" "io_clamp_low[0]" 525
-cap "io_analog[5]" "io_analog[5]" 26250
-cap "io_analog[5]" "io_analog[5]" 21250
-cap "m4_154044_554151#" "m5_154044_562737#" 97944
-cap "big_cap_0/VDD" "big_cap_0/GND" 345.695
-cap "big_cap_0/GND" "big_cap_0/VDD" 179.095
-cap "big_cap_0/VDD" "big_cap_0/GND" 425.195
-cap "big_cap_0/VDD" "big_cap_0/GND" 65.635
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
+cap "io_analog[6]" "io_analog[5]" 254205
+cap "io_clamp_high[0]" "io_analog[4]" 525
+cap "io_analog[4]" "io_analog[4]" 21250
+cap "io_analog[5]" "io_analog[5]" 23325
+cap "io_analog[6]" "io_analog[6]" 22425
+cap "io_analog[6]" "io_clamp_high[2]" 1159
+cap "io_clamp_high[0]" "io_clamp_low[0]" 525
+cap "io_analog[5]" "io_analog[5]" 28212.5
+cap "io_analog[5]" "m4_111044_670380#" 5817.11
+cap "io_analog[4]" "io_analog[4]" 26250
+cap "io_analog[4]" "io_analog[4]" 26372.5
+cap "io_analog[6]" "io_analog[6]" 22425
+cap "io_analog[5]" "m4_96854_683470#" 11471.3
+cap "io_analog[6]" "io_analog[6]" 700
+cap "m4_96854_683470#" "m4_70068_683470#" 335
+cap "io_analog[5]" "m3_18050_685390#" 48195.2
+cap "io_analog[6]" "io_analog[0]" 5687.6
+cap "io_analog[6]" "io_analog[3]" 5687.6
+cap "io_analog[5]" "io_analog[5]" 675
+cap "io_analog[5]" "m3_17650_617440#" 48143.2
+cap "io_analog[5]" "io_analog[5]" 27325
+cap "io_analog[6]" "io_analog[9]" 17278
+cap "io_analog[5]" "m4_120014_651320#" 5817.11
+cap "io_analog[6]" "io_analog[5]" 525
+cap "big_cap_0/VDD" "big_cap_0/GND" 541.99
+cap "big_cap_0/GND" "big_cap_0/VDD" 280.79
+cap "big_cap_0/GND" "big_cap_0/VDD" -292.34
+cap "big_cap_0/GND" "big_cap_0/VDD" -441.62
+cap "big_cap_0/GND" "big_cap_0/VDD" 332
+cap "big_cap_0/VDD" "big_cap_0/GND" 172
+cap "big_cap_0/VDD" "big_cap_0/GND" -219.255
+cap "big_cap_0/GND" "big_cap_0/VDD" -331.215
 cap "big_cap_0/VDD" "big_cap_0/GND" 301
 cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/VDD" "big_cap_0/GND" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/VDD" "big_cap_0/GND" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" 301
-cap "big_cap_0/GND" "big_cap_0/VDD" 581
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/GND" "big_cap_0/VDD" 581
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/GND" "big_cap_0/VDD" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/VDD" "big_cap_0/GND" 307.1
-cap "big_cap_0/GND" "big_cap_0/VDD" 64.5
-cap "big_cap_0/VDD" "big_cap_0/GND" 187.695
-cap "big_cap_0/VDD" "big_cap_0/GND" 362.295
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" -259.675
-cap "big_cap_0/GND" "big_cap_0/VDD" -392.275
-cap "big_cap_0/VDD" "big_cap_0/GND" -456.5
-cap "big_cap_0/VDD" "big_cap_0/GND" -425.7
-cap "big_cap_0/GND" "big_cap_0/VDD" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/GND" "big_cap_0/VDD" 161.465
-cap "big_cap_0/GND" "big_cap_0/VDD" 311.665
-cap "big_cap_0/VDD" "big_cap_0/GND" -272.805
-cap "big_cap_0/GND" "big_cap_0/VDD" -337.965
-cap "big_cap_0/GND" "big_cap_0/VDD" -654.27
-cap "big_cap_0/VDD" "big_cap_0/GND" -717.15
-cap "big_cap_0/GND" "big_cap_0/VDD" 61.895
-cap "big_cap_0/GND" "big_cap_0/VDD" 300.015
-cap "big_cap_0/VDD" "big_cap_0/GND" 155.805
-cap "big_cap_0/GND" "big_cap_0/GND" 92.82
-cap "big_cap_0/VDD" "big_cap_0/GND" -183.43
-cap "big_cap_0/GND" "big_cap_0/GND" -119.34
-cap "big_cap_0/VDD" "big_cap_0/GND" 329
+cap "big_cap_0/GND" "big_cap_0/VDD" -292.34
+cap "big_cap_0/VDD" "big_cap_0/GND" -441.62
+cap "big_cap_0/GND" "big_cap_0/VDD" 371.01
+cap "big_cap_0/VDD" "big_cap_0/GND" 192.21
+cap "big_cap_0/GND" "big_cap_0/VDD" -277.755
+cap "big_cap_0/GND" "big_cap_0/VDD" -382.515
+cap "big_cap_0/GND" "big_cap_0/VDD" 75.2
+cap "big_cap_0/GND" "big_cap_0/GND" 44.8
+cap "big_cap_0/VDD" "big_cap_0/GND" -129.065
+cap "big_cap_0/GND" "big_cap_0/GND" -83.97
+cap "big_cap_0/GND" "big_cap_0/VDD" -72.85
+cap "big_cap_0/GND" "big_cap_0/GND" -86.8
+cap "big_cap_0/GND" "big_cap_0/GND" 44.8
+cap "big_cap_0/VDD" "big_cap_0/GND" 75.2
+cap "big_cap_0/GND" "big_cap_0/VDD" 329
 cap "big_cap_0/GND" "big_cap_0/GND" 196
-cap "big_cap_0/GND" "big_cap_0/VDD" -458.575
-cap "big_cap_0/GND" "big_cap_0/GND" -298.35
-cap "big_cap_0/GND" "big_cap_0/VDD" 148.05
-cap "big_cap_0/GND" "big_cap_0/GND" 88.2
-cap "big_cap_0/GND" "big_cap_0/GND" -45.54
-cap "big_cap_0/VDD" "big_cap_0/GND" -66.43
-cap "big_cap_0/GND" "big_cap_0/VDD" 142.645
-cap "big_cap_0/GND" "big_cap_0/VDD" 68.855
-cap "big_cap_0/GND" "big_cap_0/VDD" -183.43
-cap "big_cap_0/VDD" "big_cap_0/GND" -183.43
-cap "big_cap_0/GND" "big_cap_0/VDD" 32.195
-cap "big_cap_0/GND" "big_cap_0/GND" 19.18
-cap "big_cap_0/GND" "big_cap_0/GND" -59.67
-cap "big_cap_0/GND" "big_cap_0/VDD" -91.715
-cap "big_cap_0/VDD" "big_cap_0/GND" 262.515
-cap "big_cap_0/VDD" "big_cap_0/GND" 506.715
-cap "big_cap_0/VDD" "big_cap_0/GND" -416.42
-cap "big_cap_0/GND" "big_cap_0/VDD" -324.74
-cap "big_cap_0/VDD" "big_cap_0/GND" -606.97
-cap "big_cap_0/VDD" "big_cap_0/GND" -625.85
-cap "big_cap_0/VDD" "big_cap_0/GND" 33.945
-cap "big_cap_0/GND" "big_cap_0/VDD" 246.065
-cap "big_cap_0/VDD" "big_cap_0/GND" 581
+cap "big_cap_0/GND" "big_cap_0/GND" -419.85
+cap "big_cap_0/GND" "big_cap_0/VDD" -645.325
+cap "big_cap_0/VDD" "big_cap_0/GND" -364.25
+cap "big_cap_0/GND" "big_cap_0/GND" -434
+cap "big_cap_0/GND" "big_cap_0/GND" 196
+cap "big_cap_0/GND" "big_cap_0/VDD" 329
+cap "big_cap_0/GND" "big_cap_0/VDD" 167.32
+cap "big_cap_0/GND" "big_cap_0/GND" 99.68
+cap "big_cap_0/GND" "big_cap_0/GND" -131.04
+cap "big_cap_0/GND" "big_cap_0/VDD" -199.63
+cap "big_cap_0/GND" "big_cap_0/GND" -390.6
+cap "big_cap_0/GND" "big_cap_0/VDD" -364.25
+cap "big_cap_0/GND" "big_cap_0/GND" 196
+cap "big_cap_0/VDD" "big_cap_0/GND" 329
+cap "big_cap_0/GND" "big_cap_0/VDD" 203.98
+cap "big_cap_0/VDD" "big_cap_0/GND" -387.195
+cap "big_cap_0/VDD" "big_cap_0/GND" -218.55
+cap "big_cap_0/VDD" "big_cap_0/GND" 223.25
+cap "top_0/GND" "top_0/Vout_p" -22.72
+cap "top_0/Vout_p" "top_0/GND" 70.99
+cap "top_0/Vout_n" "top_0/GND" -104.8
+cap "big_cap_0/VDD" "big_cap_0/GND" 101.05
+cap "big_cap_0/GND" "big_cap_0/VDD" -258.13
+cap "big_cap_0/VDD" "big_cap_0/GND" -145.7
+cap "big_cap_0/GND" "big_cap_0/VDD" 101.05
+cap "big_cap_0/GND" "big_cap_0/VDD" 188.77
+cap "big_cap_0/VDD" "big_cap_0/GND" 364.37
+cap "big_cap_0/VDD" "big_cap_0/GND" -277.755
+cap "big_cap_0/VDD" "big_cap_0/GND" -382.515
 cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" -313.82
-cap "big_cap_0/GND" "big_cap_0/VDD" -207.74
-cap "big_cap_0/GND" "big_cap_0/VDD" -425.7
-cap "big_cap_0/VDD" "big_cap_0/GND" -365.2
+cap "big_cap_0/GND" "big_cap_0/VDD" 581
+cap "big_cap_0/VDD" "big_cap_0/GND" -441.62
+cap "big_cap_0/VDD" "big_cap_0/GND" -292.34
 cap "big_cap_0/GND" "big_cap_0/VDD" 581
 cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/GND" "big_cap_0/VDD" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" -392.275
-cap "big_cap_0/VDD" "big_cap_0/GND" -259.675
-cap "big_cap_0/VDD" "big_cap_0/GND" -456.5
-cap "big_cap_0/VDD" "big_cap_0/GND" -473
-cap "big_cap_0/GND" "big_cap_0/VDD" 581
-cap "big_cap_0/VDD" "big_cap_0/GND" 301
-cap "big_cap_0/VDD" "big_cap_0/GND" 209.84
-cap "big_cap_0/GND" "big_cap_0/VDD" 405.04
-cap "big_cap_0/VDD" "big_cap_0/GND" -155.805
-cap "big_cap_0/GND" "big_cap_0/VDD" -235.365
-cap "big_cap_0/GND" "big_cap_0/VDD" -283.8
-cap "big_cap_0/GND" "big_cap_0/VDD" -273.9
-cap "big_cap_0/VDD" "big_cap_0/GND" 405.04
-cap "big_cap_0/VDD" "big_cap_0/GND" 209.84
-cap "big_cap_0/VDD" "big_cap_0/GND" 221.665
-cap "big_cap_0/VDD" "big_cap_0/GND" 427.865
-cap "big_cap_0/VDD" "big_cap_0/GND" -235.365
-cap "big_cap_0/GND" "big_cap_0/VDD" -155.805
-cap "big_cap_0/GND" "big_cap_0/VDD" -273.9
-cap "big_cap_0/GND" "big_cap_0/VDD" -331.1
-cap "big_cap_0/VDD" "big_cap_0/GND" 427.865
-cap "big_cap_0/VDD" "big_cap_0/GND" 221.665
-cap "big_cap_0/VDD" "big_cap_0/GND" 373.5
-cap "big_cap_0/VDD" "big_cap_0/GND" 193.5
-cap "big_cap_0/GND" "big_cap_0/VDD" -140.575
-cap "big_cap_0/VDD" "big_cap_0/GND" -43.975
-cap "big_cap_0/VDD" "big_cap_0/GND" -456.5
-cap "big_cap_0/VDD" "big_cap_0/GND" -473
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
+cap "big_cap_0/VDD" "big_cap_0/GND" -365.425
+cap "big_cap_0/VDD" "big_cap_0/GND" -552.025
+cap "big_cap_0/GND" "big_cap_0/VDD" 283.585
+cap "big_cap_0/GND" "big_cap_0/VDD" 547.385
+cap "big_cap_0/VDD" "big_cap_0/GND" -292.34
+cap "big_cap_0/GND" "big_cap_0/VDD" -441.62
+cap "big_cap_0/VDD" "big_cap_0/GND" 147.92
+cap "big_cap_0/VDD" "big_cap_0/GND" 285.52
+cap "big_cap_0/GND" "big_cap_0/VDD" -146.17
+cap "big_cap_0/GND" "big_cap_0/VDD" -220.81
+cap "big_cap_0/GND" "big_cap_0/VDD" -257.3
+cap "big_cap_0/VDD" "big_cap_0/GND" -333.25
+cap "big_cap_0/VDD" "big_cap_0/GND" 285.52
+cap "big_cap_0/VDD" "big_cap_0/GND" 147.92
+cap "big_cap_0/GND" "big_cap_0/VDD" 234.35
+cap "big_cap_0/VDD" "big_cap_0/GND" 452.35
+cap "big_cap_0/VDD" "big_cap_0/GND" -184.49
+cap "big_cap_0/VDD" "big_cap_0/GND" -315.77
+cap "big_cap_0/VDD" "big_cap_0/GND" -514.6
+cap "big_cap_0/VDD" "big_cap_0/GND" -599.85
 cap "big_cap_0/VDD" "big_cap_0/GND" 581
 cap "big_cap_0/VDD" "big_cap_0/GND" 301
+cap "big_cap_0/VDD" "big_cap_0/GND" 260.15
+cap "big_cap_0/VDD" "big_cap_0/GND" 502.15
+cap "big_cap_0/VDD" "big_cap_0/GND" -477.475
+cap "big_cap_0/GND" "big_cap_0/VDD" -316.075
+cap "big_cap_0/VDD" "big_cap_0/GND" -643.25
+cap "big_cap_0/VDD" "big_cap_0/GND" -666.5
 cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" -259.675
-cap "big_cap_0/VDD" "big_cap_0/GND" -392.275
-cap "big_cap_0/VDD" "big_cap_0/GND" -456.5
-cap "big_cap_0/VDD" "big_cap_0/GND" -425.7
+cap "big_cap_0/VDD" "big_cap_0/GND" 301
+cap "big_cap_0/GND" "big_cap_0/VDD" 301
+cap "big_cap_0/GND" "big_cap_0/VDD" 581
+cap "big_cap_0/VDD" "big_cap_0/GND" -365.425
+cap "big_cap_0/VDD" "big_cap_0/GND" -552.025
+cap "big_cap_0/GND" "big_cap_0/VDD" -643.25
+cap "big_cap_0/VDD" "big_cap_0/GND" -666.5
 cap "big_cap_0/GND" "big_cap_0/VDD" 581
 cap "big_cap_0/VDD" "big_cap_0/GND" 301
-cap "big_cap_0/GND" "big_cap_0/VDD" 250.26
-cap "big_cap_0/VDD" "big_cap_0/GND" 483.06
-cap "big_cap_0/GND" "big_cap_0/VDD" -207.74
-cap "big_cap_0/GND" "big_cap_0/VDD" -313.82
-cap "big_cap_0/VDD" "big_cap_0/GND" -378.4
-cap "big_cap_0/VDD" "big_cap_0/GND" -365.2
-cap "big_cap_0/VDD" "big_cap_0/GND" 483.475
-cap "big_cap_0/GND" "big_cap_0/VDD" 250.475
-cap "big_cap_0/GND" "big_cap_0/GND" 170.94
-cap "big_cap_0/VDD" "big_cap_0/GND" 286.935
-cap "big_cap_0/GND" "big_cap_0/GND" -312.48
-cap "big_cap_0/VDD" "big_cap_0/GND" -483.86
-cap "big_cap_0/VDD" "big_cap_0/GND" 269.545
-cap "big_cap_0/GND" "big_cap_0/VDD" -366.86
-cap "big_cap_0/GND" "big_cap_0/VDD" 270.955
-cap "big_cap_0/GND" "big_cap_0/VDD" -366.86
-cap "big_cap_0/VDD" "big_cap_0/GND" 375.73
-cap "big_cap_0/GND" "big_cap_0/GND" 137.06
-cap "big_cap_0/GND" "big_cap_0/VDD" 75.465
-cap "big_cap_0/GND" "big_cap_0/GND" -179.01
-cap "big_cap_0/GND" "big_cap_0/VDD" -78.455
-cap "big_cap_0/GND" "big_cap_0/VDD" -327.08
-cap "big_cap_0/VDD" "big_cap_0/GND" -141.9
-cap "big_cap_0/VDD" "big_cap_0/GND" -91.3
-cap "big_cap_0/GND" "big_cap_0/VDD" 145.665
-cap "big_cap_0/GND" "big_cap_0/VDD" 75.465
+cap "big_cap_0/GND" "big_cap_0/VDD" 23.005
+cap "big_cap_0/GND" "big_cap_0/VDD" 44.405
+cap "big_cap_0/GND" "big_cap_0/VDD" -66.65
+cap "big_cap_0/GND" "big_cap_0/VDD" 44.82
+cap "big_cap_0/GND" "big_cap_0/VDD" 23.22
+cap "big_cap_0/VDD" "big_cap_0/GND" 206.33
+cap "big_cap_0/GND" "big_cap_0/GND" 122.92
+cap "big_cap_0/VDD" "big_cap_0/GND" -445.695
+cap "big_cap_0/GND" "big_cap_0/GND" -288.81
+cap "big_cap_0/VDD" "big_cap_0/GND" 329
+cap "big_cap_0/GND" "big_cap_0/VDD" -516.26
+cap "big_cap_0/GND" "big_cap_0/VDD" 21.15
+cap "big_cap_0/VDD" "big_cap_0/GND" 190.35
+cap "big_cap_0/VDD" "big_cap_0/GND" -387.195
+cap "big_cap_0/VDD" "big_cap_0/GND" -129.065
+cap "big_cap_0/VDD" "big_cap_0/GND" 1.72
+cap "big_cap_0/GND" "big_cap_0/GND" 185.08
+cap "big_cap_0/VDD" "big_cap_0/GND" 313.99
+cap "big_cap_0/GND" "big_cap_0/GND" -335.88
+cap "big_cap_0/VDD" "big_cap_0/GND" -516.26
+cap "big_cap_0/GND" "big_cap_0/VDD" -66.65
+cap "big_cap_0/VDD" "big_cap_0/GND" 3.32
+cap "big_cap_0/VDD" "big_cap_0/GND" 1.72
 cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
-cap "big_cap_0/GND" "big_cap_0/VDD" -207.74
-cap "big_cap_0/VDD" "big_cap_0/GND" -313.82
-cap "big_cap_0/GND" "big_cap_0/VDD" -425.7
-cap "big_cap_0/GND" "big_cap_0/VDD" -365.2
+cap "big_cap_0/VDD" "big_cap_0/GND" 301
+cap "big_cap_0/GND" "big_cap_0/VDD" -441.62
+cap "big_cap_0/GND" "big_cap_0/VDD" -292.34
+cap "big_cap_0/VDD" "big_cap_0/GND" -599.85
+cap "big_cap_0/GND" "big_cap_0/VDD" -514.6
 cap "big_cap_0/GND" "big_cap_0/VDD" 301
 cap "big_cap_0/GND" "big_cap_0/VDD" 581
-cap "big_cap_0/VDD" "big_cap_0/GND" 257.355
-cap "big_cap_0/VDD" "big_cap_0/GND" 496.755
-cap "big_cap_0/GND" "big_cap_0/VDD" -313.82
-cap "big_cap_0/GND" "big_cap_0/VDD" -207.74
-cap "big_cap_0/GND" "big_cap_0/VDD" -473
-cap "big_cap_0/GND" "big_cap_0/VDD" -456.5
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
+cap "big_cap_0/VDD" "big_cap_0/GND" 301
 cap "big_cap_0/VDD" "big_cap_0/GND" 581
-cap "big_cap_0/GND" "big_cap_0/VDD" 191.995
-cap "big_cap_0/GND" "big_cap_0/VDD" 370.595
-cap "big_cap_0/VDD" "big_cap_0/GND" -235.365
-cap "big_cap_0/VDD" "big_cap_0/GND" -155.805
-cap "big_cap_0/VDD" "big_cap_0/GND" -473
-cap "big_cap_0/GND" "big_cap_0/VDD" -456.5
-cap "big_cap_0/GND" "big_cap_0/VDD" 301
+cap "big_cap_0/VDD" "big_cap_0/GND" -365.425
+cap "big_cap_0/VDD" "big_cap_0/GND" -552.025
+cap "big_cap_0/GND" "big_cap_0/VDD" -666.5
+cap "big_cap_0/VDD" "big_cap_0/GND" -643.25
 cap "big_cap_0/GND" "big_cap_0/VDD" 581
-cap "big_cap_0/VDD" "big_cap_0/GND" 95.675
-cap "big_cap_0/VDD" "big_cap_0/GND" 184.675
-cap "big_cap_0/VDD" "big_cap_0/GND" -78.455
-cap "big_cap_0/GND" "big_cap_0/VDD" -51.935
-cap "big_cap_0/GND" "big_cap_0/VDD" -91.3
-cap "big_cap_0/VDD" "big_cap_0/GND" -141.9
-cap "big_cap_0/GND" "big_cap_0/VDD" 184.675
-cap "big_cap_0/GND" "big_cap_0/VDD" 95.675
-merge "top_0/Vb5" "m4_128410_670160#" -290.368 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -75440 -1488 0 0 0 0
-merge "top_0/Vout_p" "m3_94254_637980#" -267.82 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -86400 -1180 0 0 0 0 0 0
-merge "top_0/VSUBS" "big_cap_0/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "big_cap_0/VDD" "big_cap_0/GND" 301
+cap "big_cap_0/GND" "big_cap_0/VDD" 148.35
+cap "big_cap_0/GND" "big_cap_0/VDD" 286.35
+cap "big_cap_0/VDD" "big_cap_0/GND" -331.215
+cap "big_cap_0/VDD" "big_cap_0/GND" -219.255
+cap "big_cap_0/VDD" "big_cap_0/GND" -643.25
+cap "big_cap_0/VDD" "big_cap_0/GND" -666.5
+cap "big_cap_0/GND" "big_cap_0/VDD" 581
+cap "big_cap_0/VDD" "big_cap_0/GND" 301
+cap "big_cap_0/GND" "big_cap_0/VDD" 169.42
+cap "big_cap_0/GND" "big_cap_0/VDD" 327.02
+cap "big_cap_0/GND" "big_cap_0/VDD" -146.17
+cap "big_cap_0/VDD" "big_cap_0/GND" -220.81
+cap "big_cap_0/VDD" "big_cap_0/GND" -333.25
+cap "big_cap_0/GND" "big_cap_0/VDD" -257.3
+cap "big_cap_0/GND" "big_cap_0/VDD" 327.02
+cap "big_cap_0/GND" "big_cap_0/VDD" 169.42
+cap "esd_4/GND" "esd_4/out" 221.239
+cap "esd_4/VDD" "esd_4/out" 217.208
+cap "esd_4/GND" "esd_4/out" 663.716
+cap "esd_4/out" "esd_4/VDD" 651.623
+cap "esd_wide_3/in" "esd_wide_3/VDD" -469.822
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -76.4168
+cap "esd_wide_3/in" "io_analog[6]" -550.625
+cap "esd_wide_3/VDD" "io_analog[6]" -73.72
+cap "esd_wide_3/VDD" "io_analog[6]" -394.115
+cap "esd_wide_3/in" "esd_wide_3/GND" 187.21
+cap "esd_wide_3/in" "esd_wide_3/GND" -640.306
+cap "esd_wide_3/GND" "esd_wide_3/GND" -78.217
+cap "esd_4/out" "esd_4/GND" 663.716
+cap "esd_4/out" "esd_4/VDD" 651.623
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -135.08
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -135.08
+cap "esd_wide_3/VDD" "esd_wide_3/in" -469.822
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -217.883
+cap "esd_wide_3/VDD" "esd_wide_3/in" -469.822
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -215.08
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -135.08
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -62.7888
+cap "esd_wide_3/VDD" "io_analog[6]" -1833.37
+cap "esd_wide_3/in" "io_analog[6]" -1101.25
+cap "esd_wide_3/in" "esd_wide_3/GND" 374.42
+cap "esd_wide_3/GND" "esd_wide_3/GND" -230.218
+cap "esd_wide_3/GND" "esd_wide_3/GND" -148.815
+cap "esd_wide_3/GND" "esd_wide_3/GND" -148.815
+cap "esd_wide_3/GND" "esd_wide_3/in" -640.306
+cap "esd_wide_3/in" "esd_wide_3/GND" -640.306
+cap "esd_wide_3/GND" "esd_wide_3/GND" -229.015
+cap "esd_wide_3/GND" "esd_wide_3/GND" -71.9232
+cap "esd_wide_3/GND" "esd_wide_3/GND" -148.815
+cap "esd_4/GND" "esd_4/out" 443.134
+cap "esd_4/VDD" "esd_4/out" 435.066
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -215.08
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -55.08
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -135.08
+cap "esd_wide_3/in" "esd_wide_3/VDD" -469.822
+cap "esd_wide_3/in" "esd_wide_3/VDD" -469.822
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -215.08
+cap "esd_wide_3/in" "esd_wide_3/VDD" -715.822
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -135.08
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -70.7312
+cap "esd_wide_3/in" "io_analog[6]" -1651.87
+cap "io_analog[6]" "esd_wide_3/VDD" -1686.72
+cap "esd_wide_3/GND" "esd_wide_3/in" 561.63
+cap "esd_wide_3/GND" "esd_wide_3/GND" -68.615
+cap "esd_wide_3/GND" "esd_wide_3/GND" -148.815
+cap "esd_wide_3/GND" "esd_wide_3/in" -927.021
+cap "esd_wide_3/GND" "esd_wide_3/GND" -229.015
+cap "esd_wide_3/GND" "esd_wide_3/in" -640.306
+cap "esd_wide_3/GND" "esd_wide_3/GND" -229.015
+cap "esd_wide_3/GND" "esd_wide_3/GND" -75.3317
+cap "esd_wide_3/GND" "esd_wide_3/GND" -148.815
+cap "esd_wide_3/in" "esd_wide_3/GND" -640.306
+cap "esd_4/GND" "esd_4/out" -457.135
+cap "esd_4/GND" "esd_4/out" 658.095
+cap "esd_4/VDD" "esd_4/out" 433.764
+cap "esd_4/in" "esd_4/VDD" 1046.91
+cap "esd_4/in" "esd_4/VDD" -71.91
+cap "esd_wide_3/in" "esd_wide_3/VDD" -469.822
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -135.08
+cap "esd_wide_3/in" "esd_wide_3/VDD" -469.822
+cap "esd_wide_3/in" "esd_wide_3/VDD" -715.822
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -135.08
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -147.227
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -55.08
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -135.08
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -215.08
+cap "io_analog[6]" "esd_wide_3/in" -1762.15
+cap "esd_wide_3/VDD" "io_analog[6]" -1699.77
+cap "esd_wide_3/GND" "esd_wide_3/in" 556.29
+cap "esd_wide_3/GND" "esd_wide_3/in" -640.306
+cap "esd_wide_3/GND" "esd_wide_3/GND" -148.815
+cap "esd_wide_3/GND" "esd_wide_3/GND" -148.815
+cap "esd_wide_3/GND" "esd_wide_3/in" -640.306
+cap "esd_wide_3/GND" "esd_wide_3/in" -927.021
+cap "esd_wide_3/GND" "esd_wide_3/GND" -154.028
+cap "esd_wide_3/GND" "esd_wide_3/GND" -148.815
+cap "esd_wide_3/GND" "esd_wide_3/GND" -68.615
+cap "esd_wide_3/GND" "esd_wide_3/GND" -229.015
+cap "esd_4/GND" "esd_4/in" 663.716
+cap "esd_4/VDD" "esd_4/in" 651.623
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -67.0728
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -215.08
+cap "esd_wide_3/in" "esd_wide_3/VDD" -469.822
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -215.08
+cap "esd_wide_3/VDD" "esd_wide_3/in" -446.18
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -135.08
+cap "esd_wide_3/in" "esd_wide_3/VDD" -469.822
+cap "io_analog[6]" "esd_wide_3/in" -1211.52
+cap "io_analog[6]" "esd_wide_3/VDD" -394.115
+cap "esd_wide_3/VDD" "io_analog[6]" -1231.97
+cap "esd_wide_3/GND" "esd_wide_3/in" 369.08
+cap "esd_wide_3/in" "esd_wide_3/GND" -640.306
+cap "esd_wide_3/out" "esd_wide_3/GND" -446.18
+cap "esd_wide_3/GND" "esd_wide_3/GND" -229.015
+cap "esd_wide_3/GND" "esd_wide_3/GND" -148.815
+cap "esd_wide_3/in" "esd_wide_3/GND" -640.306
+cap "esd_wide_3/GND" "esd_wide_3/GND" -74.207
+cap "esd_wide_3/GND" "esd_wide_3/GND" -229.015
+cap "esd_4/in" "esd_4/GND" 663.716
+cap "esd_4/VDD" "esd_4/in" 651.623
+cap "esd_wide_3/in" "esd_wide_3/VDD" -1973.12
+cap "io_analog[6]" "esd_wide_3/VDD" 0.84
+cap "io_analog[6]" "esd_wide_3/in" -2606.5
+cap "esd_wide_3/out" "esd_wide_3/GND" -1968.42
+cap "top_0/Iin_p" "top_0/Iin_n" -67
+cap "esd_4/GND" "esd_4/in" 442.477
+cap "esd_4/VDD" "esd_4/in" 434.415
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -215.08
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -215.08
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -136.715
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -135.08
+cap "esd_wide_3/VDD" "esd_wide_3/out" -469.822
+cap "esd_wide_3/VDD" "esd_wide_3/out" -469.822
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -135.08
+cap "esd_wide_3/VDD" "esd_wide_3/out" -469.822
+cap "io_analog[6]" "esd_wide_3/out" -1762.15
+cap "io_analog[6]" "esd_wide_3/VDD" -394.955
+cap "io_analog[6]" "esd_wide_3/VDD" -1236.03
+cap "esd_wide_3/out" "esd_wide_3/GND" 556.29
+cap "esd_wide_3/GND" "esd_wide_3/out" -640.306
+cap "esd_wide_3/GND" "esd_wide_3/GND" -229.015
+cap "esd_wide_3/GND" "esd_wide_3/GND" -148.815
+cap "esd_wide_3/GND" "esd_wide_3/out" -640.306
+cap "esd_wide_3/GND" "esd_wide_3/GND" -148.815
+cap "esd_wide_3/GND" "esd_wide_3/out" -640.306
+cap "esd_wide_3/GND" "esd_wide_3/GND" -149.517
+cap "esd_wide_3/GND" "esd_wide_3/GND" -229.015
+cap "esd_4/in" "esd_4/GND" 663.716
+cap "esd_4/in" "esd_4/VDD" 651.623
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -154.782
+cap "esd_wide_3/VDD" "esd_wide_3/out" -469.822
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -135.08
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -55.08
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -77.5848
+cap "esd_wide_3/out" "esd_wide_3/VDD" -715.822
+cap "esd_wide_3/out" "esd_wide_3/VDD" -469.822
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -135.08
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -215.08
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -135.08
+cap "esd_wide_3/out" "io_analog[6]" -1762.15
+cap "esd_wide_3/VDD" "io_analog[6]" -1929.23
+cap "esd_wide_3/GND" "esd_wide_3/out" 556.29
+cap "esd_wide_3/GND" "esd_wide_3/out" -640.306
+cap "esd_wide_3/GND" "esd_wide_3/GND" -229.015
+cap "esd_wide_3/GND" "esd_wide_3/out" -927.021
+cap "esd_wide_3/GND" "esd_wide_3/GND" -68.615
+cap "esd_wide_3/GND" "esd_wide_3/GND" -148.815
+cap "esd_wide_3/GND" "esd_wide_3/GND" -148.815
+cap "esd_wide_3/GND" "esd_wide_3/GND" -157.715
+cap "esd_wide_3/GND" "esd_wide_3/GND" -148.815
+cap "esd_wide_3/GND" "esd_wide_3/out" -640.306
+cap "esd_wide_3/GND" "esd_wide_3/GND" -78.7182
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -135.08
+cap "esd_wide_3/out" "esd_wide_3/VDD" -715.822
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -215.08
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -221.154
+cap "esd_wide_3/out" "esd_wide_3/VDD" -469.822
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -55.08
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -140.298
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -135.08
+cap "esd_wide_3/out" "io_analog[6]" -1101.25
+cap "esd_wide_3/VDD" "io_analog[6]" -1833.37
+cap "esd_wide_3/GND" "esd_wide_3/out" 374.42
+cap "esd_wide_3/GND" "esd_wide_3/GND" -68.615
+cap "esd_wide_3/GND" "esd_wide_3/GND" -231.621
+cap "esd_wide_3/GND" "esd_wide_3/GND" -151.5
+cap "esd_wide_3/out" "esd_wide_3/GND" -927.021
+cap "esd_wide_3/GND" "esd_wide_3/GND" -229.015
+cap "esd_wide_3/GND" "esd_wide_3/GND" -148.815
+cap "esd_wide_3/out" "esd_wide_3/GND" -640.306
+cap "esd_wide_3/GND" "esd_wide_3/GND" -148.815
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -73.1464
+cap "esd_wide_3/out" "esd_wide_3/VDD" -469.822
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -215.08
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -135.08
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -135.08
+cap "esd_wide_3/VDD" "esd_wide_3/VDD" -135.08
+cap "esd_wide_3/out" "esd_wide_3/VDD" -469.822
+cap "esd_wide_3/out" "esd_wide_3/VDD" -469.822
+cap "esd_wide_3/out" "io_analog[6]" -1651.87
+cap "esd_wide_3/VDD" "io_analog[6]" -1272.21
+cap "esd_wide_3/VDD" "io_analog[6]" -394.115
+cap "esd_wide_3/out" "esd_wide_3/GND" 561.63
+cap "esd_wide_3/GND" "esd_wide_3/out" -640.306
+cap "esd_wide_3/out" "esd_wide_3/GND" -640.306
+cap "esd_wide_3/GND" "esd_wide_3/GND" -148.815
+cap "esd_wide_3/GND" "esd_wide_3/GND" -148.815
+cap "esd_wide_3/GND" "esd_wide_3/GND" -229.015
+cap "esd_wide_3/GND" "esd_wide_3/GND" -76.8135
+cap "esd_wide_3/GND" "esd_wide_3/GND" -148.815
+cap "esd_wide_3/out" "esd_wide_3/GND" -640.306
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/in" "esd_wide_2/GND" 17.0883
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/in" "esd_wide_2/GND" 23.3485
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/in" -489.73
+cap "esd_wide_2/GND" "esd_wide_2/in" 23.3485
+cap "esd_wide_2/GND" "esd_wide_2/in" 23.3485
+cap "esd_wide_2/GND" "esd_wide_2/GND" 2.63225
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/GND" -157.447
+cap "esd_wide_2/GND" "esd_wide_2/in" 23.3485
+cap "esd_wide_2/GND" "esd_wide_2/in" 23.3485
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/in" "esd_wide_2/GND" 23.3485
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/in" 23.3485
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/in" 23.3485
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/in" 23.3485
+cap "esd_wide_2/GND" "esd_wide_2/GND" -0.4125
+cap "esd_wide_2/GND" "esd_wide_2/GND" -154.402
+cap "esd_wide_2/out" "esd_wide_2/GND" -1105.7
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/in" 23.3485
+cap "esd_wide_2/out" "esd_wide_2/GND" 23.3485
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/GND" -2.015
+cap "esd_wide_2/out" "esd_wide_2/GND" -1494.35
+cap "esd_wide_2/GND" "esd_wide_2/GND" -152.8
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/out" 23.3485
+cap "esd_wide_2/GND" "esd_wide_2/out" 23.3485
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/GND" 6.79875
+cap "esd_wide_2/GND" "esd_wide_2/out" 23.3485
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/out" 23.3485
+cap "esd_wide_2/GND" "esd_wide_2/GND" -5.05975
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/out" "esd_wide_2/GND" 23.3485
+cap "esd_wide_2/GND" "esd_wide_2/GND" -161.614
+cap "esd_wide_2/GND" "esd_wide_2/out" 23.3485
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/out" "esd_wide_2/GND" 23.3485
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/GND" -149.755
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/out" 23.3485
+cap "esd_wide_2/GND" "esd_wide_2/GND" 3.754
+cap "esd_wide_2/out" "esd_wide_2/GND" 23.3485
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/GND" "esd_wide_2/GND" 11.585
+cap "esd_wide_2/out" "esd_wide_2/GND" 23.3485
+cap "esd_wide_2/GND" "esd_wide_2/GND" -158.569
+cap "esd_wide_0/GND" "esd_wide_0/in" 23.3485
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/GND" -3.13675
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/in" "esd_wide_0/GND" 23.3485
+cap "esd_wide_0/GND" "esd_wide_0/in" 23.3485
+cap "esd_wide_0/GND" "esd_wide_0/GND" -151.678
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/in" "esd_wide_0/GND" 23.3485
+cap "esd_wide_0/GND" "esd_wide_0/GND" 5.677
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/in" "esd_wide_0/GND" 23.3485
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/in" "esd_wide_0/GND" 17.0883
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/GND" -160.492
+cap "esd_wide_0/in" "esd_wide_0/GND" 23.3485
+cap "esd_wide_0/in" "esd_wide_0/GND" 23.3485
+cap "esd_wide_0/in" "esd_wide_0/GND" -489.73
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/GND" 2.63225
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/in" "esd_wide_0/GND" 23.3485
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/out" "esd_wide_0/GND" 128.51
+cap "esd_wide_0/GND" "esd_wide_0/in" 23.3485
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/GND" -157.447
+cap "esd_wide_0/GND" "esd_wide_0/in" 23.3485
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/out" "esd_wide_0/GND" 23.3485
+cap "esd_wide_0/GND" "esd_wide_0/out" -137.86
+cap "esd_wide_0/GND" "esd_wide_0/GND" 1.02975
+cap "esd_wide_0/out" "esd_wide_0/GND" 23.3485
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/GND" -155.845
+cap "esd_wide_0/GND" "esd_wide_0/GND" 9.8435
+cap "esd_wide_0/GND" "esd_wide_0/out" 23.3485
+cap "esd_wide_0/out" "esd_wide_0/GND" 23.3485
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/out" 23.3485
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/out" "esd_wide_0/GND" 23.3485
+cap "esd_wide_0/GND" "esd_wide_0/GND" -2.015
+cap "esd_wide_0/GND" "esd_wide_0/GND" -164.658
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/GND" 6.79875
+cap "esd_wide_0/GND" "esd_wide_0/out" 23.3485
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/out" 23.3485
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/out" 23.3485
+cap "esd_wide_0/GND" "esd_wide_0/GND" -152.8
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/out" "esd_wide_0/GND" 23.3485
+cap "esd_wide_0/GND" "esd_wide_0/GND" -161.614
+cap "esd_wide_0/GND" "esd_wide_0/out" 23.3485
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_0/GND" "esd_wide_0/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/out" 23.3485
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" 9.04225
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" -2.81625
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" -163.857
+cap "esd_wide_1/out" "esd_wide_1/GND" 23.3485
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/out" "esd_wide_1/GND" 23.3485
+cap "esd_wide_1/out" "esd_wide_1/GND" 23.3485
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" 5.9975
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/out" "esd_wide_1/GND" 23.3485
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" -151.999
+cap "esd_wide_1/GND" "esd_wide_1/out" 23.3485
+cap "esd_wide_1/out" "esd_wide_1/GND" 23.3485
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/out" 17.5284
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" -160.812
+cap "esd_wide_1/GND" "esd_wide_1/out" 23.3485
+cap "esd_wide_1/GND" "esd_wide_1/out" 23.3485
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/out" "esd_wide_1/GND" 133.654
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/out" "esd_wide_1/GND" 23.3485
+cap "esd_wide_1/out" "esd_wide_1/GND" -325.88
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/out" 378.296
+cap "esd_wide_1/in" "esd_wide_1/GND" 23.3485
+cap "esd_wide_1/GND" "esd_wide_1/GND" 1.35025
+cap "esd_wide_1/in" "esd_wide_1/GND" 23.3485
+cap "esd_wide_1/in" "esd_wide_1/GND" 23.3485
+cap "esd_wide_1/in" "esd_wide_1/GND" 23.3485
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/in" 23.3485
+cap "esd_wide_1/GND" "esd_wide_1/GND" 10.164
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" -156.165
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/in" 23.3485
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/in" 23.3485
+cap "esd_wide_1/GND" "esd_wide_1/in" 23.3485
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" -1.6945
+cap "esd_wide_1/GND" "esd_wide_1/GND" -164.979
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/in" 23.3485
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/in" "esd_wide_1/GND" 23.3485
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/GND" "esd_wide_1/GND" -153.12
+cap "esd_wide_1/GND" "esd_wide_1/GND" 11.585
+cap "esd_wide_1/in" "esd_wide_1/GND" 23.3485
+cap "esd_0/GND" "esd_0/in" 23.3485
+cap "esd_0/GND" "esd_0/in" 23.3485
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/in" 23.3485
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" 3.754
+cap "esd_0/GND" "esd_0/in" 7.1085
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" -158.569
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/in" 23.3485
+cap "esd_0/GND" "esd_0/in" 23.3485
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" 0.70925
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/in" "esd_0/GND" 23.3485
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/in" -482.47
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/in" "esd_0/GND" 23.3485
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/in" 23.3485
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" -155.524
+cap "esd_0/in" "esd_0/GND" 23.3485
+cap "esd_0/in" "esd_0/GND" 23.3485
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/out" -470.345
+cap "esd_0/GND" "esd_0/GND" -1.0535
+cap "esd_0/out" "esd_0/GND" 23.3485
+cap "esd_0/out" "esd_0/GND" 23.3485
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/out" 23.3485
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" -153.761
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" 7.76025
+cap "esd_0/out" "esd_0/GND" 23.3485
+cap "esd_0/GND" "esd_0/out" 23.3485
+cap "esd_0/GND" "esd_0/out" 23.3485
+cap "esd_0/GND" "esd_0/GND" -162.575
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/out" 23.3485
+cap "esd_0/GND" "esd_0/GND" -4.09825
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" 4.7155
+cap "esd_0/out" "esd_0/GND" 23.3485
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/out" "esd_0/GND" 23.3485
+cap "esd_0/GND" "esd_0/GND" -150.717
+cap "esd_0/GND" "esd_0/out" 23.3485
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/out" "esd_0/GND" 23.3485
+cap "esd_0/GND" "esd_0/GND" 11.585
+cap "esd_0/GND" "esd_0/GND" -159.53
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/GND" -2.9765
+cap "esd_1/GND" "esd_1/in" 23.3485
+cap "esd_1/in" "esd_1/GND" 23.3485
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/in" "esd_1/GND" 23.3485
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/GND" -151.838
+cap "esd_1/GND" "esd_1/GND" 5.83725
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/in" 23.3485
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/in" 23.3485
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/in" 23.3485
+cap "esd_1/GND" "esd_1/GND" -160.652
+cap "esd_1/in" "esd_1/GND" 23.3485
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/GND" 2.7925
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/in" "esd_1/GND" 23.3485
+cap "esd_1/GND" "esd_1/in" 23.3485
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/in" "esd_1/GND" 23.3485
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/out" "esd_1/GND" 8.1518
+cap "esd_1/GND" "esd_1/in" 23.3485
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/out" "esd_1/GND" -470.345
+cap "esd_1/GND" "esd_1/GND" -157.607
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/out" "esd_1/GND" 23.3485
+cap "esd_1/GND" "esd_1/GND" 1.02975
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/out" "esd_1/GND" 23.3485
+cap "esd_1/out" "esd_1/GND" -483.513
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/out" "esd_1/GND" 23.3485
+cap "esd_1/GND" "esd_1/GND" 9.8435
+cap "esd_1/GND" "esd_1/out" 23.3485
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/GND" -155.845
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/out" 23.3485
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/out" 23.3485
+cap "esd_1/GND" "esd_1/GND" -2.015
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/GND" -164.658
+cap "esd_1/GND" "esd_1/out" 23.3485
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/GND" "esd_1/out" 23.3485
+cap "esd_1/GND" "esd_1/GND" -152.8
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/out" "esd_1/GND" 23.3485
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_1/out" "esd_1/GND" 23.3485
+cap "esd_1/GND" "esd_1/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" 1.67075
+cap "esd_2/GND" "esd_2/in" 23.3485
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/in" 23.3485
+cap "esd_2/GND" "esd_2/GND" 10.4845
+cap "esd_2/in" "esd_2/GND" 23.3485
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" -156.486
+cap "esd_2/in" "esd_2/GND" 23.3485
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/in" 23.3485
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" -1.374
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/in" 23.3485
+cap "esd_2/GND" "esd_2/GND" -165.299
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/in" 23.3485
+cap "esd_2/GND" "esd_2/in" 23.3485
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" -153.441
+cap "esd_2/GND" "esd_2/in" 23.3485
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" 7.43975
+cap "esd_2/GND" "esd_2/GND" -162.255
+cap "esd_2/in" "esd_2/GND" 23.3485
+cap "esd_2/out" "esd_2/GND" -470.345
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/in" "esd_2/GND" 23.3485
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/out" "esd_2/GND" 23.3485
+cap "esd_2/GND" "esd_2/GND" 5.677
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/out" "esd_2/GND" 23.3485
+cap "esd_2/out" "esd_2/GND" 23.3485
+cap "esd_2/GND" "esd_2/GND" -160.492
+cap "esd_2/GND" "esd_2/out" 23.3485
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/out" "esd_2/GND" 17.0883
+cap "esd_2/GND" "esd_2/out" 23.3485
+cap "esd_2/out" "esd_2/GND" -489.73
+cap "esd_2/GND" "esd_2/GND" 2.63225
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/out" "esd_2/GND" 23.3485
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/out" "esd_2/GND" 23.3485
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/out" "esd_2/GND" 23.3485
+cap "esd_2/GND" "esd_2/out" 23.3485
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/out" 23.3485
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" 11.585
+cap "esd_2/GND" "esd_2/GND" -157.447
+cap "esd_3/GND" "esd_3/in" 23.3485
+cap "esd_3/GND" "esd_3/in" 23.3485
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" 4.23475
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" -159.05
+cap "esd_3/GND" "esd_3/in" 23.3485
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/in" "esd_3/GND" 23.3485
+cap "esd_3/in" "esd_3/GND" 8.67345
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" 1.19
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/in" -484.035
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/in" 23.3485
+cap "esd_3/GND" "esd_3/in" 23.3485
+cap "esd_3/in" "esd_3/GND" 23.3485
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" -156.005
+cap "esd_3/GND" "esd_3/in" 23.3485
+cap "esd_3/GND" "esd_3/GND" 10.0037
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/in" 23.3485
+cap "esd_3/out" "esd_3/GND" -470.345
+cap "esd_3/out" "esd_3/GND" 23.3485
+cap "esd_3/GND" "esd_3/GND" -164.819
+cap "esd_3/GND" "esd_3/GND" -0.57275
+cap "esd_3/GND" "esd_3/in" 23.3485
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/out" 23.3485
+cap "esd_3/GND" "esd_3/GND" -154.242
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" 8.241
+cap "esd_3/GND" "esd_3/out" 23.3485
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/out" 23.3485
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" -163.056
+cap "esd_3/out" "esd_3/GND" 23.3485
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/out" 23.3485
+cap "esd_3/GND" "esd_3/GND" -3.6175
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" -151.197
+cap "esd_3/GND" "esd_3/out" 23.3485
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/out" 23.3485
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/out" 23.3485
+cap "esd_3/GND" "esd_3/GND" 5.19625
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/out" "esd_3/GND" 23.3485
+cap "esd_3/GND" "esd_3/GND" 11.585
+cap "esd_3/out" "esd_3/GND" 23.3485
+cap "esd_3/GND" "esd_3/GND" -160.011
+cap "esd_wide_2/in" "esd_wide_2/GND" 342.35
+cap "esd_wide_2/in" "esd_wide_2/GND" 202.595
+cap "esd_wide_2/GND" "esd_wide_2/in" 593.67
+cap "esd_wide_2/GND" "esd_wide_2/in" 593.67
+cap "esd_wide_2/GND" "esd_wide_2/in" 197.89
+cap "esd_wide_2/GND" "esd_wide_2/out" 197.89
+cap "esd_wide_2/out" "esd_wide_2/GND" 593.67
+cap "esd_wide_2/out" "esd_wide_2/GND" 593.67
+cap "esd_wide_2/GND" "esd_wide_2/out" 395.78
+cap "esd_wide_2/out" "esd_wide_2/GND" 395.78
+cap "esd_wide_0/in" "esd_wide_0/GND" 197.89
+cap "esd_wide_0/in" "esd_wide_0/GND" 593.67
+cap "esd_wide_0/GND" "esd_wide_0/in" 540.24
+cap "esd_wide_0/GND" "esd_wide_0/in" 202.595
+cap "esd_wide_0/out" "esd_wide_0/GND" 1128.75
+cap "esd_wide_0/in" "esd_wide_0/GND" 395.78
+cap "esd_wide_0/GND" "esd_wide_0/out" 2024.49
+cap "esd_wide_0/out" "esd_wide_0/GND" 395.78
+cap "esd_wide_0/out" "esd_wide_0/GND" 593.67
+cap "esd_wide_0/out" "esd_wide_0/GND" 593.67
+cap "esd_wide_0/GND" "esd_wide_0/out" 395.78
+cap "esd_wide_1/out" "esd_wide_1/GND" 197.89
+cap "esd_wide_1/out" "esd_wide_1/GND" 593.67
+cap "esd_wide_1/GND" "esd_wide_1/out" 593.67
+cap "esd_wide_1/out" "esd_wide_1/GND" 542.48
+cap "esd_wide_1/out" "esd_wide_1/GND" 1483.1
+cap "esd_wide_1/GND" "esd_wide_1/in" 197.89
+cap "esd_wide_1/out" "esd_wide_1/GND" 1556.8
+cap "esd_wide_1/in" "esd_wide_1/GND" 593.67
+cap "esd_wide_1/in" "esd_wide_1/GND" 395.78
+cap "esd_wide_1/in" "esd_wide_1/GND" 593.67
+cap "esd_wide_1/in" "esd_wide_1/GND" 395.78
+cap "esd_0/in" "esd_0/GND" 593.67
+cap "esd_0/in" "esd_0/GND" 488.2
+cap "esd_0/in" "esd_0/GND" 253.275
+cap "esd_0/GND" "esd_0/in" 593.67
+cap "esd_0/GND" "esd_0/out" 1783.53
+cap "esd_0/GND" "esd_0/out" 395.78
+cap "esd_0/GND" "esd_0/out" 593.67
+cap "esd_0/GND" "esd_0/out" 593.67
+cap "esd_0/GND" "esd_0/out" 197.89
+cap "esd_1/GND" "esd_1/in" 395.78
+cap "esd_1/in" "esd_1/GND" 395.78
+cap "esd_1/GND" "esd_1/in" 593.67
+cap "esd_1/GND" "esd_1/in" 593.67
+cap "esd_1/in" "esd_1/GND" 197.89
+cap "esd_1/GND" "esd_1/out" 1483.51
+cap "esd_1/GND" "esd_1/out" 249.935
+cap "esd_1/GND" "esd_1/out" 593.67
+cap "esd_1/GND" "esd_1/out" 593.67
+cap "esd_1/GND" "esd_1/out" 395.78
+cap "esd_2/GND" "esd_2/in" 197.89
+cap "esd_2/GND" "esd_2/in" 593.67
+cap "esd_2/GND" "esd_2/in" 593.67
+cap "esd_2/GND" "esd_2/in" 395.78
+cap "esd_2/GND" "esd_2/out" 1387.75
+cap "esd_2/GND" "esd_2/in" 395.78
+cap "esd_2/out" "esd_2/GND" 593.67
+cap "esd_2/out" "esd_2/GND" 540.24
+cap "esd_2/GND" "esd_2/out" 202.595
+cap "esd_2/GND" "esd_2/out" 593.67
+cap "esd_3/in" "esd_3/GND" 395.78
+cap "esd_3/in" "esd_3/GND" 493.21
+cap "esd_3/GND" "esd_3/in" 248.265
+cap "esd_3/GND" "esd_3/in" 593.67
+cap "esd_3/in" "esd_3/GND" 197.89
+cap "esd_3/out" "esd_3/GND" 1585.64
+cap "esd_3/out" "esd_3/GND" 395.78
+cap "esd_3/GND" "esd_3/out" 593.67
+cap "esd_3/out" "esd_3/GND" 593.67
+cap "esd_3/GND" "esd_3/out" 395.78
+cap "io_analog[6]" "esd_wide_2/VDD" 113.15
+cap "io_analog[6]" "esd_wide_2/VDD" 221.03
+cap "io_analog[6]" "esd_wide_2/in" 197.53
+cap "esd_wide_2/VDD" "io_analog[6]" 635.55
+cap "io_analog[6]" "esd_wide_2/in" 7.975
+cap "esd_wide_2/in" "io_analog[6]" 339.09
+cap "esd_wide_2/VDD" "io_analog[6]" 469.93
+cap "io_analog[6]" "esd_wide_2/VDD" 434.23
+cap "io_analog[6]" "esd_wide_2/in" 339.09
+cap "io_analog[6]" "esd_wide_2/VDD" 113.15
+cap "io_analog[6]" "esd_wide_2/VDD" 124.63
+cap "io_analog[6]" "esd_wide_2/in" 113.03
+cap "io_analog[6]" "esd_wide_2/out" 113.03
+cap "io_analog[6]" "esd_wide_2/VDD" 177.83
+cap "io_analog[6]" "esd_wide_2/VDD" 113.15
+cap "esd_wide_2/out" "io_analog[6]" 339.09
+cap "io_analog[6]" "esd_wide_2/VDD" 445.56
+cap "io_analog[6]" "esd_wide_2/out" 339.09
+cap "io_analog[6]" "esd_wide_2/VDD" 542.93
+cap "esd_wide_2/VDD" "io_analog[6]" 558.59
+cap "io_analog[6]" "esd_wide_2/out" 226.06
+cap "io_analog[6]" "esd_wide_2/VDD" 113.15
+cap "io_analog[6]" "esd_wide_2/VDD" 164.59
+cap "io_analog[6]" "esd_wide_2/out" 226.06
+cap "esd_wide_0/VDD" "io_analog[6]" 174.05
+cap "io_analog[6]" "esd_wide_0/in" 113.03
+cap "esd_wide_0/VDD" "io_analog[6]" 113.15
+cap "esd_wide_0/VDD" "io_analog[6]" 445.56
+cap "esd_wide_0/in" "io_analog[6]" 339.09
+cap "esd_wide_0/in" "io_analog[6]" 310.56
+cap "esd_wide_0/VDD" "io_analog[6]" 546.17
+cap "esd_wide_0/VDD" "io_analog[6]" 635.55
+cap "esd_wide_0/in" "io_analog[6]" 7.975
+cap "io_analog[6]" "esd_wide_0/VDD" 113.15
+cap "io_analog[6]" "esd_wide_0/VDD" 168.37
+cap "esd_wide_0/in" "io_analog[6]" 900.41
+cap "io_analog[6]" "esd_wide_0/out" 113.03
+cap "io_analog[6]" "esd_wide_0/in" 1005
+cap "esd_wide_0/VDD" "io_analog[6]" 113.15
+cap "esd_wide_0/VDD" "io_analog[6]" 21.06
+cap "io_analog[6]" "esd_wide_0/out" 226.06
+cap "io_analog[6]" "esd_wide_0/VDD" 558.59
+cap "io_analog[6]" "esd_wide_0/out" 339.09
+cap "io_analog[6]" "esd_wide_0/VDD" 542.93
+cap "esd_wide_0/out" "io_analog[6]" 339.09
+cap "esd_wide_0/VDD" "io_analog[6]" 445.56
+cap "io_analog[6]" "esd_wide_0/VDD" 321.36
+cap "io_analog[6]" "esd_wide_0/VDD" 113.15
+cap "io_analog[6]" "esd_wide_0/out" 226.06
+cap "esd_wide_1/VDD" "io_analog[6]" 215.09
+cap "esd_wide_1/out" "io_analog[6]" 113.03
+cap "io_analog[6]" "esd_wide_1/VDD" 113.15
+cap "io_analog[6]" "esd_wide_1/VDD" 542.93
+cap "io_analog[6]" "esd_wide_1/out" 339.09
+cap "esd_wide_1/VDD" "io_analog[6]" 445.56
+cap "esd_wide_1/out" "io_analog[6]" 339.09
+cap "esd_wide_1/out" "io_analog[6]" 312.44
+cap "esd_wide_1/VDD" "io_analog[6]" 545.09
+cap "io_analog[6]" "esd_wide_1/out" -24.85
+cap "io_analog[6]" "esd_wide_1/VDD" 113.15
+cap "io_analog[6]" "esd_wide_1/in" 840.79
+cap "io_analog[6]" "esd_wide_1/VDD" 221.03
+cap "io_analog[6]" "esd_wide_1/VDD" 110.58
+cap "esd_wide_1/in" "io_analog[6]" 951.59
+cap "esd_wide_1/VDD" "io_analog[6]" 113.15
+cap "esd_wide_1/VDD" "io_analog[6]" 326.675
+cap "io_analog[6]" "esd_wide_1/in" 339.09
+cap "io_analog[6]" "esd_wide_1/in" 226.06
+cap "io_analog[6]" "esd_wide_1/VDD" 558.59
+cap "io_analog[6]" "esd_wide_1/in" 339.09
+cap "esd_wide_1/VDD" "io_analog[6]" 542.93
+cap "esd_wide_1/in" "io_analog[6]" 226.06
+cap "io_analog[6]" "esd_wide_1/VDD" 113.15
+cap "io_analog[6]" "esd_wide_1/VDD" 182.95
+cap "esd_0/VDD" "io_analog[6]" 472.3
+cap "esd_0/VDD" "io_analog[6]" 113.15
+cap "esd_0/in" "io_analog[6]" 339.09
+cap "esd_0/VDD" "io_analog[6]" 552.65
+cap "esd_0/in" "io_analog[6]" 276.68
+cap "io_analog[6]" "esd_0/VDD" 629.07
+cap "esd_0/in" "io_analog[6]" 40.495
+cap "io_analog[6]" "esd_0/VDD" 113.15
+cap "io_analog[6]" "esd_0/VDD" 395.88
+cap "io_analog[6]" "esd_0/in" 339.09
+cap "esd_0/out" "io_analog[6]" 226.06
+cap "esd_0/VDD" "io_analog[6]" 113.15
+cap "esd_0/VDD" "io_analog[6]" 235.07
+cap "esd_0/in" "io_analog[6]" 812.15
+cap "io_analog[6]" "esd_0/out" 226.06
+cap "io_analog[6]" "esd_0/VDD" 558.59
+cap "io_analog[6]" "esd_0/VDD" 542.93
+cap "esd_0/out" "io_analog[6]" 339.09
+cap "esd_0/VDD" "io_analog[6]" 445.56
+cap "esd_0/out" "io_analog[6]" 339.09
+cap "io_analog[6]" "esd_0/VDD" 113.15
+cap "io_analog[6]" "esd_0/out" 113.03
+cap "io_analog[6]" "esd_0/VDD" 107.35
+cap "esd_1/in" "io_analog[6]" 226.06
+cap "esd_1/VDD" "io_analog[6]" 228.59
+cap "esd_1/VDD" "io_analog[6]" 113.15
+cap "esd_1/VDD" "io_analog[6]" 558.59
+cap "io_analog[6]" "esd_1/in" 226.06
+cap "esd_1/VDD" "io_analog[6]" 517.86
+cap "esd_1/in" "io_analog[6]" 339.09
+cap "io_analog[6]" "esd_1/in" 339.09
+cap "io_analog[6]" "esd_1/VDD" 386.18
+cap "esd_1/in" "io_analog[6]" 925.18
+cap "io_analog[6]" "esd_1/VDD" 113.15
+cap "esd_1/out" "io_analog[6]" 53.6
+cap "io_analog[6]" "esd_1/VDD" 113.83
+cap "io_analog[6]" "esd_1/VDD" 113.15
+cap "io_analog[6]" "esd_1/VDD" 630.15
+cap "io_analog[6]" "esd_1/out" 37.515
+cap "io_analog[6]" "esd_1/out" 339.09
+cap "io_analog[6]" "esd_1/VDD" 445.56
+cap "esd_1/out" "io_analog[6]" 339.09
+cap "esd_1/VDD" "io_analog[6]" 542.93
+cap "io_analog[6]" "esd_1/out" 226.06
+cap "io_analog[6]" "esd_1/VDD" 113.15
+cap "io_analog[6]" "esd_1/VDD" 351.06
+cap "io_analog[6]" "esd_2/VDD" 113.15
+cap "io_analog[6]" "esd_2/in" 113.03
+cap "io_analog[6]" "esd_2/VDD" 190.25
+cap "io_analog[6]" "esd_2/VDD" 445.56
+cap "esd_2/in" "io_analog[6]" 339.09
+cap "io_analog[6]" "esd_2/in" 339.09
+cap "io_analog[6]" "esd_2/VDD" 542.93
+cap "esd_2/VDD" "io_analog[6]" 558.59
+cap "esd_2/in" "io_analog[6]" 226.06
+cap "esd_2/in" "io_analog[6]" 1038.21
+cap "io_analog[6]" "esd_2/VDD" 113.15
+cap "io_analog[6]" "esd_2/VDD" 152.17
+cap "esd_2/out" "io_analog[6]" 339.09
+cap "esd_2/VDD" "io_analog[6]" 478.78
+cap "esd_2/VDD" "io_analog[6]" 113.15
+cap "esd_2/VDD" "io_analog[6]" 546.17
+cap "esd_2/out" "io_analog[6]" 310.56
+cap "esd_2/VDD" "io_analog[6]" 635.55
+cap "esd_2/out" "io_analog[6]" 7.975
+cap "io_analog[6]" "esd_2/VDD" 113.15
+cap "io_analog[6]" "esd_2/out" 339.09
+cap "io_analog[6]" "esd_2/VDD" 389.4
+cap "esd_3/in" "io_analog[6]" 226.06
+cap "esd_3/VDD" "io_analog[6]" 252.89
+cap "esd_3/VDD" "io_analog[6]" 113.15
+cap "io_analog[6]" "esd_3/in" 281.15
+cap "io_analog[6]" "esd_3/VDD" 551.03
+cap "esd_3/in" "io_analog[6]" 36.025
+cap "esd_3/VDD" "io_analog[6]" 630.69
+cap "esd_3/VDD" "io_analog[6]" 445.56
+cap "esd_3/in" "io_analog[6]" 339.09
+cap "esd_3/in" "io_analog[6]" 925.18
+cap "esd_3/VDD" "io_analog[6]" 89.53
+cap "esd_3/VDD" "io_analog[6]" 15.66
+cap "io_analog[6]" "esd_3/VDD" 113.15
+cap "esd_3/out" "io_analog[6]" 113.03
+cap "esd_3/VDD" "io_analog[6]" 113.15
+cap "io_analog[6]" "esd_3/VDD" 558.59
+cap "io_analog[6]" "esd_3/out" 226.06
+cap "esd_3/out" "io_analog[6]" 339.09
+cap "esd_3/VDD" "io_analog[6]" 542.93
+cap "esd_3/VDD" "io_analog[6]" 445.56
+cap "esd_3/out" "io_analog[6]" 339.09
+cap "io_analog[6]" "esd_3/VDD" 113.15
+cap "io_analog[6]" "esd_3/VDD" 326.76
+cap "io_analog[6]" "esd_3/out" 226.06
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/in" "esd_wide_2/VDD" 132.348
+cap "esd_wide_2/in" "esd_wide_2/VDD" 98.7402
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 28.7664
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/in" "esd_wide_2/VDD" 132.348
+cap "esd_wide_2/VDD" "esd_wide_2/in" -462.382
+cap "esd_wide_2/in" "esd_wide_2/VDD" 132.348
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/in" 132.348
+cap "esd_wide_2/VDD" "esd_wide_2/in" 132.348
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/in" 132.348
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" -130.246
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/in" "esd_wide_2/VDD" 132.348
+cap "esd_wide_2/in" "esd_wide_2/VDD" 132.348
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 15.588
+cap "esd_wide_2/in" "esd_wide_2/VDD" 132.348
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/in" "esd_wide_2/VDD" -1105.7
+cap "esd_wide_2/in" "esd_wide_2/VDD" 132.348
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" -117.068
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 8.652
+cap "esd_wide_2/VDD" "esd_wide_2/out" 132.348
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/in" "esd_wide_2/VDD" -1499.05
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" -110.132
+cap "esd_wide_2/VDD" "esd_wide_2/out" 132.348
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/out" 132.348
+cap "esd_wide_2/VDD" "esd_wide_2/out" 132.348
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 46.8
+cap "esd_wide_2/VDD" "esd_wide_2/out" 132.348
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/out" 132.348
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" -4.5264
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/out" 132.348
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" -148.28
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" -96.9536
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 33.6216
+cap "esd_wide_2/VDD" "esd_wide_2/out" 132.348
+cap "esd_wide_2/VDD" "esd_wide_2/out" 132.348
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" -135.102
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_2/out" "esd_wide_2/VDD" 132.348
+cap "esd_wide_2/out" "esd_wide_2/VDD" 132.348
+cap "esd_wide_2/VDD" "esd_wide_2/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 3.7968
+cap "esd_wide_0/VDD" "esd_wide_0/in" 132.348
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 41.9448
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/in" "esd_wide_0/VDD" 132.348
+cap "esd_wide_0/in" "esd_wide_0/VDD" 132.348
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" -105.277
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/in" "esd_wide_0/VDD" 132.348
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/in" "esd_wide_0/VDD" 132.348
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" -143.425
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/in" "esd_wide_0/VDD" 132.348
+cap "esd_wide_0/in" "esd_wide_0/VDD" 98.7402
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/in" "esd_wide_0/VDD" 132.348
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/in" "esd_wide_0/VDD" 132.348
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 28.7664
+cap "esd_wide_0/in" "esd_wide_0/VDD" -462.382
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/in" "esd_wide_0/VDD" 609.74
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/in" 132.348
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" -130.246
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/in" 132.348
+cap "esd_wide_0/VDD" "esd_wide_0/out" 132.348
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 21.8304
+cap "esd_wide_0/VDD" "esd_wide_0/in" 773.91
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/out" 132.348
+cap "esd_wide_0/VDD" "esd_wide_0/out" 132.348
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" -123.31
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 59.9784
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/out" "esd_wide_0/VDD" 132.348
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 8.652
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/out" "esd_wide_0/VDD" 132.348
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/out" "esd_wide_0/VDD" 132.348
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" -161.458
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/out" 132.348
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" -110.132
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 46.8
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/out" "esd_wide_0/VDD" 132.348
+cap "esd_wide_0/out" "esd_wide_0/VDD" 132.348
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" -148.28
+cap "esd_wide_0/out" "esd_wide_0/VDD" 132.348
+cap "esd_wide_0/VDD" "esd_wide_0/VDD" 64.92
+cap "esd_wide_0/out" "esd_wide_0/VDD" 132.348
+cap "esd_wide_1/VDD" "esd_wide_1/out" 132.348
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 56.5104
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/out" "esd_wide_1/VDD" 132.348
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/out" "esd_wide_1/VDD" 132.348
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 5.184
+cap "esd_wide_1/out" "esd_wide_1/VDD" 132.348
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" -157.99
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" -106.664
+cap "esd_wide_1/out" "esd_wide_1/VDD" 132.348
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 43.332
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/out" "esd_wide_1/VDD" 132.348
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/out" "esd_wide_1/VDD" 132.348
+cap "esd_wide_1/out" "esd_wide_1/VDD" 132.348
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" -144.812
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/out" 132.348
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/out" "esd_wide_1/VDD" 101.163
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/out" 132.348
+cap "esd_wide_1/VDD" "esd_wide_1/in" 732.696
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/out" "esd_wide_1/VDD" -300.515
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/in" 1172.25
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/in" 132.348
+cap "esd_wide_1/in" "esd_wide_1/VDD" 132.348
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/in" "esd_wide_1/VDD" 132.348
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/in" 132.348
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 23.2176
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/in" "esd_wide_1/VDD" 132.348
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 61.3656
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" -124.698
+cap "esd_wide_1/in" "esd_wide_1/VDD" 132.348
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/in" "esd_wide_1/VDD" 132.348
+cap "esd_wide_1/VDD" "esd_wide_1/in" 132.348
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 10.0392
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" -162.846
+cap "esd_wide_1/VDD" "esd_wide_1/in" 132.348
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/in" "esd_wide_1/VDD" 132.348
+cap "esd_wide_1/VDD" "esd_wide_1/in" 132.348
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" -111.519
+cap "esd_wide_1/VDD" "esd_wide_1/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" 33.6216
+cap "esd_0/in" "esd_0/VDD" 132.348
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/in" "esd_0/VDD" 132.348
+cap "esd_0/in" "esd_0/VDD" 132.348
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/in" 132.348
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/in" 132.348
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" -135.102
+cap "esd_0/VDD" "esd_0/in" 56.703
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" 20.4432
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/in" 132.348
+cap "esd_0/VDD" "esd_0/in" -423.065
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/in" "esd_0/VDD" 132.348
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/in" "esd_0/VDD" 132.348
+cap "esd_0/in" "esd_0/VDD" 132.348
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/in" 132.348
+cap "esd_0/VDD" "esd_0/VDD" -121.923
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" 12.8136
+cap "esd_0/VDD" "esd_0/in" 471.315
+cap "esd_0/VDD" "esd_0/out" 132.348
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/out" 132.348
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/out" 132.348
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" 50.9616
+cap "esd_0/VDD" "esd_0/VDD" -114.294
+cap "esd_0/VDD" "esd_0/out" 132.348
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" -152.442
+cap "esd_0/out" "esd_0/VDD" 132.348
+cap "esd_0/out" "esd_0/VDD" 132.348
+cap "esd_0/out" "esd_0/VDD" 132.348
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" -0.3648
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/out" "esd_0/VDD" 132.348
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/VDD" -101.115
+cap "esd_0/VDD" "esd_0/out" 132.348
+cap "esd_0/VDD" "esd_0/out" 132.348
+cap "esd_0/VDD" "esd_0/VDD" 37.7832
+cap "esd_0/VDD" "esd_0/VDD" -139.263
+cap "esd_0/VDD" "esd_0/VDD" 64.92
+cap "esd_0/VDD" "esd_0/out" 132.348
+cap "esd_1/VDD" "esd_1/in" 132.348
+cap "esd_1/VDD" "esd_1/VDD" 4.4904
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/in" 132.348
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/in" "esd_1/VDD" 132.348
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/in" "esd_1/VDD" 132.348
+cap "esd_1/VDD" "esd_1/VDD" 42.6384
+cap "esd_1/VDD" "esd_1/VDD" -105.97
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/VDD" -144.118
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/in" 132.348
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/in" "esd_1/VDD" 132.348
+cap "esd_1/VDD" "esd_1/in" 132.348
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/in" "esd_1/VDD" 132.348
+cap "esd_1/in" "esd_1/VDD" 132.348
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/in" "esd_1/VDD" 132.348
+cap "esd_1/VDD" "esd_1/VDD" 29.46
+cap "esd_1/out" "esd_1/VDD" 60.5492
+cap "esd_1/VDD" "esd_1/in" 132.348
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/in" 471.315
+cap "esd_1/VDD" "esd_1/VDD" -130.94
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/VDD" 21.8304
+cap "esd_1/VDD" "esd_1/out" 132.348
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/out" 132.348
+cap "esd_1/VDD" "esd_1/out" -426.911
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/out" 132.348
+cap "esd_1/VDD" "esd_1/VDD" -123.31
+cap "esd_1/out" "esd_1/VDD" 132.348
+cap "esd_1/VDD" "esd_1/out" 132.348
+cap "esd_1/VDD" "esd_1/VDD" 59.9784
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/out" "esd_1/VDD" 132.348
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/out" "esd_1/VDD" 132.348
+cap "esd_1/VDD" "esd_1/VDD" -161.458
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/out" "esd_1/VDD" 132.348
+cap "esd_1/VDD" "esd_1/VDD" 8.652
+cap "esd_1/VDD" "esd_1/out" 132.348
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/VDD" -110.132
+cap "esd_1/VDD" "esd_1/out" 132.348
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_1/VDD" "esd_1/VDD" 64.92
+cap "esd_2/VDD" "esd_2/VDD" 24.6048
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/in" "esd_2/VDD" 132.348
+cap "esd_2/VDD" "esd_2/VDD" -126.085
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/in" "esd_2/VDD" 132.348
+cap "esd_2/in" "esd_2/VDD" 132.348
+cap "esd_2/in" "esd_2/VDD" 132.348
+cap "esd_2/VDD" "esd_2/VDD" 62.7528
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/in" 132.348
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/VDD" 11.4264
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/in" 132.348
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/in" "esd_2/VDD" 132.348
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/VDD" -164.233
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/in" 132.348
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/VDD" 49.5744
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/in" "esd_2/VDD" 132.348
+cap "esd_2/VDD" "esd_2/VDD" -112.906
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/in" "esd_2/VDD" 132.348
+cap "esd_2/in" "esd_2/VDD" 471.315
+cap "esd_2/in" "esd_2/VDD" 132.348
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/VDD" -151.054
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/VDD" 41.9448
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/out" 132.348
+cap "esd_2/VDD" "esd_2/out" 132.348
+cap "esd_2/out" "esd_2/VDD" 132.348
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/out" 132.348
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/VDD" -143.425
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/out" 132.348
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/out" "esd_2/VDD" 98.7402
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/out" "esd_2/VDD" 132.348
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/out" "esd_2/VDD" -462.382
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/VDD" 28.7664
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/out" "esd_2/VDD" 132.348
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/VDD" "esd_2/out" 132.348
+cap "esd_2/VDD" "esd_2/VDD" -130.246
+cap "esd_2/out" "esd_2/VDD" 132.348
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_2/out" "esd_2/VDD" 132.348
+cap "esd_2/VDD" "esd_2/VDD" 64.92
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/in" "esd_3/VDD" 132.348
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/in" "esd_3/VDD" 132.348
+cap "esd_3/VDD" "esd_3/VDD" 35.7024
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/in" 62.4723
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/VDD" -137.182
+cap "esd_3/VDD" "esd_3/in" 132.348
+cap "esd_3/in" "esd_3/VDD" 132.348
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/in" "esd_3/VDD" -428.835
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/in" "esd_3/VDD" 132.348
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/in" "esd_3/VDD" 132.348
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/VDD" 22.524
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/in" 132.348
+cap "esd_3/VDD" "esd_3/VDD" -124.004
+cap "esd_3/in" "esd_3/VDD" 132.348
+cap "esd_3/VDD" "esd_3/VDD" 60.672
+cap "esd_3/VDD" "esd_3/in" 132.348
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/VDD" 14.8944
+cap "esd_3/in" "esd_3/VDD" 471.315
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/VDD" -162.152
+cap "esd_3/out" "esd_3/VDD" 132.348
+cap "esd_3/in" "esd_3/VDD" 132.348
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/out" "esd_3/VDD" 132.348
+cap "esd_3/VDD" "esd_3/VDD" -116.374
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/out" 132.348
+cap "esd_3/VDD" "esd_3/VDD" 53.0424
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/VDD" 1.716
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/out" "esd_3/VDD" 132.348
+cap "esd_3/out" "esd_3/VDD" 132.348
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/out" "esd_3/VDD" 132.348
+cap "esd_3/VDD" "esd_3/VDD" -154.522
+cap "esd_3/VDD" "esd_3/VDD" 39.864
+cap "esd_3/out" "esd_3/VDD" 132.348
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/out" 132.348
+cap "esd_3/VDD" "esd_3/out" 132.348
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/VDD" -103.196
+cap "esd_3/out" "esd_3/VDD" 132.348
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/out" "esd_3/VDD" 132.348
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/VDD" 64.92
+cap "esd_3/VDD" "esd_3/VDD" -141.344
+cap "io_analog[6]" "esd_wide_0/in" -124.55
+cap "esd_wide_0/in" "io_analog[6]" -251.45
+cap "io_analog[6]" "esd_wide_1/in" -160.27
+cap "io_analog[6]" "esd_wide_1/in" -215.73
+merge "esd_3/VDD" "esd_2/VDD" -381424 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -18000000 -24400 -948114034 -472747 -252730241 -498283 0 0
+merge "esd_2/VDD" "esd_1/VDD"
+merge "esd_1/VDD" "esd_0/VDD"
+merge "esd_0/VDD" "esd_wide_1/VDD"
+merge "esd_wide_1/VDD" "esd_wide_0/VDD"
+merge "esd_wide_0/VDD" "esd_wide_2/VDD"
+merge "esd_wide_2/VDD" "esd_wide_3/VDD"
+merge "esd_wide_3/VDD" "esd_4/VDD"
+merge "esd_4/VDD" "top_0/VDD"
+merge "top_0/VDD" "big_cap_0/VDD"
+merge "big_cap_0/VDD" "io_analog[6]"
+merge "esd_1/out" "top_0/Vb5" -14939.2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9454110 -70532 0 0 0 0
+merge "top_0/Vb5" "m4_111044_670380#"
+merge "esd_wide_2/out" "top_0/Vout_p" -2446.81 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -86400 -1180 -2401600 -9182 0 0 0 0
+merge "top_0/Vout_p" "m3_18050_685390#"
+merge "esd_3/GND" "esd_2/GND" -185414 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -36750000 -44400 -25000000 -30000 -631303613 -535922 0 0
+merge "esd_2/GND" "esd_1/GND"
+merge "esd_1/GND" "esd_0/GND"
+merge "esd_0/GND" "esd_wide_1/GND"
+merge "esd_wide_1/GND" "esd_wide_0/GND"
+merge "esd_wide_0/GND" "esd_wide_2/GND"
+merge "esd_wide_2/GND" "esd_wide_3/GND"
+merge "esd_wide_3/GND" "esd_4/GND"
+merge "esd_4/GND" "top_0/VSUBS"
+merge "top_0/VSUBS" "big_cap_0/VSUBS"
 merge "big_cap_0/VSUBS" "VSUBS"
-merge "top_0/Vb1_" "m4_120014_651320#" -942.06 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1084300 -3920 0 0 0 0
-merge "top_0/Vb4_" "m4_119500_639600#" -315.436 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -145280 -1548 0 0 0 0
-merge "top_0/Vb3_" "m4_119854_645460#" -354.65 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -21300 -1894 0 0 0 0
-merge "big_cap_0/GND" "m5_154044_562737#" -104843 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -448666301 -202655 0 0
-merge "big_cap_0/VDD" "m4_154044_554151#" -242508 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -839134088 -409588 0 0 0 0
-merge "top_0/Vout_n" "m3_98814_637980#" -246.315 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -28620 -1180 20856 0 0 0 0 0
-merge "top_0/Vb2" "m4_110364_670830#" -2121.15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1920000 -9390 0 0 0 0
+merge "VSUBS" "top_0/sf_0/GND"
+merge "top_0/sf_0/GND" "top_0/GND"
+merge "top_0/GND" "big_cap_0/GND"
+merge "big_cap_0/GND" "io_analog[5]"
+merge "esd_wide_0/out" "top_0/Iin_p" -9088.59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4942110 -30522 0 0 0 0
+merge "top_0/Iin_p" "m4_70068_683470#"
+merge "esd_4/out" "top_0/Vb4_" -6127.03 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -5131050 -27572 0 0 0 0
+merge "top_0/Vb4_" "m4_111924_639350#"
+merge "esd_2/out" "top_0/Vb1_" -1581.29 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1318600 -7122 0 0 0 0
+merge "top_0/Vb1_" "m4_120014_651320#"
+merge "esd_3/out" "top_0/Vb3_" -6328.62 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2873760 -31102 0 0 0 0
+merge "top_0/Vb3_" "m4_112144_645210#"
+merge "esd_1/in" "io_analog[3]" -7178.17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12117800 -15000 -18550 -4570 0 0 0 0
+merge "esd_wide_3/out" "top_0/Vout_n" -2404.29 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -28620 -1180 -2275674 -9182 0 0 0 0
+merge "top_0/Vout_n" "m3_17650_617440#"
+merge "esd_4/in" "io_analog[0]" -5770.63 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9176000 -12068 -398870 -4570 0 0 0 0
+merge "esd_wide_1/in" "io_analog[7]" -6355.03 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4934200 -15000 149800 -10240 0 0 0 0
+merge "esd_wide_3/in" "io_analog[10]" -4215.09 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -780000 -7384 -1047730 -11420 0 0 0 0
+merge "esd_2/in" "io_analog[2]" -7045.47 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -11760800 -15000 109450 -4570 0 0 0 0
+merge "esd_wide_2/in" "io_analog[9]" -7583.43 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4948400 -15000 -2696400 -13780 0 0 0 0
+merge "esd_wide_1/out" "top_0/Iin_n" -9072.33 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12916726 -33933 0 0 0 0
+merge "top_0/Iin_n" "m4_96854_683470#"
+merge "esd_wide_0/in" "io_analog[8]" -5319.65 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -910120 -15000 -709400 -10240 0 0 0 0
+merge "esd_0/in" "io_analog[4]" -28656.8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -25000000 -30000 -25322000 -32290 -25000000 -30000 0 0
+merge "esd_0/out" "top_0/Vb2" -9625.7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -10497660 -40682 0 0 0 0
+merge "top_0/Vb2" "m4_110364_670830#"
+merge "esd_3/in" "io_analog[1]" -7277.26 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12357200 -15000 -154900 -4570 0 0 0 0

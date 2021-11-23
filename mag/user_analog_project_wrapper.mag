@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1637624949
+timestamp 1637690973
 << metal2 >>
 rect 524 -800 636 480
 rect 1706 -800 1818 480
@@ -14500,47 +14500,47 @@ rect -100 0 0 704000
 rect 584000 0 584100 704000
 rect -100 -100 584100 0
 use esd_wide  esd_wide_3
-timestamp 1637113331
+timestamp 1637690973
 transform 0 -1 24350 1 0 664950
 box 11570 11470 24390 18230
 use esd_wide  esd_wide_2
-timestamp 1637113331
+timestamp 1637690973
 transform 1 0 870 0 1 679650
 box 11570 11470 24390 18230
 use big_cap  big_cap_0
 timestamp 1636526374
 transform 1 0 -27430 0 1 658600
 box 60730 -31110 106740 14450
+use esd_wide  esd_wide_0
+timestamp 1637690973
+transform 1 0 52890 0 1 679650
+box 11570 11470 24390 18230
 use top  top_0
 timestamp 1637191134
 transform 1 0 89244 0 1 662150
 box -6530 -24030 39650 21850
-use esd_wide  esd_wide_0
-timestamp 1637113331
-transform 1 0 52890 0 1 679650
-box 11570 11470 24390 18230
 use esd_wide  esd_wide_1
-timestamp 1637113331
+timestamp 1637690973
 transform -1 0 140498 0 1 679650
 box 11570 11470 24390 18230
 use esd  esd_0
-timestamp 1637624949
+timestamp 1637690859
 transform 1 0 304030 0 1 679650
 box 11570 11470 23360 18230
 use esd  esd_1
-timestamp 1637624949
+timestamp 1637690859
 transform 1 0 398430 0 1 679650
 box 11570 11470 23360 18230
 use esd  esd_2
-timestamp 1637624949
+timestamp 1637690859
 transform 1 0 450430 0 1 679650
 box 11570 11470 23360 18230
 use esd  esd_3
-timestamp 1637624949
+timestamp 1637690859
 transform 1 0 549540 0 1 679650
 box 11570 11470 23360 18230
 use esd  esd_4
-timestamp 1637624949
+timestamp 1637690859
 transform 0 1 559650 -1 0 696716
 box 11570 11470 23360 18230
 << labels >>

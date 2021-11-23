@@ -1,9 +1,0 @@
-magic
-tech sky130A
-magscale 1 2
-timestamp 1637624949
-use sky130_fd_pr__res_high_po_1p41_TY4MZF  sky130_fd_pr__res_high_po_1p41_TY4MZF_0
-timestamp 1637624949
-transform 1 0 143 0 1 482
-box -143 -52 143 52
-<< end >>
