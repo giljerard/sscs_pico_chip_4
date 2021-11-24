@@ -233,3 +233,7 @@ C {devices/launcher.sym} 1530 -820 0 0 {name=h1
 descr='tate
 tclcommand="ngspice::annotate"}
 C {devices/ngspice_probe.sym} 1060 -440 0 0 {name=r6}
+C {devices/ngspice_probe.sym} 2030 -890 2 0 {name=r7}
+C {devices/ngspice_probe.sym} 1060 -380 0 0 {name=r8}
+C {devices/ngspice_probe.sym} 1930 -440 0 0 {name=r10}
+C {devices/ngspice_probe.sym} 1930 -380 0 0 {name=r11}

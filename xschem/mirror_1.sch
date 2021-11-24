@@ -34,7 +34,7 @@ N 580 30 580 40 { lab=V9}
 N 580 -40 580 -30 { lab=V10}
 N 390 -240 390 -210 { lab=Vb1_}
 N 390 -120 390 -90 { lab=GND}
-N 390 -90 390 -80 {}
+N 390 -90 390 -80 { lab=GND}
 C {sky130_fd_pr/nfet_01v8.sym} 410 -150 0 1 {name=M27
 L=.5
 W=3.6
@@ -179,3 +179,5 @@ C {devices/gnd.sym} 430 -50 3 0 {name=l22 lab=GND}
 C {devices/gnd.sym} 390 -50 1 0 {name=l28 lab=GND}
 C {devices/gnd.sym} 390 -20 0 0 {name=l29 lab=GND}
 C {devices/gnd.sym} 390 -100 1 0 {name=l30 lab=GND}
+C {devices/ngspice_probe.sym} 390 -200 0 1 {name=r9}
+C {devices/ngspice_probe.sym} 790 -150 0 1 {name=r1}
