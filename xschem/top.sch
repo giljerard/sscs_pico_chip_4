@@ -84,13 +84,13 @@ C {devices/lab_wire.sym} 630 -220 0 1 {name=l17 sig_type=std_logic lab=Vinp}
 C {devices/lab_wire.sym} 1880 -250 0 1 {name=l14 sig_type=std_logic lab=Vcm2}
 C {devices/ngspice_probe.sym} 1890 -250 2 0 {name=r53}
 C {sky130_fd_pr/res_xhigh_po.sym} 1130 -680 1 0 {name=R6
-W=1.41
+W=.7
 L=53
 model=res_xhigh_po
 spiceprefix=X
 mult=1}
 C {sky130_fd_pr/res_xhigh_po.sym} 1060 -640 3 0 {name=R1
-W=1.41
+W=.7
 L=53
 model=res_xhigh_po
 spiceprefix=X

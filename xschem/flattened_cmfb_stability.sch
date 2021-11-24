@@ -590,16 +590,16 @@ C {devices/ammeter.sym} -720 -180 2 0 {name=Vmeas6 current=1.8021e-06}
 C {devices/lab_wire.sym} 1650 -380 0 1 {name=l14 sig_type=std_logic lab=Vcm2}
 C {devices/ngspice_probe.sym} 1660 -380 2 0 {name=r53}
 C {devices/lab_pin.sym} -710 -500 0 1 {name=l20 sig_type=std_logic lab=VDD_dummy}
-C {sky130_fd_pr/res_xhigh_po_1p41.sym} 1130 -680 1 0 {name=R6
-W=1.41
+C {sky130_fd_pr/res_xhigh_po.sym} 1130 -680 1 0 {name=R6
+W=.7
 L=53
-model=res_xhigh_po_1p41
+model=res_xhigh_po
 spiceprefix=X
 mult=1}
-C {sky130_fd_pr/res_xhigh_po_1p41.sym} 1060 -640 3 0 {name=R1
-W=1.41
+C {sky130_fd_pr/res_xhigh_po.sym} 1060 -640 3 0 {name=R1
+W=.7
 L=53
-model=res_xhigh_po_1p41
+model=res_xhigh_po
 spiceprefix=X
 mult=1}
 C {devices/gnd.sym} 1060 -620 0 0 {name=l37 lab=GND}

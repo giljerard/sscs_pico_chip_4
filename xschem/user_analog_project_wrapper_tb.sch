@@ -131,7 +131,8 @@ value="
 .include \\\\$::SKYWATER_MODELS\\\\/models/all.spice
 * Corner
 *.include \\\\$::SKYWATER_MODELS\\\\/models/corners/tt/rf.spice
-*.include /home/jared/Documents/GS_Design/tia_post_approval/pex/top_pex_fixed.spice
+.include /home/jared/Documents/GS_Design/sscs_pico_chip_4/pex/user_analog_project_wrapper_pex.spice
+
 "}
 C {devices/launcher.sym} 840 -430 0 0 {name=h1
 descr='tate
