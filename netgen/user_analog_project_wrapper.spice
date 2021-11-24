@@ -27,7 +27,7 @@ X1 GND Vb3 res GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.3e+07u l=
 X2 Vout diode VDD VDD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.05e+07u l=200000u M=4
 .ends
 
-.subckt cmfb Vb3 Vref GND Vcmfb Vcm VDD
+.subckt cmfb Vb3 Vref GND VDD Vcmfb Vcm
 Xcmfb_half_1 VDD GND Vcmfb cmfb_half_1/res Vb3 Vref cmfb_half_0/Vout cmfb_half
 Xcmfb_half_0 VDD GND cmfb_half_0/Vout cmfb_half_0/res Vb3 Vcm cmfb_half_0/Vout cmfb_half
 X0 cmfb_half_1/res cmfb_half_0/res GND sky130_fd_pr__res_xhigh_po w=1.41e+06u l=1.41e+06u
@@ -87,7 +87,7 @@ X1 Vout Vcmfb VDD VDD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=2.8e+07u
 X2 s Vin Vout GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=2.5e+07u l=150000u M=6
 .ends
 
-.subckt core Vin_p GND Vb2 Vcmfb Vb1 Vin_n Vout_n Vout_p VDD
+.subckt core GND Vb2 Vcmfb Vb1 Vin_n Vout_n Vin_p Vout_p VDD
 Xcore_half_0 Vout_n Vin_p core_half_1/s VDD Vcmfb Vb2 GND core_half
 Xcore_half_1 Vout_p Vin_n core_half_1/s VDD Vcmfb Vb2 GND core_half
 X0 GND Vb1 core_half_1/s GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=7.1e+07u l=500000u M=10
@@ -114,32 +114,32 @@ X15 a_1900_340# a_5540_660# GND sky130_fd_pr__res_xhigh_po w=350000u l=1.6e+07u
 .ends
 
 .subckt top VDD GND Vout_n Vout_p Vb2 Vb5 Vb1_ Vb3_ Vb4_ Iin_p Iin_n
-Xcmfb_0 cmfb_1/Vb3 Vb5 GND Vcmfb1 Vcm1 VDD cmfb
-Xcmfb_1 cmfb_1/Vb3 Vb5 GND Vcmfb2 Vcm2 VDD cmfb
+Xcmfb_0 cmfb_1/Vb3 Vb5 GND VDD Vcmfb1 Vcm1 cmfb
+Xcmfb_1 cmfb_1/Vb3 Vb5 GND VDD Vcmfb2 Vcm2 cmfb
 Xmirror_4_0 GND Vb4_ sf_0/Vb4 mirror_4
 Xsf_0 VDD pre_Vout_p Vout_n Vout_p GND sf_0/Vb4 pre_Vout_n sf
 Xmirror_3_0 GND cmfb_1/Vb3 Vb3_ mirror_3
-Xcore_0 Vinp GND Vb2 Vcmfb1 core_1/Vb1 Vinn Von Vop VDD core
+Xcore_0 GND Vb2 Vcmfb1 core_1/Vb1 Vinn Von Vinp Vop VDD core
 Xmirror_1_0 core_1/Vb1 GND Vb1_ mirror_1
-Xcore_1 Von GND Vb2 Vcmfb2 core_1/Vb1 Vop pre_Vout_p pre_Vout_n VDD core
+Xcore_1 GND Vb2 Vcmfb2 core_1/Vb1 Vop pre_Vout_p Von pre_Vout_n VDD core
 X0 pre_Vout_p Vinn GND sky130_fd_pr__res_xhigh_po w=700000u l=5.3e+07u
 X1 Vop a_15650_n4552# GND sky130_fd_pr__res_xhigh_po w=1.41e+06u l=1.41e+06u
 X2 Vcmfb2 GND sky130_fd_pr__cap_mim_m3_1 l=3.35e+07u w=3.35e+07u
-X3 Vinp Iin_p sky130_fd_pr__cap_mim_m3_1 l=6.12e+07u w=6.12e+07u
-X4 GND Vcmfb1 sky130_fd_pr__cap_mim_m3_2 l=3.35e+07u w=3.35e+07u
-X5 Vcm1 Vop GND sky130_fd_pr__res_xhigh_po w=1.41e+06u l=3.5e+07u
+X3 GND Vcmfb1 sky130_fd_pr__cap_mim_m3_2 l=3.35e+07u w=3.35e+07u
+X4 Vcm1 Vop GND sky130_fd_pr__res_xhigh_po w=1.41e+06u l=3.5e+07u
+X5 Vinp Iin_p sky130_fd_pr__cap_mim_m3_1 l=6.12e+07u w=6.12e+07u
 X6 GND Vcmfb2 sky130_fd_pr__cap_mim_m3_2 l=3.35e+07u w=3.35e+07u
-X7 pre_Vout_p Vcm2 GND sky130_fd_pr__res_xhigh_po w=1.41e+06u l=3.5e+07u
-X8 Iin_p Vinp sky130_fd_pr__cap_mim_m3_2 l=6.12e+07u w=6.12e+07u
-X9 a_n1350_n4552# Von GND sky130_fd_pr__res_xhigh_po w=1.41e+06u l=1.41e+06u
-X10 a_15650_n4552# pre_Vout_n sky130_fd_pr__cap_mim_m3_1 l=7.75e+06u w=7.75e+06u
-X11 pre_Vout_n Vinp GND sky130_fd_pr__res_xhigh_po w=700000u l=5.3e+07u
-X12 a_n1350_n4552# pre_Vout_p sky130_fd_pr__cap_mim_m3_1 l=7.75e+06u w=7.75e+06u
-X13 Vinn Iin_n sky130_fd_pr__cap_mim_m3_1 l=6.12e+07u w=6.12e+07u
-X14 pre_Vout_n a_15650_n4552# sky130_fd_pr__cap_mim_m3_2 l=7.75e+06u w=7.75e+06u
-X15 Von Vcm1 GND sky130_fd_pr__res_xhigh_po w=1.41e+06u l=3.5e+07u
-X16 Vcm2 pre_Vout_n GND sky130_fd_pr__res_xhigh_po w=1.41e+06u l=3.5e+07u
-X17 Iin_n Vinn sky130_fd_pr__cap_mim_m3_2 l=6.12e+07u w=6.12e+07u
+X7 Vinn Iin_n sky130_fd_pr__cap_mim_m3_1 l=6.12e+07u w=6.12e+07u
+X8 pre_Vout_p Vcm2 GND sky130_fd_pr__res_xhigh_po w=1.41e+06u l=3.5e+07u
+X9 Iin_p Vinp sky130_fd_pr__cap_mim_m3_2 l=6.12e+07u w=6.12e+07u
+X10 a_n1350_n4552# Von GND sky130_fd_pr__res_xhigh_po w=1.41e+06u l=1.41e+06u
+X11 Iin_n Vinn sky130_fd_pr__cap_mim_m3_2 l=6.12e+07u w=6.12e+07u
+X12 a_15650_n4552# pre_Vout_n sky130_fd_pr__cap_mim_m3_1 l=7.75e+06u w=7.75e+06u
+X13 pre_Vout_n Vinp GND sky130_fd_pr__res_xhigh_po w=700000u l=5.3e+07u
+X14 a_n1350_n4552# pre_Vout_p sky130_fd_pr__cap_mim_m3_1 l=7.75e+06u w=7.75e+06u
+X15 pre_Vout_n a_15650_n4552# sky130_fd_pr__cap_mim_m3_2 l=7.75e+06u w=7.75e+06u
+X16 Von Vcm1 GND sky130_fd_pr__res_xhigh_po w=1.41e+06u l=3.5e+07u
+X17 Vcm2 pre_Vout_n GND sky130_fd_pr__res_xhigh_po w=1.41e+06u l=3.5e+07u
 X18 pre_Vout_p a_n1350_n4552# sky130_fd_pr__cap_mim_m3_2 l=7.75e+06u w=7.75e+06u
 X19 Vcmfb1 GND sky130_fd_pr__cap_mim_m3_1 l=3.35e+07u w=3.35e+07u
 .ends

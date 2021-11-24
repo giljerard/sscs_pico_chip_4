@@ -1,4 +1,4 @@
-timestamp 1636213402
+timestamp 1637735227
 version 8.3
 tech sky130A
 style ngspice()
@@ -27,14 +27,14 @@ node "Vcmfb" 0 278.8 120 3650 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "VDD#1" 7 699.5 5180 4030 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 48000 3260 0 0 0 0 0 0 0 0 0 0
 node "VDD" 2 166.92 -4990 4030 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10800 780 0 0 0 0 0 0 0 0 0 0
 node "a_n6970_n2190#" 133 62361 -6970 -2190 ndif 0 0 0 0 0 0 0 0 7100000 143000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5680000 142800 6752000 14840 0 0 0 0 0 0 0 0 0 0
-node "Vb1" 689 11063.7 7300 -950 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14581000 293620 0 0 310000 8200 592100 4440 0 0 0 0 0 0 0 0 0 0
+node "Vb1" 1349 16526 7300 -950 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14900000 300000 0 0 620000 16400 1181100 8860 0 0 0 0 0 0 0 0 0 0
 node "w_n50_1010#" 12646 3751.5 -50 1010 nw 0 0 0 0 1250500 6920 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 substrate "GND" 0 0 5680 -2480 m1 0 0 0 0 0 0 0 0 8236000 171560 2272000 57120 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9088000 171680 7840000 20280 0 0 0 0 0 0 0 0 0 0
-cap "Vb2" "w_n50_1010#" 275.6
 cap "Vcmfb" "w_n50_1010#" 62.4
-cap "Vcmfb" "Vb2" 150
-cap "a_n6970_n2190#" "Vb1" 4540
+cap "Vb1" "a_n6970_n2190#" 4540
 cap "Vin_p" "Vin_n" 151.364
+cap "Vb2" "w_n50_1010#" 275.6
+cap "Vb2" "Vcmfb" 150
 device msubckt sky130_fd_pr__nfet_01v8 -6970 -2290 -6969 -2289 l=100 w=14200 "GND" "Vb1" 200 0 "GND" 14200 0 "a_n6970_n2190#" 14200 0
 device msubckt sky130_fd_pr__nfet_01v8 -6970 -2090 -6969 -2089 l=100 w=14200 "GND" "Vb1" 200 0 "a_n6970_n2190#" 14200 0 "GND" 14200 0
 device msubckt sky130_fd_pr__nfet_01v8 -6970 -1890 -6969 -1889 l=100 w=14200 "GND" "Vb1" 200 0 "GND" 14200 0 "a_n6970_n2190#" 14200 0
@@ -45,52 +45,51 @@ device msubckt sky130_fd_pr__nfet_01v8 -6970 -1090 -6969 -1089 l=100 w=14200 "GN
 device msubckt sky130_fd_pr__nfet_01v8 -6970 -890 -6969 -889 l=100 w=14200 "GND" "Vb1" 200 0 "a_n6970_n2190#" 14200 0 "GND" 14200 0
 device msubckt sky130_fd_pr__nfet_01v8 -6970 -690 -6969 -689 l=100 w=14200 "GND" "Vb1" 200 0 "GND" 14200 0 "a_n6970_n2190#" 14200 0
 device msubckt sky130_fd_pr__nfet_01v8 -6970 -490 -6969 -489 l=100 w=14200 "GND" "Vb1" 200 0 "a_n6970_n2190#" 14200 0 "GND" 14200 0
-cap "a_n6970_n2190#" "core_half_0/GND" 108.706
-cap "core_half_0/GND" "core_half_0/s" 184.8
-cap "core_half_0/GND" "core_half_0/Vout" 112
-cap "a_n6970_n2190#" "GND" 135.882
-cap "core_half_0/Vout" "GND" 140
-cap "core_half_0/s" "GND" 231
-cap "GND" "core_half_0/s" 366.882
+cap "core_half_0/GND" "a_n6970_n2190#" 78.6176
+cap "core_half_0/GND" "core_half_0/s" 133.65
+cap "core_half_0/GND" "core_half_0/Vout" 81
+cap "core_half_0/GND" "a_n6970_n2190#" 135.882
+cap "core_half_0/GND" "core_half_0/Vout" 140
+cap "core_half_0/GND" "core_half_0/s" 231
 cap "GND" "core_half_0/Vout" 140
-cap "core_half_0/Vout" "GND" 108
-cap "core_half_0/s" "GND" 283.024
-cap "core_half_1/Vin" "core_half_0/Vin" 4.76
-cap "core_half_0/Vin" "GND" 59.2308
-cap "GND" "core_half_0/Vin" 6.34615
-cap "core_half_1/Vin" "core_half_0/Vin" 56.7273
-cap "core_half_1/Vout" "GND" 80
-cap "core_half_1/s" "GND" 209.647
+cap "GND" "core_half_0/s" 366.882
+cap "GND" "core_half_0/s" 364.262
+cap "core_half_0/Vout" "GND" 139
+cap "a_n6970_n2190#" "GND" 128.409
 cap "GND" "core_half_1/Vin" 65.5769
-cap "GND" "core_half_1/Vout" 140
-cap "GND" "core_half_1/s" 366.882
-cap "core_half_1/s" "GND" 231
-cap "GND" "a_n6970_n2190#" 135.882
+cap "GND" "core_half_1/Vout" 49
+cap "core_half_0/Vin" "GND" 65.5769
+cap "core_half_0/Vin" "core_half_1/Vin" 56.7273
 cap "core_half_1/Vout" "GND" 140
+cap "core_half_1/s" "GND" 366.882
+cap "GND" "core_half_1/s" 366.882
+cap "GND" "core_half_1/Vout" 140
 cap "core_half_1/GND" "core_half_1/Vout" 140
 cap "core_half_1/GND" "a_n6970_n2190#" 135.882
-cap "core_half_1/s" "core_half_1/GND" 231
-cap "core_half_1/Vin" "core_half_0/Vin" 4.32
-cap "core_half_1/Vin" "core_half_0/Vin" 101.636
-cap "w_n50_1010#" "core_half_0/Vb2" -1.42109e-14
-cap "core_half_1/Vb2" "w_n50_1010#" 2.84217e-14
-cap "core_half_1/Vb2" "core_half_0/Vcmfb" -16.6667
-cap "w_n50_1010#" "core_half_1/Vb2" 1.06581e-14
-cap "core_half_1/Vcmfb" "core_half_1/Vb2" 1.13687e-13
-cap "core_half_1/Vcmfb" "w_n50_1010#" -7.10543e-15
-merge "core_half_0/VDD" "VDD#1" -16073.5 0 0 0 0 -4808200 -21372 0 0 104640 -4824 89320 -4884 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 209280 -5304 -51300 -4040 0 0 0 0 0 0 0 0 0 0
+cap "core_half_1/GND" "core_half_1/s" 231
+cap "core_half_1/GND" "a_n6970_n2190#" 30.0882
+cap "core_half_1/GND" "core_half_1/s" 51.15
+cap "core_half_1/Vout" "core_half_1/GND" 31
+cap "w_n50_1010#" "core_half_0/Vb2" 1.42109e-14
+cap "core_half_0/Vin" "core_half_1/Vin" 101.636
+cap "w_n50_1010#" "core_half_1/Vb2" 2.84217e-14
+cap "core_half_0/Vcmfb" "core_half_1/Vb2" -16.6667
+cap "core_half_1/Vb2" "w_n50_1010#" 1.06581e-14
+cap "core_half_1/Vb2" "core_half_1/Vcmfb" -1.13687e-13
+cap "w_n50_1010#" "core_half_1/Vcmfb" 7.10543e-15
+merge "core_half_1/VDD" "VDD#1" -21057.6 0 0 0 0 -6462800 -19972 0 0 93440 -4824 71920 -4884 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 186880 -5304 -50700 -4040 0 0 0 0 0 0 0 0 0 0
 merge "VDD#1" "VDD"
-merge "VDD" "core_half_1/VDD"
-merge "core_half_1/VDD" "w_n50_1010#"
-merge "core_half_1/GND" "core_half_0/GND" -4703.53 0 0 0 0 0 0 0 0 182210 -18432 273920 -18422 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 547840 -18502 -217830 -7271 0 0 0 0 0 0 0 0 0 0
+merge "VDD" "core_half_0/VDD"
+merge "core_half_0/VDD" "w_n50_1010#"
+merge "core_half_1/GND" "core_half_0/GND" -3918.54 0 0 0 0 0 0 0 0 238910 -15012 313520 -15002 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 627040 -15082 -216120 -6651 0 0 0 0 0 0 0 0 0 0
 merge "core_half_0/GND" "GND"
-merge "core_half_1/Vout" "Vout_p" -768.36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -122400 -3360 0 0 0 0 0 0 0 0 0 0
-merge "core_half_0/Vin" "Vin_p" -579.61 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -229400 -2100 0 0 0 0 0 0 0 0 0 0
-merge "core_half_0/Vb2" "core_half_1/Vb2" -2133.46 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -968400 -7660 0 0 0 0 0 0 0 0 0 0
-merge "core_half_1/Vb2" "Vb2"
-merge "core_half_0/Vout" "Vout_n" -753.8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -100000 -3360 0 0 0 0 0 0 0 0 0 0
-merge "core_half_1/s" "core_half_0/s" -1629.35 0 0 0 0 0 0 0 0 10900 -7802 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 87920 -7782 0 -6400 0 0 0 0 0 0 0 0 0 0
+merge "core_half_1/Vout" "Vout_p" -769.92 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -124800 -3360 0 0 0 0 0 0 0 0 0 0
+merge "core_half_0/Vin" "Vin_p" -565.18 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -207200 -2100 0 0 0 0 0 0 0 0 0 0
+merge "core_half_1/Vb2" "core_half_0/Vb2" -1483.2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 32000 -7660 0 0 0 0 0 0 0 0 0 0
+merge "core_half_0/Vb2" "Vb2"
+merge "core_half_0/Vout" "Vout_n" -772 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -128000 -3360 0 0 0 0 0 0 0 0 0 0
+merge "core_half_1/s" "core_half_0/s" -1416.48 0 0 0 0 0 0 0 0 12700 -8422 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 95920 -8402 95860 -6801 0 0 0 0 0 0 0 0 0 0
 merge "core_half_0/s" "a_n6970_n2190#"
-merge "core_half_0/Vcmfb" "core_half_1/Vcmfb" -278.16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 177600 -1920 0 0 0 0 0 0 0 0 0 0
-merge "core_half_1/Vcmfb" "Vcmfb"
-merge "core_half_1/Vin" "Vin_n" -459.36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -44400 -2100 0 0 0 0 0 0 0 0 0 0
+merge "core_half_1/Vcmfb" "core_half_0/Vcmfb" -310.725 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127500 -1920 0 0 0 0 0 0 0 0 0 0
+merge "core_half_0/Vcmfb" "Vcmfb"
+merge "core_half_1/Vin" "Vin_n" -579.61 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -229400 -2100 0 0 0 0 0 0 0 0 0 0
